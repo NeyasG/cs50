@@ -16,15 +16,15 @@ int main(void)
     for (int i = 1; i <= n; i++)
     {
         //Print intial spaces
-        for (int j = 1; j < n - i; j++)
+        for (int j = 1; j < n; j++)
         {
             printf(".");
         }
         //Print left side Hashes
-        for (int k = 1; k < i; k++)
+        for (int k = 1; k <= i; k++)
         {
             printf("#");
         }
+        printf("\n");
     }
-    printf("\n");
 }

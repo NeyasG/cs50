@@ -8,7 +8,7 @@ int main(void)
     {
         n = get_int("Pyramid Height: ");
     }
-    while (n < 1);
+    while (n < 1 || n > 8);
 
     for (int i = 1; i <= n; i++)
     {

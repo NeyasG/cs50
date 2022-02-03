@@ -4,16 +4,21 @@
 int main(void)
 {
     int n;
+
+    // Get user input for Pyramid Height
     do
     {
         n = get_int("Pyramid Height: ");
     }
     while (n < 1 || n > 8);
 
-    for (int i = 1; i <= n -1 || i >; i++)
+    //initial for loop
+    for (int i = 1; i <= n; i++)
     {
-        printf(
-        );
+        for (int j = 1; j < n - i; j++)
+        {
+            printf(" ");
+        }
     }
     printf("\n");
 }

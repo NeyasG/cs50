@@ -10,9 +10,9 @@ int main(void)
     }
     while (n < 1);
 
-    for (int i = 0, i < n; i++)
+    for (int i = 0; i < n; i++)
     {
-        printif("#")
+        printf("#");
     }
-    printif("\n");
+    printf("\n");
 }

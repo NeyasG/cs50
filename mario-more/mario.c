@@ -25,6 +25,7 @@ int main(void)
         {
             printf("#");
         }
+
         //Print middle spaces
         printf("  ");
 

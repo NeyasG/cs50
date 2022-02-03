@@ -6,7 +6,7 @@ int main(void)
     int n;
     do
     {
-        n = get_int("Pyramid Size: ");
+        n = get_int("Pyramid Height: ");
     }
     while (n < 1);
 
@@ -16,6 +16,7 @@ int main(void)
         {
             printf("#");
         }
+            printf("\n");
     }
     printf("\n");
 }

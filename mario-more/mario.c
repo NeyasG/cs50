@@ -16,7 +16,7 @@ int main(void)
     for (int i = 1; i <= n; i++)
     {
         //Print intial spaces
-        for (int j = 1; j < n - j; j++)
+        for (int j = 1; j <= n - 1; j++)
         {
             printf(".");
         }

@@ -15,9 +15,15 @@ int main(void)
     //initial for loop
     for (int i = 1; i <= n; i++)
     {
+        //Print intial spaces
         for (int j = 1; j < n - i; j++)
         {
-            printf(" ");
+            printf(".");
+        }
+        //Print left side Hashes
+        for (int k = 1; k < i; k++)
+        {
+            printf("#");
         }
     }
     printf("\n");

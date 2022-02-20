@@ -12,13 +12,14 @@ int main(void)
     int i = 0;
     int sum = 0;
     long x = 0;
+    int length[16];
 
     do
     {
         // finding individual digit
         x = ( (n/pow(10, i)));
         int y = x % 10;
-        int array[16] = y;
+        length[i] = y;
 
         if ( i % 2 == 0)
         {
@@ -40,7 +41,7 @@ int main(void)
     // Checksum mod 10 value
     if (sum % 10 == 0)
     {
-        sprintf(string, "%ld", n);
+        printf("Valid\n");
     }
     else
     {

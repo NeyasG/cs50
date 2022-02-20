@@ -18,7 +18,7 @@ int main(void)
         // finding individual digit
         x = ( (n/pow(10, i)));
         int y = x % 10;
-        // printf("y = %i\n", y);
+        
 
         if ( i % 2 == 0)
         {

@@ -33,4 +33,7 @@ int main(void)
         i ++;
     }
     while( x != 0 );
+
+    // Checksum mod 10 value
+    Checksum = 
 }

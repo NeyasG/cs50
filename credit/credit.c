@@ -40,7 +40,7 @@ int main(void)
     // Checksum mod 10 value
     if (sum % 10 == 0)
     {
-        
+        sprintf(string, "%ld", n);
     }
     else
     {

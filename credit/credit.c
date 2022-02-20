@@ -12,9 +12,10 @@ int main(void)
 
     do
     {
+        printf("i = %i\n", i);
          int x = ( (n/(10^i) % 10));
          i ++;
          printf("%i\n", x);
     }
-    while( (n/(10^i)) > 0 );
+    while( (n/(10^i)) > 1 );
 }

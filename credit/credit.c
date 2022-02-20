@@ -11,7 +11,7 @@ int main(void)
     // Initialise power counter
     int i = 0;
     int sum = 0;
-    int x = 0;
+    long x = 0;
 
     do
     {

@@ -41,8 +41,10 @@ int main(void)
     // Checksum mod 10 value
     if (sum % 10 == 0)
     {
-        char first2 = length[i-1] + length[i-2];
-        printf("%s", first2);
+        if (length[i-1] == 4)
+        {
+        printf("Visa\n");
+        }
     }
     else
     {

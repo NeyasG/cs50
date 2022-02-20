@@ -4,15 +4,17 @@
 int main(void)
 {
     // User inputs CC number
-    n = get_long("Credit Card Number");
+    int n = get_long("Credit Card Number\n");
 
     // Initialise power counter
     int i = 0;
     int sum = 0;
+
     do
     {
          int x = ( (n/(10^i) % 10));
-         printf(x);
+         i ++;
+         printf("%i\n", x);
     }
     while( (n/(10^i)) > 0 );
 }

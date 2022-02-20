@@ -18,7 +18,7 @@ int main(void)
         // finding individual digit
         x = ( (n/pow(10, i)));
         int y = x % 10;
-        int[16] = y
+        int array[16] = y;
 
         if ( i % 2 == 0)
         {

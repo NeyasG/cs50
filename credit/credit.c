@@ -35,5 +35,12 @@ int main(void)
     while( x != 0 );
 
     // Checksum mod 10 value
-    if (Checksum)
+    if (sum % 10 == 0)
+    {
+        printf("Valid\n");
+    }
+    else
+    {
+        printf("Invalid\n");
+    }
 }

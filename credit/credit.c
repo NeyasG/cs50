@@ -10,7 +10,7 @@ int main(void)
 
     // Initialise power counter
     int i = 0;
-    double sum = 0;
+    int sum = 0;
     int x = 0;
 
     do
@@ -19,10 +19,15 @@ int main(void)
         x = ( (n/pow(10, i)));
         x = x % 10;
 
-        if ( x % i = 0)
+        if ( x % i == 0)
         {
-            
+            sum = sum + x;
         }
+        else
+        {
+            sum = sum + (x*2);
+        }
+        printf("%i", sum);
 
         i ++;
     }

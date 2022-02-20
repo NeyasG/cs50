@@ -26,6 +26,11 @@ int main(void)
         }
         else
         {
+
+            if ( y > 4)
+            {
+                sum = 
+            }
             sum = sum + (y*2);
         }
         printf("sum = %i\n", sum);

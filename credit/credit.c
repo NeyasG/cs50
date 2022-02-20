@@ -17,7 +17,7 @@ int main(void)
         printf("i = %f\n", i); //remove after debug
          int x = ( (n/pow(10,1)));
          i ++;
-         printf("%i\n", x); //remove after debug
+         printf("x = %i\n", x); //remove after debug
     }
     while( (n/pow(10,i)) > 0 );
 }

@@ -27,7 +27,9 @@ int main(void)
         else
         {
             int z = y*2;
-            sum + ((z/pow(10, 0)) % 10) + ((z/pow(10, 1)) % 10);
+            int a = ( (z/pow(10, 0)));
+            int b = ( (z/pow(10, 1)));
+            sum = sum + a%10 + b%10;
         }
         printf("sum = %i\n", sum);
 

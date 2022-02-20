@@ -15,9 +15,16 @@ int main(void)
 
     do
     {
-         x = ( (n/pow(10, i)));
-         x = x % 10;
-         i ++;
+        // finding individual digit
+        x = ( (n/pow(10, i)));
+        x = x % 10;
+
+        if ( x % i = 0)
+        {
+            
+        }
+
+        i ++;
     }
     while( x != 0 );
 }

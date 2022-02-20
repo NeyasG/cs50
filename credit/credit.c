@@ -14,7 +14,7 @@ int main(void)
     do
     {
         printf("i = %i\n", i); //remove after debug
-         int x = ( (n/(10^i)));
+         int x = ( (n/(10^1)));
          i ++;
          printf("%i\n", x); //remove after debug
     }

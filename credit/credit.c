@@ -15,11 +15,9 @@ int main(void)
 
     do
     {
-         printf("i = %i\n", i); //remove after debug
          x = ( (n/pow(10, i)));
          x = x % 10;
          i ++;
-         printf("x = %i\n", x); //remove after debug
     }
     while( x != 0 );
 }

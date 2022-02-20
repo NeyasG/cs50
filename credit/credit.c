@@ -16,11 +16,11 @@ int main(void)
     do
     {
         // finding individual digit
-        x = ( (n/pow(10, i)));
+        x = ((n / pow(10, i)));
         int y = x % 10;
         length[i] = y;
 
-        if ( i % 2 == 0)
+        if (i % 2 == 0)
         {
             //adding normal digits
             sum = sum + y;
@@ -28,28 +28,29 @@ int main(void)
         // adding the sum of the remaining digits
         else
         {
-            int z = y*2;
-            int a = ( (z/pow(10, 0)));
-            int b = ( (z/pow(10, 1)));
-            sum = sum + a%10 + b%10;
+            int z = y * 2;
+            int a = ((z / pow(10, 0)));
+            int b = ((z / pow(10, 1)));
+            sum = sum + a % 10 + b % 10;
         }
 
         i ++;
     }
-    while( x != 0 );
+    while (x != 0);
 
     // Checksum mod 10 value
     if ((sum % 10 == 0) && (i == 14 || i == 16 || i == 17))
     {
-        if (length[i-2] == 4)
+        if (length[i - 2] == 4)
         {
             printf("VISA\n");
         }
-        else if (length[i-2] == 3 && (length[i-3] == 4 || length[i-3] == 7))
+        else if (length[i - 2] == 3 && (length[i - 3] == 4 || length[i - 3] == 7))
         {
             printf("AMEX\n");
         }
-        else if (length[i-2] == 5 && (length[i-3] == 1 || length[i-3] == 2 || length[i-3] == 3 || length[i-3] == 4 || length[i-3] == 5))
+        else if (length[i - 2] == 5 && (length[i - 3] == 1 || length[i - 3] == 2 || length[i - 3] == 3 || length[i - 3] == 4
+        || length[i - 3] == 5))
         {
             printf("MASTERCARD\n");
         }
@@ -58,8 +59,8 @@ int main(void)
             printf("INVALID\n");
         }
     }
-        else
-        {
-            printf("INVALID\n");
-        }
+    else
+    {
+        printf("INVALID\n");
+    }
 }

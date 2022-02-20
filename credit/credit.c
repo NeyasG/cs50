@@ -41,7 +41,8 @@ int main(void)
     // Checksum mod 10 value
     if (sum % 10 == 0)
     {
-        printf("Valid\n");
+        int first2 = length
+        printf("%i\n", length[i-1]);
     }
     else
     {

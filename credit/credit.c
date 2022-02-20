@@ -18,7 +18,7 @@ int main(void)
         x = ( (n/pow(10, i)));
         x = x % 10;
 
-        if ( x % i == 0)
+        if ( i % 2 == 0)
         {
             sum = sum + x;
         }

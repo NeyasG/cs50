@@ -20,5 +20,5 @@ int main(void)
          i ++;
          printf("x = %i\n", x); //remove after debug
     }
-    while( (n/pow(10,i)) > 0 );
+    while( x > 0 );
 }

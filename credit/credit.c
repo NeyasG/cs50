@@ -26,7 +26,7 @@ int main(void)
         }
         else
         {
-            sum = sum + (y*2);
+            sum = sum + ((y*2/pow(10, 0) % 10) + ((y*2/pow(10, 1) % 10);
         }
         printf("sum = %i\n", sum);
 

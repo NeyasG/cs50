@@ -45,10 +45,7 @@ int main(void)
         {
             printf("Visa\n");
         }
-        else
-        {
-            
-        }
+        if (length [i-2] == 3)
     }
     else
     {

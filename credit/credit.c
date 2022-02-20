@@ -17,16 +17,16 @@ int main(void)
     {
         // finding individual digit
         x = ( (n/pow(10, i)));
-        x = x % 10;
-        printf("x = %ld\n", x);
+        int y = x % 10;
+        printf("y = %i\n", y);
 
         if ( i % 2 == 0)
         {
-            sum = sum + x;
+            sum = sum + y;
         }
         else
         {
-            sum = sum + (x*2);
+            sum = sum + (y*2);
         }
         printf("sum = %i\n", sum);
 

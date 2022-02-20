@@ -5,20 +5,21 @@
 int main(void)
 {
     // User inputs CC number
-    double n = get_long("Credit Card Number\n");
-    printf("n = %f\n", n); //remove after debug
+    int n = get_long("Credit Card Number\n");
+    printf("n = %i\n", n); //remove after debug
 
     // Initialise power counter
-    double i = 0;
+    int i = 0;
     double sum = 0;
+    int x = 0;
 
     do
     {
-        printf("i = %f\n", i); //remove after debug
-         int x = ( (n/pow(10,i)));
+         printf("i = %i\n", i); //remove after debug
+         x = ( (n/pow(10, i)));
          x = x % 10;
          i ++;
          printf("x = %i\n", x); //remove after debug
     }
-    while( x > 0 );
+    while( x != 0 );
 }

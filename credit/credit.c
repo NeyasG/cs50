@@ -6,7 +6,7 @@ int main(void)
 {
     // User inputs CC number
     long n = get_long("Credit Card Number\n");
-    printf ( "%ld\n", n);
+    // printf ( "%ld\n", n);
 
     // Initialise power counter
     int i = 0;
@@ -43,7 +43,11 @@ int main(void)
     {
         if (length[i-2] == 4)
         {
-        printf("Visa\n");
+            printf("Visa\n");
+        }
+        else
+        {
+            
         }
     }
     else

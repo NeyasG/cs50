@@ -35,5 +35,5 @@ int main(void)
     while( x != 0 );
 
     // Checksum mod 10 value
-    Checksum = 
+    if (Checksum)
 }

@@ -5,8 +5,8 @@
 int main(void)
 {
     // User inputs CC number
-    long long n = get_long("Credit Card Number\n");
-    printf ( "%lld\n", n);
+    int n = get_long("Credit Card Number\n");
+    printf ( "%i\n", n);
 
     // Initialise power counter
     int i = 0;

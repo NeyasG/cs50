@@ -43,15 +43,15 @@ int main(void)
     {
         if (length[i-2] == 4)
         {
-            printf("Visa\n");
+            printf("VISA\n");
         }
         if (length[i-2] == 3 && (length[i-3] == 4 || length[i-3] == 7))
         {
-            printf("Amex\n");
+            printf("AMEX\n");
         }
         if (length[i-2] == 5 && (length[i-3] == 1 || length[i-3] == 2 || length[i-3] == 3 || length[i-3] == 4 || length[i-3] == 5))
         {
-            printf("Mastercard\n");
+            printf("MASTERCARD\n");
         }
     }
     else

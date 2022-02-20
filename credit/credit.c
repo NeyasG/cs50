@@ -45,7 +45,7 @@ int main(void)
         {
             printf("VISA\n");
         }
-        if (length[i-2] == 3 && (length[i-3] == 4 || length[i-3] == 7 || length[i-3] == 0))
+        if (length[i-2] == 3 && (length[i-3] == 4 || length[i-3] == 7))
         {
             printf("AMEX\n");
         }

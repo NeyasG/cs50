@@ -39,7 +39,7 @@ int main(void)
     while( x != 0 );
 
     // Checksum mod 10 value
-    if ((sum % 10 == 0) && i < 15)
+    if ((sum % 10 == 0) && i < 17)
     {
         if (length[i-2] == 4)
         {

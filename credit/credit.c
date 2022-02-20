@@ -6,7 +6,6 @@ int main(void)
 {
     // User inputs CC number
     long n = get_long("Credit Card Number\n");
-    // printf ( "%ld\n", n);
 
     // Initialise power counter
     int i = 0;
@@ -23,16 +22,17 @@ int main(void)
 
         if ( i % 2 == 0)
         {
-            sum = sum + y; //adding normal digits
+            //adding normal digits
+            sum = sum + y;
         }
-        else // adding the sum of the remaining digits
+        // adding the sum of the remaining digits
+        else
         {
             int z = y*2;
             int a = ( (z/pow(10, 0)));
             int b = ( (z/pow(10, 1)));
             sum = sum + a%10 + b%10;
         }
-        // printf("sum = %i\n", sum);
 
         i ++;
     }

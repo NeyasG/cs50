@@ -17,5 +17,5 @@ int main(void)
          i ++;
          printf("%i\n", x);
     }
-    while( (n/(10^i)) > 1 );
+    while( (n/(10^i)) > 0 );
 }

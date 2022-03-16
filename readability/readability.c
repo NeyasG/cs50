@@ -11,22 +11,22 @@ int main(void)
 {
 
 //prompt user for string input
-string text = get_string("Text: ");
+    string text = get_string("Text: ");
 //printing number of letters
 //printf("%i\n", count_letters(text));
-float let = count_letters(text);
+    float let = count_letters(text);
 //printing number of words
 //printf("%i\n", count_words(text));
-float word = count_words(text);
+    float word = count_words(text);
 //printing number of sentences
 //printf("%i\n", count_sentences(text));
-float sent = count_sentences(text);
+    float sent = count_sentences(text);
 
 //calculate the Coleman-Liau index for text
-float L = let/( word/100 );
-float S = sent/( word/100 );
-float index = (0.0588 * L) - (0.296 * S) - 15.8;
-int rounded_index = round(index);
+    float L = let/( word/100 );
+    float S = sent/( word/100 );
+    float index = (0.0588 * L) - (0.296 * S) - 15.8;
+    int rounded_index = round(index);
 
 //output Grade level
 if(rounded_index < 1)

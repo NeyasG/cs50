@@ -18,6 +18,8 @@ printf("%i\n", count_words(text));
 //printing number of sentences
 printf("%i\n", count_sentences(text));
 
+//
+
 }
 
 // function to count letters
@@ -54,8 +56,7 @@ int count_sentences(string text)
     int sentences = 0;
     for(int k = 0; k < strlen(text); k++)
     {
-        int text_char = text[k];
-        if(&text[k] == "." || &text[k] == "!" || &text[k] == "?")
+        if(text[k] == '.' || text[k] == '!' || text[k] == '?')
         sentences++;
     }
     return(sentences);

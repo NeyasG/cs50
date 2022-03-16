@@ -72,11 +72,8 @@ int count_words(string text)
     for (int j = 0; j < strlen(text); j++)
     {
         if (isspace(text[j]) != 0)
-
-
             words++;
-
-    }
+        }
 
     words = words + 1;
     return (words);
@@ -89,8 +86,6 @@ int count_sentences(string text)
     for (int k = 0; k < strlen(text); k++)
     {
         if (text[k] == '.' || text[k] == '!' || text[k] == '?')
-
-
             sentences++;
         }
     return(sentences);

@@ -22,15 +22,15 @@ printf("%i\n", count_letters(text));
 // function to count letters in a sentence
 int count_letters(string text)
 {
-
-    int letters;
-    for(i = 0; i < strlen(text); i++)
+    int letters = 0;
+    for(int i = 0; i < strlen(text); i++)
     {
-        if(isalnum(text[i] 
+        if(isalnum(text[i]) != false)
+        letters ++;
     }
-
+    return(letters++);
 
     // counting all characters and spaces
-    int x = strlen(text);
-    return(x);
+    //int x = strlen(text);
+    //return(x);
 }

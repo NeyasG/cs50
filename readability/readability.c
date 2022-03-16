@@ -7,7 +7,6 @@ int count_letters(string text);
 int main(void)
 {
 
-
 //count number of characters, words, and sentences
 //Exclude spaces
 //Coleman formula to identify grade
@@ -16,14 +15,20 @@ int main(void)
 
 //prompt user for string input
 string text = get_string("Text: ");
-int y = count_letters(text);
-printf("%i\n", y);
+printf("%i\n", count_letters(text));
 
 }
 
 // function to count letters in a sentence
 int count_letters(string text)
 {
+
+    int letters;
+    for(i = 0; i < strlen(text); i++)
+    {
+        if(isalnum(text[i] 
+    }
+
 
     // counting all characters and spaces
     int x = strlen(text);

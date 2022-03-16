@@ -25,7 +25,7 @@ int count_letters(string text)
     int letters = 0;
     for(int i = 0; i < strlen(text); i++)
     {
-        if(isalnum(text[i]) != false)
+        if(isalnum(text[i]) != false &&  != ".")
         letters ++;
     }
     return(letters++);

@@ -32,7 +32,7 @@ int count_letters(string text)
             letters++;
         }
     }
-    return(letters)
+    return(letters);
     // counting all characters and spaces
     //int x = strlen(text);
     //return(x);

@@ -23,8 +23,8 @@ printf("%i\n", count_sentences(text));
 float L = count_letters(text)/( count_words(text)/100 );
 float S = count_sentences(text)/( count_words(text)/100 );
 float index = (0.0588 * L) - (0.296 * S) - 15.8;
-int rounded_index = round(index);
-printf("Grade %i\n", rounded_index);
+//int rounded_index = round(index);
+printf("Grade %ff\n", index);
 
 }
 

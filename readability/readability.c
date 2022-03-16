@@ -13,13 +13,13 @@ int main(void)
 //prompt user for string input
 string text = get_string("Text: ");
 //printing number of letters
-printf("%i\n", count_letters(text));
+//printf("%i\n", count_letters(text));
 float let = count_letters(text);
 //printing number of words
-printf("%i\n", count_words(text));
+//printf("%i\n", count_words(text));
 float word = count_words(text);
 //printing number of sentences
-printf("%i\n", count_sentences(text));
+//printf("%i\n", count_sentences(text));
 float sent = count_sentences(text);
 
 //calculate the Coleman-Liau index for text
@@ -28,17 +28,21 @@ float S = sent/( word/100 );
 float index = (0.0588 * L) - (0.296 * S) - 15.8;
 int rounded_index = round(index);
 
+//output Grade level
 if(rounded_index < 1)
 {
-    printf("Before Grade 1");
+    printf("Before Grade 1\n");
+    return(0);
 }
 if(rounded_index > 16)
 {
-    printf("Grade 16+");
+    printf("Grade 16+\n");
+    return(0);
 }
 else
 {
     printf("Grade %i\n", rounded_index);
+    return(0);
 }
 
 }

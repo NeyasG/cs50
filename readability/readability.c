@@ -22,7 +22,7 @@ printf("%i\n", x);
 }
 
 // function to count letters in a sentence
-int count_letters(string text)
+int count_letters()
 {
     int letters = 0;
     for (int y = 0, y < strlen(text), y++)

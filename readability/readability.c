@@ -5,24 +5,22 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 int main(void)
 {
 
-//count number of characters, words, and sentences
-//Exclude spaces
-//Coleman formula to identify grade
-//if <1 output "before grade 1"
-//if >16 output "Grade 16+"
-
 //prompt user for string input
 string text = get_string("Text: ");
-//calling function count_letters using string text
+//printing number of letters
 printf("%i\n", count_letters(text));
+//printing number of words
 printf("%i\n", count_words(text));
+//printing number of sentences
+printf("%i\n", count_sentences(text));
 
 }
 
-// function to count letters in a sentence
+// function to count letters
 int count_letters(string text)
 {
     int letters = 0;
@@ -37,6 +35,7 @@ int count_letters(string text)
 
 }
 
+//function to count numbers
 int count_words(string text)
 {
     int words = 0;
@@ -47,4 +46,16 @@ int count_words(string text)
     }
     words = words + 1;
     return(words);
+}
+
+//function to count sentences
+int count_sentences(string text)
+{
+    int sentences = 0;
+    for(int k = 0; k < strlen(text); k++)
+    {
+        if(text[k] == "." || text[k] = "!" || text[k] = "?")
+        sentences++;
+    }
+    return(sentences);
 }

@@ -20,11 +20,11 @@ printf("%i\n", count_words(text));
 printf("%i\n", count_sentences(text));
 
 //calculate the Coleman-Liau index for text
-int L = 
-int S
+int L = count_letters(text)/100;
+int S = count_sentences(text)/100;
 float index = 0.0588 * L - 0.296 * S - 15.8;
-index = round(index);
-printf("Grade %i\n" index);
+int rounded_index = round(index);
+printf("Grade %i\n", rounded_index);
 
 }
 

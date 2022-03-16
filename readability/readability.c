@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -18,7 +19,12 @@ printf("%i\n", count_words(text));
 //printing number of sentences
 printf("%i\n", count_sentences(text));
 
-//
+//calculate the Coleman-Liau index for text
+int L = 
+int S
+float index = 0.0588 * L - 0.296 * S - 15.8;
+index = round(index);
+printf("Grade %i\n" index);
 
 }
 

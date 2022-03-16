@@ -25,7 +25,7 @@ printf("%i\n", x);
 int count_letters(string text)
 {
     int letters = 0;
-    for (int y = 0, y > strlen(text), y++)
+    for (int y = 0, y < strlen(text), y++)
     {
         if(isalnum(text[y] = true))
         {

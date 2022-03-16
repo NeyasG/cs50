@@ -14,12 +14,12 @@ int main(void)
 //if >16 output "Grade 16+"
 
 string text = get_string("Text: ");
-printf("%s\n", text);
+int x = count_letters(text);
+printf("%i\n", x);
 
 }
 
 int count_letters(string text)
 {
-    text_length = strlen(text);
-    return(text_length);
+    return(strlen(text));
 }

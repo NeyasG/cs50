@@ -18,6 +18,7 @@ int main(void)
 string text = get_string("Text: ");
 //calling function count_letters using string text
 printf("%i\n", count_letters(text));
+printf("%i\n", count_words(text));
 
 }
 
@@ -38,5 +39,11 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    
+    int words = 0;
+    for(int i = 0; i < strlen(text); i++)
+    {
+        if(isspace(text[i]) = true)
+        words++
+    }
+    return(words + 1)
 }

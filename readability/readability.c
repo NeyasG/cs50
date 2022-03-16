@@ -40,10 +40,11 @@ int count_letters(string text)
 int count_words(string text)
 {
     int words = 0;
-    for(int i = 0; i < strlen(text); i++)
+    for(int j = 0; j < strlen(text); j++)
     {
-        if(isspace(text[i]) == true)
+        if(isspace(text[j]) == true)
         words++;
     }
-    return(words + 1);
+    words = words + 1;
+    return(words);
 }

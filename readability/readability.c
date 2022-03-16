@@ -14,17 +14,32 @@ int main(void)
 string text = get_string("Text: ");
 //printing number of letters
 printf("%i\n", count_letters(text));
+float let = count_letters(text);
 //printing number of words
 printf("%i\n", count_words(text));
+float word = count_words(text);
 //printing number of sentences
 printf("%i\n", count_sentences(text));
+float sent = count_sentences(text);
 
 //calculate the Coleman-Liau index for text
-float L = count_letters(text)/( count_words(text)/100 );
-float S = count_sentences(text)/( count_words(text)/100 );
+float L = let/( word/100 );
+float S = sent/( word/100 );
 float index = (0.0588 * L) - (0.296 * S) - 15.8;
-//int rounded_index = round(index);
-printf("Grade %ff\n", index);
+int rounded_index = round(index);
+
+if(rounded_index < 1)
+{
+    printf("Before Grade 1");
+}
+if(rounded_index > 16)
+{
+    printf("Grade 16+");
+}
+else
+{
+    printf("Grade %i\n", rounded_index);
+}
 
 }
 

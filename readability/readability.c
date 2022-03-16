@@ -16,24 +16,16 @@ int main(void)
 
 //prompt user for string input
 string text = get_string("Text: ");
-int x = count_letters(text);
-printf("%i\n", x);
+int y = count_letters(text);
+printf("%i\n", y);
 
 }
 
 // function to count letters in a sentence
 int count_letters(string text)
 {
-    int letters = 0;
-    for (int i = 0; i < strlen(text); i++)
-    {
-        if(isalnum(text[i] = true))
-        {
-            letters++;
-        }
-    }
-    return(letters);
+
     // counting all characters and spaces
-    //int x = strlen(text);
-    //return(x);
+    int x = strlen(text);
+    return(x);
 }

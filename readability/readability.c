@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int count_letters(string user_text);
+int count_letters(string text);
 int main(void)
 {
 
@@ -22,12 +22,12 @@ printf("%i\n", x);
 }
 
 // function to count letters in a sentence
-int count_letters()
+int count_letters(string text)
 {
     int letters = 0;
-    for (int y = 0, y < strlen(text), y++)
+    for (int i = 0; i < strlen(text); i++)
     {
-        if(isalnum(text[y] = true))
+        if(isalnum(text[i] = true))
         {
             letters++;
         }

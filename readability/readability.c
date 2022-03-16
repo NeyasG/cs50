@@ -3,8 +3,6 @@
 #include <string.h>
 
 int main(void)
-int count_letters(string text)
-
 {
 
 //prompt user for string input
@@ -14,7 +12,7 @@ int count_letters(string text)
 //if <1 output "before grade 1"
 //if >16 output "Grade 16+"
 
-text = get_string("Text: ");
+string text = get_string("Text: ");
 printf("%s\n", text);
 
 }

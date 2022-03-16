@@ -20,5 +20,6 @@ printf("%s\n", text);
 
 int count_letters(string text)
 {
-
+    text_length = strlen(text);
+    return(text_length);
 }

@@ -42,7 +42,7 @@ int count_words(string text)
     int words = 0;
     for(int j = 0; j < strlen(text); j++)
     {
-        if(isspace(text[j]) == true)
+        if(isspace(text[j]) != 0)
         words++;
     }
     words = words + 1;

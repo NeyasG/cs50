@@ -24,8 +24,4 @@ printf("%i\n", x);
 int count_letters(string text)
 {
     int x = strlen(text);
-    for(int i = 0, i > strlen, i++)
-    {
-
-    }
 }

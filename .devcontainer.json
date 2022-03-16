@@ -11,7 +11,7 @@
     "samuelcolvin.jinjahtml", 
     "vsls-contrib.gitdoc"
   ], 
-  "image": "ghcr.io/cs50/codespace:7b573c347502c12c8016a15b057d6890969d7183", 
+  "image": "ghcr.io/cs50/codespace:63d1386bb87e8efcbcc433cd4d8abf2f0983641a", 
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand", 
   "settings": {
     "C_Cpp.autocomplete": "Disabled", 
@@ -57,6 +57,7 @@
     "files.associations": {
       "*.html": "jinja-html"
     }, 
+    "files.autoSave": "afterDelay", 
     "files.exclude": {
       "**/.*": true
     }, 

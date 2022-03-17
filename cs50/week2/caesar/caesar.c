@@ -28,15 +28,15 @@ int main(int argc, string argv[])
         // convert to int from string
         int key = atoi(argv[1]);
         string plain_text = get_string("plaintext: ");
-    }
 
-    char ch = rotate('a', 2);
-    printf("Rotated = %c\n", ch);
-    // run cipher function on string array per character
-    for (int j = 0, len = strlen(plain_text); j < len; j++)
-    {
-        string cipher_text[i] = rotate(argv[i], key)
+        // run cipher function on string array per character
+        for (int j = 0, len = strlen(plain_text); j < len; j++)
+        {
+            string cipher_text[j] = rotate(plain_text[j], key)
+        }
     }
+    //char ch = rotate('a', 2);
+    //printf("Rotated = %c\n", ch);
     // print cipher
     printf("ciphertextL: %s\n", cipher_text);
     // return 0

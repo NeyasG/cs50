@@ -8,7 +8,7 @@ char rotate(char a, int x);
 bool only_digits(string digits);
 int main(int argc, string argv[])
 {
-    printf("Argv = %s\n", argv[1]);
+    printf("argv[1] = %s\n", argv[1]);
     // Get key value from command line argument
     if (argc != 2)
     {

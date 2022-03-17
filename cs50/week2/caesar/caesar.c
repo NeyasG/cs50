@@ -30,9 +30,10 @@ int main(int argc, string argv[])
         string plain_text = get_string("plaintext: ");
     }
 
+    char ch = rotate('A', 1);
+    printf("Rotated = %c\n", ch);
     // run cipher function on string array per character
-    printf("ciphertext: %c", rotate('A', 15));
-        // apply key to find resulting character
+    // apply key to find resulting character
     // print cipher
     // return 0
 }
@@ -54,8 +55,7 @@ char rotate(char a, int x)
     if (isalpha(a))
     {
         char c = (a + x) % 26;
-        printf("%c\n", x);
-        return (a + x) % 26;
+        return c;
     }
     else
     {

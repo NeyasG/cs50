@@ -5,6 +5,7 @@ int collatz(int n);
 int main(void)
 {
     int x = get_int("Starting Number: ");
+    printf("Collatz: %i\n", collatz(x));
 
 
 }

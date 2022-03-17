@@ -11,11 +11,10 @@ int main(void)
 
 int collatz(int n)
 {
-    int i = 0
+
     if (n == 1)
         return 0;
     else if (%(n/2) = 0)
-        n = n/2
-        
+
 
 }

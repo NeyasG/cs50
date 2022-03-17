@@ -27,7 +27,8 @@ int compute_score(string word)
     // TODO: Compute and return score for string
     int word_score = 0;
     for (int i = 0; i < strlen(word); i++)
-        if (isalpha(word[i]) != 0)
-            word_score[i] = POINTS[i] + word_score[i];
+    {
+        
+    }
 
 }

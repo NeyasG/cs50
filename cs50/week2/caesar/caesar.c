@@ -50,5 +50,12 @@ bool only_digits(string s)
 
 char rotate(char a, int x)
 {
-    if (a )
+    if (isalpha(a))
+    {
+        return (a + x) % 26);
+    }
+    else
+    {
+        return a;
+    }
 }

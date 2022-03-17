@@ -30,9 +30,13 @@ int main(int argc, string argv[])
         string plain_text = get_string("plaintext: ");
     }
 
-    char ch = rotate('A', 2);
+    char ch = rotate('a', 2);
     printf("Rotated = %c\n", ch);
     // run cipher function on string array per character
+    for (int j = 0, len = strlen(argv); j < len; j++)
+    {
+        
+    }
     // apply key to find resulting character
     // print cipher
     // return 0
@@ -52,10 +56,17 @@ bool only_digits(string s)
 
 char rotate(char a, int x)
 {
-    if (isalpha(a) )
+    if (isupper(a))
     {
         char c = ((a - 'A') + x) % 26;
         c = c + 'A';
+        return c;
+    }
+    else
+        if (islower(a))
+    {
+        char c = ((a - 'a') + x) % 26;
+        c = c + 'a';
         return c;
     }
     else

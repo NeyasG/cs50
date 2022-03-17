@@ -33,7 +33,7 @@ int main(int argc, string argv[])
     char ch = rotate('a', 2);
     printf("Rotated = %c\n", ch);
     // run cipher function on string array per character
-    for (int j = 0, len = strlen(argv); j < len; j++)
+    for (int j = 0, len = strlen(plain_text); j < len; j++)
     {
         string cipher_text[i] = rotate(argv[i], key)
     }

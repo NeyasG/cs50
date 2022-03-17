@@ -31,7 +31,7 @@ int main(int argc, string argv[])
     }
 
     char ch = rotate('A', 1);
-    printf("Rotated = %c\n", ch);
+    printf("Rotated = %i\n", ch);
     // run cipher function on string array per character
     // apply key to find resulting character
     // print cipher

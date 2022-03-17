@@ -11,11 +11,13 @@ int main(int argc, string argv[])
     // Get key value from command line argument
     if (argc != 2)
     {
+        // prompt user for string input
         printf("Usage: ./caesar key\n");
         return 1;
     }
 
         // if not decimal digit print error message and return 1
+        // if error print error message and return 1
     if (only_digits(argv[1]) == false)
     {
         printf("Usage: ./caesar key\n");
@@ -23,14 +25,14 @@ int main(int argc, string argv[])
     }
     else
     {
+        // convert to int from string
         int key = atoi(argv[1]);
         string plain_text = get_string("plaintext: ");
         return 0;
     }
-        // if error print error message and return 1
-        // convert to int from string
-    // prompt user for string input
+
     // run cipher function on string array per character
+    printf("ciphertext: %c", rotate(plain_text[1], key));
         // apply key to find resulting character
     // print cipher
     // return 0

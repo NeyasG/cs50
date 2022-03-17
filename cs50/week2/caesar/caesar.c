@@ -28,11 +28,12 @@ int main(int argc, string argv[])
         // convert to int from string
         int key = atoi(argv[1]);
         string plain_text = get_string("plaintext: ");
-
+        int len = strlen(plain_text);
+        string cipher_text[len];
         // run cipher function on string array per character
-        for (int j = 0, len = strlen(plain_text); j < len; j++)
+        for (int j = 0; j < len; j++)
         {
-            string cipher_text[j] = rotate(plain_text[j], key)
+            cipher_text[j] = rotate(plain_text[j], key)
         }
     }
     //char ch = rotate('a', 2);

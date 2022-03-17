@@ -17,5 +17,5 @@ int collatz(int n)
     else if ((n % 2) == 0)
         return 1 + collatz(n/2);
     else
-        return 1 + collatz(n/3);
+        return 1 + collatz(3*n + 1);
 }

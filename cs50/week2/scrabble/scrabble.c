@@ -35,9 +35,9 @@ int compute_score(string word)
     for (int i = 0; i < strlen(word); i++)
     {
         if (isupper(word[i] != 0))
-            word_score = word_score + POINTS[(word[i] - "A")];
+            word_score += POINTS[word[i] - "A"];
         else if (ispper(word[i] == 0))
-            word_score = word_score + POINTS[(word[i] - "a")];
+            word_score += POINTS[word[i] - "a"];
     }
 
 }

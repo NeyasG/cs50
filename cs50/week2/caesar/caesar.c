@@ -35,10 +35,10 @@ int main(int argc, string argv[])
     // run cipher function on string array per character
     for (int j = 0, len = strlen(argv); j < len; j++)
     {
-        
+        string cipher_text[i] = rotate(argv[i], key)
     }
-    // apply key to find resulting character
     // print cipher
+    printf("ciphertextL: %s\n", cipher_text);
     // return 0
 }
 

@@ -28,6 +28,6 @@ int compute_score(string word)
     int word_score = 0;
     for (int i = 0; i < strlen(word); i++)
         if (isalpha(word[i]) != 0)
-            word_score++;
+            word_score[i] = POINTS[i] + word_score[i];
 
 }

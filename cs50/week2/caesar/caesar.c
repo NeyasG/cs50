@@ -28,11 +28,10 @@ int main(int argc, string argv[])
         // convert to int from string
         int key = atoi(argv[1]);
         string plain_text = get_string("plaintext: ");
-        return 0;
     }
 
     // run cipher function on string array per character
-    // printf("ciphertext: %c", rotate(plain_text[1], key));
+    printf("ciphertext: %c", rotate('A', 15));
         // apply key to find resulting character
     // print cipher
     // return 0

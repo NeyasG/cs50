@@ -37,7 +37,11 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+
+    // set score to 0
     int score = 0;
+
+    // loop through each character and find score using ASCII values
     for (int i = 0, len = strlen(word); i < len; i++)
     {
         if (isupper(word[i]))

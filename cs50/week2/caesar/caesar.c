@@ -50,5 +50,5 @@ bool only_digits(string s)
 
 char rotate(char a, int x)
 {
-    
+    if (a )
 }

@@ -1,4 +1,4 @@
-sort1 uses: TODO
+sort1 uses: selection sort
 
 How do you know?: TODO
 sort 1 on random5000 time = 0.107s
@@ -19,7 +19,7 @@ Has to check all n elements O(n)?
 Very quick with sorted list as it only checks n elements? It starts searching from 1.
 Likely selection sort
 
-sort2 uses: Merge
+sort2 uses: merge sort
 
 How do you know?: TODO
 sort 2 on random5000 time = 0.033s
@@ -38,7 +38,7 @@ Seems to handle scaling problems very well O(log n)?
 Very little difference if list is sorted or unsorted. Omega(log n)?
 Likely Merge Sort
 
-sort3 uses: Bubble Sort
+sort3 uses: bubble sort
 
 How do you know?: TODO
 sort 3 on random5000 time = 0.076s

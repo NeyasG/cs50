@@ -69,7 +69,10 @@ bool vote(string name)
     // TODO
     for (int j = 0; j < voter_count; j++)
     {
-        
+        if (strcomp(name, candidates[j+1].name) == 0)
+        {
+            
+        }
     }
     return false;
 }

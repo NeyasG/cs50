@@ -71,7 +71,7 @@ bool vote(string name)
     {
         if (strcomp(name, candidates[j+1].name) == 0)
         {
-            
+            candidates[j+1].votes++
         }
     }
     return false;

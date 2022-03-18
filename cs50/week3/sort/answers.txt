@@ -1,6 +1,6 @@
 sort1 uses: selection sort
 
-How do you know?: TODO
+How do you know?:
 sort 1 on random5000 time = 0.107s
 sort 1 on random10000 time = 0.322s
 sort 1 on random50000 time = 7.452s
@@ -17,11 +17,10 @@ Scales very poorly with problem size if not sorted (random5000)
 Linear relationship when going through sorted list
 Has to check all n elements O(n)?
 Very quick with sorted list as it only checks n elements? It starts searching from 1.
-Likely selection sort
 
-sort2 uses: merge sort
+sort2 uses: bubble sort
 
-How do you know?: TODO
+How do you know?:
 sort 2 on random5000 time = 0.033s
 sort 2 on random10000 time = 0.085s
 sort 2 on random50000 time = 0.382s
@@ -36,11 +35,10 @@ sort 2 on sorted50000 time = 0.519s
 
 Seems to handle scaling problems very well O(log n)?
 Very little difference if list is sorted or unsorted. Omega(log n)?
-Likely Merge Sort
 
-sort3 uses: bubble sort
+sort3 uses: merge sort
 
-How do you know?: TODO
+How do you know?:
 sort 3 on random5000 time = 0.076s
 sort 3 on random10000 time = 0.181s
 sort 3 on random50000 time = 3.031s
@@ -56,4 +54,3 @@ sort 3 on sorted50000 time = 3.006s
 Similar results across all 3 files
 Faster that sort1 over large unsorted samples
 However over sorted samples still has the same time relationship.
-Likely Bubble sort?

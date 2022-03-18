@@ -7,7 +7,7 @@ sort 1 on random50000 time = 7.452s
 
 sort 1 on reversed5000 time = 0.094s
 sort 1 on reversed10000 time = 0.276s
-sort 1 on reversed10000 time = 5.419s
+sort 1 on reversed50000 time = 5.419s
 
 sort 1 on sorted5000 time = 0.047s
 sort 1 on sorted10000 time = 0.064s

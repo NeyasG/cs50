@@ -15,7 +15,7 @@ sort 1 on sorted50000 time = 0.331s
 
 Scales very poorly with problem size if not sorted (random5000)
 Linear relationship when going through sorted list
-Has to check all n elements
+Has to check all n elements O(n)?
 Likely selection sort
 
 sort2 uses: TODO
@@ -33,12 +33,22 @@ sort 2 on sorted5000 time = 0.045s
 sort 2 on sorted10000 time = 0.063s
 sort 2 on sorted50000 time = 0.519s
 
-Seems to handle scaling problems very well
-Very little difference if list is sorted or unsorted.
+Seems to handle scaling problems very well O(log n)?
+Very little difference if list is sorted or unsorted. Omega(log n)?
+Likely Merge Sort
 
 sort3 uses: TODO
 
 How do you know?: TODO
 sort 3 on random5000 time = 0.076s
-sort 3 on random10000 time = 0.181
+sort 3 on random10000 time = 0.181s
 sort 3 on random50000 time = 3.031s
+
+sort 3 on reversed5000 time = 0.050s
+sort 3 on reversed10000 time = 0.184s
+sort 3 on reversed50000 time = 3.252s
+
+sort 3 on sorted5000 time = 0.053s
+sort 3 on sorted10000 time = 0.184s
+sort 3 on sorted50000 time = 3.006s
+

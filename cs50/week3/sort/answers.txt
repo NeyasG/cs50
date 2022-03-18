@@ -3,15 +3,18 @@ sort1 uses: TODO
 How do you know?: TODO
 sort 1 on random5000 time = 0.107s
 sort 1 on random10000 time = 0.322s
+sort 1 on random50000 time = 7.452s
 
 sort2 uses: TODO
 
 How do you know?: TODO
 sort 2 on random5000 time = 0.023s
 sort 2 on random10000 time = 0.062s
+sort 2 on random50000 time = 0.551s
 
 sort3 uses: TODO
 
 How do you know?: TODO
 sort 3 on random5000 time = 0.076s
 sort 3 on random10000 time = 0.181
+sort 3 on random50000 time = 3.031s

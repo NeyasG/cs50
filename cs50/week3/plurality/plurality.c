@@ -80,11 +80,11 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    int total_votes;
+    int total_votes = 0;
     // TODO
     for (int k = 0; k < candidate_count; k++)
     {
-        total_votes += candidate[k].votes;
+        total_votes += candidates[k].votes;
     }
     printf("Number of voters %i\n", total_votes);
     return;

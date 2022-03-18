@@ -87,6 +87,6 @@ void print_winner(void)
     {
         total_votes += candidates[k].votes;
     }
-    printf("Number of voters %i\n", total_votes);
+    printf("Number of voters %i\n", candidates[1].votes);
     return;
 }

@@ -67,11 +67,11 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    for (int j = 0; j < voter_count; j++)
+    for (int j = 0; j < candidate_count; j++)
     {
-        if (strcomp(name, candidates[j+1].name) == 0)
+        if (strcmp(name, candidates[j+1].name) == 0)
         {
-            candidates[j+1].votes++
+            candidates[j+1].votes++;
         }
     }
     return false;
@@ -81,5 +81,6 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    
     return;
 }

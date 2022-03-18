@@ -5,6 +5,17 @@ sort 1 on random5000 time = 0.107s
 sort 1 on random10000 time = 0.322s
 sort 1 on random50000 time = 7.452s
 
+sort 1 on reversed5000 time = 0.094s
+sort 1 on reversed10000 time = 0.276s
+sort 1 on reversed10000 time = 5.419s
+
+sort 1 on sorted5000 time = 0.047s
+sort 1 on sorted10000 time = 0.064s
+sort 1 on sorted50000 time = 0.331s
+Linear relationship between size and time
+Has to check all n elements
+Likely selection sort
+
 sort2 uses: TODO
 
 How do you know?: TODO

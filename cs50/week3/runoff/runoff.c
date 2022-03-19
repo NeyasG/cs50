@@ -131,17 +131,6 @@ bool vote(int voter, int rank, string name)
     //check if name is valid match
     //update preferences array to match voter preference
     //return true
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (strcmp(name) == 0)
-        {
-            preferences[i][i] = 
-            return true;
-        }
-        return false;
-    }
-
-
     return false;
 }
 

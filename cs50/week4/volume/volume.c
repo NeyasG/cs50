@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
     // Copy header bytes into temp variable
     fread(&header, sizeof(header), 1, input);
     // write header into output file
-    fwrite(&header, sizeof(header))
+    fwrite(&header, sizeof(header), 1, output);
     // TODO: Read samples from input file and write updated data to output file
 
     // Close files

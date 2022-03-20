@@ -132,9 +132,9 @@ bool vote(int voter, int rank, string name)
     //check if name is valid match
     for (int i = 0; i < candidate_count; i++)
         //update preferences array to match voter preference
-        if (strcmp(name, candidates[i]))
+        if (strcmp(name, candidates[i].name))
         {
-            preferences[voter][rank] = [i];
+            preferences[voter][rank] = i;
             printf("Updated Preferences[%i][%i] %i\n", voter, rank, preferences[voter][rank]);
             return true;
         }

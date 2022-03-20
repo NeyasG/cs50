@@ -54,7 +54,6 @@ int main(int argc, string argv[])
         candidates[i].name = argv[i + 1];
         candidates[i].votes = 0;
         candidates[i].eliminated = false;
-        printf("i = %i name = %s\n", i, candidates[i].name);
     }
 
 
@@ -130,18 +129,13 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    // TODO
     //check if name is valid match
     for (int k = 0; k < candidate_count; k++)
     {
-        printf("k = %i voter = %i rank = %i\n", k, voter, rank);
         //update preferences array to match voter preference
         if (strcmp(name, candidates[k].name) == 0)
         {
             preferences[voter][rank] = k;
-            // printf("k = %i\n", k);
-            printf("candidates[k].name: %s\n", candidates[k].name);
-            printf("Updated Preferences[%i][%i] %i\n", voter, rank, preferences[voter][rank]);
             return true;
         }
     }
@@ -152,6 +146,7 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+    
     return;
 }
 

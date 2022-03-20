@@ -35,10 +35,12 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     // Get 44 bytes of memory
-    head_mem = malloc(sizeof())
+    char *head_mem = malloc(44);
     // Copy header bytes into temp variable
-
+    
     // write header into output file
+    // Free mem
+    free(head_mem);
 
     // TODO: Read samples from input file and write updated data to output file
 

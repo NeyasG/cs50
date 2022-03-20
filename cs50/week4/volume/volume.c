@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     // Get 44 bytes of memory
-    head_mem = 
+    head_mem = malloc()
     // Copy header bytes into temp variable
 
     // write header into output file

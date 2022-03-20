@@ -1,14 +1,16 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
 
 int main(void)
 {
-        int x = 3;
-        int y = 5;
+        float x = 3;
+        float y = 5;
 
-        int majority = x / y;
+        float majority = x / y;
+        majority = round(majority);
 
-        printf("%i\n", majority);
+        printf("%fd\n", majority);
 
 }
 

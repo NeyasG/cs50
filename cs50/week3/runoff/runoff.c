@@ -150,7 +150,8 @@ void tabulate(void)
     {
         for (int m = 0; m < candidate_count; m++)
         {
-            if (candidates{preferences[l][m]}.eliminated == false)
+            int can_number = preferences[l][m];
+            if (candidates[can_number].eliminated == false)
             {
                 candidates[l].votes += 1;
                 printf("Candidate %s votes = %i\n", candidates[m].name, candidates[l].votes);

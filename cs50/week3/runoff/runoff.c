@@ -167,7 +167,7 @@ bool print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (round(candidates[i].votes) >= round(voter_count / 2))
+        if (round(candidates[i].votes)*2 >= voter_count)
         {
             printf("%s\n", candidates[i].name);
             return true;

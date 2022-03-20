@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     //Create array of 44 bytes
     uint8_t header[44];
     // Copy header bytes into temp variable
-
+    
     // write header into output file
     // Free mem
     free(head_mem);

@@ -37,11 +37,9 @@ int main(int argc, char *argv[])
     //Create array of 44 bytes
     uint8_t header[44];
     // Copy header bytes into temp variable
-    
+    fread(&header, sizeof(header), 1, input);
     // write header into output file
-    // Free mem
-    free(head_mem);
-
+    fwrite(&header, sizeof(header))
     // TODO: Read samples from input file and write updated data to output file
 
     // Close files

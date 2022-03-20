@@ -34,8 +34,6 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
-    // Get 44 bytes of memory
-    char *head_mem = malloc(44);
     //Create array of 44 bytes
     uint8_t header[44];
     // Copy header bytes into temp variable

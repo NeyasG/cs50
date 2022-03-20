@@ -156,8 +156,6 @@ void tabulate(void)
                 candidates[l].votes += 1;
                 printf("Candidate %s votes = %i\n", candidates[m].name, candidates[l].votes);
             }
-            else
-                return;
         }
     }
     return;

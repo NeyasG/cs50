@@ -134,6 +134,7 @@ bool vote(int voter, int rank, string name)
         if (strcmp(name, candidates[i]))
         {
             preferences[voter][rank] = [i];
+            printf("Updated Preferences[%i][%i] %i\n", voter, rank, preferences[voter][rank]);
             return true;
         }
     return false;

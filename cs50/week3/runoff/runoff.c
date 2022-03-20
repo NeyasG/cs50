@@ -131,6 +131,7 @@ bool vote(int voter, int rank, string name)
     //check if name is valid match
     //update preferences array to match voter preference
     //return true
+    if (name )
     return false;
 }
 

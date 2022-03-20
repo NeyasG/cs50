@@ -136,7 +136,7 @@ bool vote(int voter, int rank, string name)
     {
         printf("k = %i voter = %i rank = %i\n", k, voter, rank);
         //update preferences array to match voter preference
-        if (strcmp(name, candidates[k].name))
+        if (strcmp(name, candidates[k].name) == 0)
         {
             preferences[voter][rank] = k;
             // printf("k = %i\n", k);

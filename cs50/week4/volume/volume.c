@@ -40,8 +40,11 @@ int main(int argc, char *argv[])
     fread(&header, sizeof(header), 1, input);
     // write header into output file
     fwrite(&header, sizeof(header), 1, output);
-    // TODO: Read samples from input file and write updated data to output file
 
+    // TODO: Read samples from input file and write updated data to output file
+    int16_t buffer;
+
+    for (int i )
     // Close files
     fclose(input);
     fclose(output);

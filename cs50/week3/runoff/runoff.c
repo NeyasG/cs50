@@ -54,7 +54,9 @@ int main(int argc, string argv[])
         candidates[i].name = argv[i + 1];
         candidates[i].votes = 0;
         candidates[i].eliminated = false;
+        printf("i = %i name = %s\n", i, candidates[i].name);
     }
+
 
     voter_count = get_int("Number of voters: ");
     if (voter_count > MAX_VOTERS)
@@ -132,7 +134,7 @@ bool vote(int voter, int rank, string name)
     //check if name is valid match
     for (int k = 0; k < candidate_count; k++)
     {
-        printf("K = %i voter = %i rank = %i\n", k, voter, rank);
+        printf("k = %i voter = %i rank = %i\n", k, voter, rank);
         //update preferences array to match voter preference
         if (strcmp(name, candidates[k].name))
         {

@@ -178,9 +178,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // find average and assign to image[i][j]
-            image[i][j].rgbtRed = round((float) sumRed / counter);
-            image[i][j].rgbtBlue = round((float) sumBlue / counter);
-            image[i][j].rgbtGreen = round((float) sumGreen / counter);
+            image[i][j].rgbtRed = fmin(round((float) sumRed / counter), 255);
+            image[i][j].rgbtBlue = fmin(round((float) sumBlue / counter), 255);
+            image[i][j].rgbtGreen = fmin(round((float) sumGreen / counter), 255);
         }
     }
     return;

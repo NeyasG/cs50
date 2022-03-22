@@ -85,9 +85,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 
     // creating variables to track growing sum of RGB colours
-    int sumRed = 0;
-    int sumBlue = 0;
-    int sumGreen = 0;
+    int sumRed;
+    int sumBlue;
+    int sumGreen;
     // tracking number of cells used
     int counter = 0;
 

@@ -79,10 +79,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    int sumRed = 0;
-    int sumBlue = 0;
-    int sumGreen = 0;
-
     // make a copy of the original image
     RGBTRIPLE copy[height][width];
     for (int i = 0; i < height; i++)
@@ -93,6 +89,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
+    // creating variables to track growing sum of RGB colours
+    int sumRed = 0;
+    int sumBlue = 0;
+    int sumGreen = 0;
+    // tracking number of cells used
+    int counter = 0;
+
+    // looping through copy to find averages
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -100,7 +104,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // top left corner
             if (i == 0 || j = 0)
             {
-                image[i][j].rgbtRed =
+                sumRed = copy[i][j].rgbtRed
             }
         }
     }

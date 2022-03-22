@@ -140,7 +140,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // top edge
             else if (i == 0 && (j != 0 || j != width -1))
             {
-                sumRed = (copy[i][j].rgbtRed + copy[i - 1][j].rgbtRed + copy[i][j - 1].rgbtRed + copy[i - 1][j - 1].rgbtRed)
+                sumRed = (copy[i][j].rgbtRed + copy[i][j -1].rgbtRed + copy[i][j + 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j - 1].rgbtRed + copy[i - 1][j + 1].rgbtRed)
                 sumBlue = (copy[i][j].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i - 1][j - 1].rgbtBlue)
                 sumGreen = (copy[i][j].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i][j - 1].rgbtGreen + copy[i - 1][j - 1].rgbtGreen)
                 counter = 4

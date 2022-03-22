@@ -119,6 +119,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 counter = 4
             }
 
+            // top edge
+            else if (i == 0 && (j != 0 || j != width -1))
+            {
+                sumRed = (copy[i][j].rgbtRed + copy[i][j - 1].rgbtRed + copy[i][j + 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j - 1].rgbtRed + copy[i - 1][j + 1].rgbtRed)
+                sumBlue = (copy[i][j].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i][j + 1].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i - 1][j - 1].rgbtBlue + copy[i - 1][j + 1].rgbtBlue)
+                sumGreen = (copy[i][j].rgbtGreen + copy[i][j - 1].rgbtGreen + copy[i][j + 1].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i - 1][j - 1].rgbtGreen + copy[i - 1][j + 1].rgbtGreen)
+                counter = 6
+            }
+
             // bottom left corner
             else if (i == (height - 1) || j == 0)
             {
@@ -137,14 +146,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 counter = 4
             }
 
-            // top edge
-            else if (i == 0 && (j != 0 || j != width -1))
+            // bottom edge
+            else if (i == (height - 1) && (j != 0 || j != width -1))
             {
-                sumRed = (copy[i][j].rgbtRed + copy[i][j -1].rgbtRed + copy[i][j + 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j - 1].rgbtRed + copy[i - 1][j + 1].rgbtRed)
-                sumBlue = (copy[i][j].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i - 1][j - 1].rgbtBlue)
-                sumGreen = (copy[i][j].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i][j - 1].rgbtGreen + copy[i - 1][j - 1].rgbtGreen)
-                counter = 4
+                sumRed = (copy[i][j].rgbtRed + copy[i][j - 1].rgbtRed + copy[i][j + 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j - 1].rgbtRed + copy[i - 1][j + 1].rgbtRed)
+                sumBlue = (copy[i][j].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i][j + 1].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i - 1][j - 1].rgbtBlue + copy[i - 1][j + 1].rgbtBlue)
+                sumGreen = (copy[i][j].rgbtGreen + copy[i][j - 1].rgbtGreen + copy[i][j + 1].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i - 1][j - 1].rgbtGreen + copy[i - 1][j + 1].rgbtGreen)
+                counter = 6
             }
+
         }
     }
     return;

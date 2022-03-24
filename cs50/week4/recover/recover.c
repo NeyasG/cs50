@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
     // create buffer[]
     BYTE buffer[512];
-    FILE *prev_image = NULL;
+    FILE *c_image = NULL;
 
     // initialise counter to 1
     int counter = 0;
@@ -39,10 +39,10 @@ int main(int argc, char *argv[])
         {
             if (counter !=0)
             {
-                
+                fclose(c_image)
             }
             sprintf(buffer, "%03i.jpg", counter);
-                // counter++
+            counter++
             // fopen in write mode
             // fwrite to out file
         }

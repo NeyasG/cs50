@@ -13,6 +13,6 @@ int main(int argc, char *argv[])
         // fopen out file
         // fread to temp array
             // if jpeg signature found stop
-            // fwrite to out file
+            // fwrite to out file with name sprintf(###.jpg [8 bytes])
 
 }

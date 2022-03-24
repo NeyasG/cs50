@@ -9,14 +9,17 @@ int main(int argc, char *argv[])
         printf("Usage: ./recover IMAGE\n");
         return 1;
     }
+
     // fopen IN file in read mode
     FILE *infile = fopen(argv[1], "r");
     if (infile == NULL)
     {
-        printf("Could not open %s.\n", infile);
+        printf("Could not open %s.\n", argv[1]);
+        return 1;
     }
-        // else error message and return 1
+
     // create buffer[]
+    buffer
     // initialise counter to 1
     // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
         // if buffer[0] == Oxff

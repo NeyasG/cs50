@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     }
 
     // create buffer[]
-    int *buffer = malloc(sizeof(BYTE) * 512);
+    char *buffer = malloc(sizeof(BYTE) * 512);
     if (buffer == NULL)
     {
         return 1;
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
         // and (buffer[3] & Ocf0) == Oxe0
         if (buffer[0] == 'Oxff' && buffer[1] == 'Oxd8' && buffer[2] == 'Oxff' && (buffer[3] & 'Ocf0') == 'Oxe0')
         {
-            sprintf(filename, "%O3i.jpg", counter)
+            sprintf(buffer, "%O3i.jpg", counter)
                 // counter++
             // fopen in write mode
             // fwrite to out file

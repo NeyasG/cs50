@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef uint8_t BYTE;
+
 int main(int argc, char *argv[])
 {
     // check that argc == 2
@@ -19,7 +21,7 @@ int main(int argc, char *argv[])
     }
 
     // create buffer[]
-    int buffer[] = malloc(512)
+    BYTE buffer[] = malloc(512)
     // initialise counter to 1
     // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
         // if buffer[0] == Oxff

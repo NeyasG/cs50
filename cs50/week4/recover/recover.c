@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
         // and (buffer[3] & Ocf0) == Oxe0
         if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
         {
-            if (counter !=0)
+            if (counter != 0)
             {
                 fclose(c_image);
             }

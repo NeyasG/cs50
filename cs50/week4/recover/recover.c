@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 typedef uint8_t BYTE;
 
@@ -21,7 +22,11 @@ int main(int argc, char *argv[])
     }
 
     // create buffer[]
-    BYTE buffer[] = malloc(sizeof(uint8_t * 512));
+    BYTE buffer[] = malloc(sizeof(uint8_t) * 512);
+    if buffer == NULL
+    {
+        return 1;
+    }
 
     // initialise counter to 1
     int counter = 1;
@@ -42,6 +47,6 @@ int main(int argc, char *argv[])
         }
     }
 
-
+free(buffer);
 
 }

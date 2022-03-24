@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     }
 
     // create buffer[]
-    buffer
+    int buffer[] = malloc(512)
     // initialise counter to 1
     // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
         // if buffer[0] == Oxff

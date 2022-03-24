@@ -21,14 +21,25 @@ int main(int argc, char *argv[])
     }
 
     // create buffer[]
-    BYTE buffer[] = malloc(512)
+    BYTE buffer[] = malloc(sizeof(uint8_t))
+
     // initialise counter to 1
+    int counter = 1
+
     // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    {
         // if buffer[0] == Oxff
         // and buffer[1] == Oxd8
         // and buffer[2] == Oxff
         // and (buffer[3] & Ocf0) == Oxe0
-        // and counter > 1 then close current file
+        if (buffer[0] == Oxff && buffer[1] == Oxd8 && buffer[2] == Oxff && (buffer[3] & Ocf0) == Oxe0)
+        {
+        // some condition to deal with if a file is open or not
+        }
+    }
+
+
             // sprintf(filename, "%O3i.jpg", counter)
                 // counter++
             // fopen in write mode

@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
         // and buffer[1] == Oxd8
         // and buffer[2] == Oxff
         // and (buffer[3] & Ocf0) == Oxe0
+        // and counter > 1 then close current file
             // sprintf(filename, "%O3i.jpg", counter)
                 // counter++
             // fopen in write mode

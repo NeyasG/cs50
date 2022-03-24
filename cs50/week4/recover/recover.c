@@ -21,10 +21,10 @@ int main(int argc, char *argv[])
     }
 
     // create buffer[]
-    BYTE buffer[] = malloc(sizeof(uint8_t))
+    BYTE buffer[] = malloc(sizeof(uint8_t * 512));
 
     // initialise counter to 1
-    int counter = 1
+    int counter = 1;
 
     // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)

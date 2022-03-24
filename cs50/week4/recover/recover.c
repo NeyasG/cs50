@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
 
     // initialise counter to 1
     int counter = 0;
+    char filename[8];
 
     // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     while (fread(buffer, 1, 512, infile) == 512)
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
             {
                 fclose(c_image)
             }
-            sprintf(buffer, "%03i.jpg", counter);
+            sprintf(filename, "%03i.jpg", counter);
             counter++
             // fopen in write mode
             c_image = fopen()

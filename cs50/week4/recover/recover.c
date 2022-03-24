@@ -51,9 +51,10 @@ int main(int argc, char *argv[])
             {
                 fwrite(&buffer, 512, 1, c_image);
             }
+        fclose(c_image);
+        fclose(infile);
+        return 0;
         }
     }
-            fclose(c_image);
-        fclose(infile);
-    return 0;
+
 }

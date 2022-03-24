@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
         // and buffer[1] == Oxd8
         // and buffer[2] == Oxff
         // and (buffer[3] & Ocf0) == Oxe0
-        if (buffer[0] == Oxff && buffer[1] == Oxd8 && buffer[2] == Oxff && (buffer[3] & Ocf0) == Oxe0)
+        if (buffer[0] == 'Oxff' && buffer[1] == 'Oxd8' && buffer[2] == 'Oxff' && (buffer[3] & 'Ocf0') == 'Oxe0')
         {
             sprintf(filename, "%O3i.jpg", counter)
                 // counter++

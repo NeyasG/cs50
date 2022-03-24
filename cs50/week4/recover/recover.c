@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     }
 
     // create buffer[]
-    BYTE buffer[] = malloc(sizeof(uint8_t) * 512);
+    buffer[] = malloc(sizeof(BYTE) * 512);
     if buffer == NULL
     {
         return 1;

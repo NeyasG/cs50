@@ -15,5 +15,8 @@ int main(int argc, char *argv[])
     // fopen file
     // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
         // if buffer[0] == Oxff
+        // and buffer[1] == Oxd8
+        // and buffer[2] == Oxff
+        // and (buffer[3] & Ocf0) == Oxe0
             // fwrite to out file with name sprintf(###.jpg [8 bytes])
 }

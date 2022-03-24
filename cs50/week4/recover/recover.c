@@ -22,17 +22,13 @@ int main(int argc, char *argv[])
     }
 
     // create buffer[]
-    BYTE buffer[512] = malloc(sizeof(BYTE) * 512);
-    if (buffer == NULL)
-    {
-        return 1;
-    }
+    BYTE buffer[512];
 
     // initialise counter to 1
-    int counter = 1;
+    int counter = 0;
 
     // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
-    while (fread(&buffer, 1, 512, infile) == 512)
+    while (fread(buffer, 1, 512, infile) == 512)
     {
         // if buffer[0] == Oxff
         // and buffer[1] == Oxd8
@@ -40,7 +36,7 @@ int main(int argc, char *argv[])
         // and (buffer[3] & Ocf0) == Oxe0
         if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
         {
-            sprintf(&buffer, "%03i.jpg", counter);
+            sprintf(buffer, "%03i.jpg", counter);
                 // counter++
             // fopen in write mode
             // fwrite to out file

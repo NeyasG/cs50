@@ -35,13 +35,13 @@ int main(int argc, char *argv[])
         // and (buffer[3] & Ocf0) == Oxe0
         if (buffer[0] == Oxff && buffer[1] == Oxd8 && buffer[2] == Oxff && (buffer[3] & Ocf0) == Oxe0)
         {
-        // some condition to deal with if a file is open or not
+            sprintf(filename, "%O3i.jpg", counter)
+                // counter++
+            // fopen in write mode
+            // fwrite to out file
         }
     }
 
 
-            // sprintf(filename, "%O3i.jpg", counter)
-                // counter++
-            // fopen in write mode
-            // fwrite to out file
+
 }

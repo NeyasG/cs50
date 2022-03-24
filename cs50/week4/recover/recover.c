@@ -43,10 +43,11 @@ int main(int argc, char *argv[])
                 fclose(c_image);
             }
             sprintf(filename, "%03i.jpg", counter);
+            c_image = fopen(filename, "w");
             counter++;
 
             // fwrite to out file
-            if (counter > 0)
+            if (counter != 0)
             {
                 fwrite(&buffer, (sizeof(BYTE)*512), 1, c_image);
             }

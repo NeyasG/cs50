@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     char filename[8];
 
     // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
-    while (fread(buffer, 1, 512, infile) == 512)
+    while (fread(&buffer, 1, 512, infile) == 512)
     {
         // if buffer[0] == Oxff
         // and buffer[1] == Oxd8

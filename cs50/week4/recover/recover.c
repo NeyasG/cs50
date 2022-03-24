@@ -12,11 +12,15 @@ int main(int argc, char *argv[])
     // check if file can be opened
         // else error message and return 1
     // create temp buffer array
-    // fopen file
+    // initialise counter to 1
+    // fopen IN file in read mode
     // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
         // if buffer[0] == Oxff
         // and buffer[1] == Oxd8
         // and buffer[2] == Oxff
         // and (buffer[3] & Ocf0) == Oxe0
-            // fwrite to out file with name sprintf(###.jpg [8 bytes])
+            // sprintf(filename, "%O3i.jpg", counter)
+                // counter++
+            // fopen in write mode
+            // fwrite to out file
 }

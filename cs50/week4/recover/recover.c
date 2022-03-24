@@ -9,11 +9,10 @@ int main(int argc, char *argv[])
         printf("Usage: ./recover IMAGE\n");
         return 1;
     }
-    // check if file can be opened
-        // else error message and return 1
-    // create temp buffer array
-    // initialise counter to 1
     // fopen IN file in read mode
+        // else error message and return 1
+    // create buffer[]
+    // initialise counter to 1
     // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
         // if buffer[0] == Oxff
         // and buffer[1] == Oxd8

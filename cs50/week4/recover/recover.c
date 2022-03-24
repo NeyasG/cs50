@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     }
 
     // create buffer[]
-    BYTE buffer = malloc(sizeof(BYTE) * 512);
+    BYTE buffer[512] = malloc(sizeof(BYTE) * 512);
     if (buffer == NULL)
     {
         return 1;

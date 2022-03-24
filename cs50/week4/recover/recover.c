@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
             }
         }
     }
-fclose(c_image);
-fclose(infile);
-free(buffer);
+            fclose(c_image);
+        fclose(infile);
+    return 0;
 }

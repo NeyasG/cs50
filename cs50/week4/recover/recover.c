@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
 
     // create buffer[]
     BYTE buffer[512];
+    FILE *prev_image = NULL;
 
     // initialise counter to 1
     int counter = 0;

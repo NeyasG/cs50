@@ -44,6 +44,7 @@ int main(int argc, char *argv[])
             sprintf(buffer, "%03i.jpg", counter);
             counter++
             // fopen in write mode
+            c_image = fopen()
             // fwrite to out file
         }
     }

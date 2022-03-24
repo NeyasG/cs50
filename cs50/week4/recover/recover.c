@@ -40,16 +40,21 @@ int main(int argc, char *argv[])
         {
             if (counter !=0)
             {
-                fclose(c_image)
+                fclose(c_image);
             }
             sprintf(filename, "%03i.jpg", counter);
-            counter++
-            // fopen in write mode
-            c_image = fopen()
+            counter++;
+
             // fwrite to out file
+            if (counter > 0)
+            {
+                fwrite(&buffer, (sizeof(BYTE)*512), 1, filename)
+            }
         }
     }
 
+fclose(filename);
+fclose(infile);
 free(buffer);
 
 }

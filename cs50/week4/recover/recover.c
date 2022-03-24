@@ -48,13 +48,11 @@ int main(int argc, char *argv[])
             // fwrite to out file
             if (counter > 0)
             {
-                fwrite(&buffer, (sizeof(BYTE)*512), 1, filename)
+                fwrite(&buffer, (sizeof(BYTE)*512), 1, c_image);
             }
         }
     }
-
-fclose(filename);
+fclose(c_image);
 fclose(infile);
 free(buffer);
-
 }

@@ -10,7 +10,11 @@ int main(int argc, char *argv[])
         return 1;
     }
     // fopen IN file in read mode
-    FILE *file = fopen(argv[1], "r");
+    FILE *infile = fopen(argv[1], "r");
+    if (infile == NULL)
+    {
+        printf("Could not open %s.\n", infile);
+    }
         // else error message and return 1
     // create buffer[]
     // initialise counter to 1

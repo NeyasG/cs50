@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
             // fwrite to out file
             if (counter != 0)
             {
-                fwrite(&buffer, (sizeof(BYTE)*512), 1, c_image);
+                fwrite(&buffer, 512, 1, c_image);
             }
         }
     }

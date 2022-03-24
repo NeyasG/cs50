@@ -8,11 +8,8 @@ int main(int argc, char *argv[])
     // check if file can be opened
         // else error message and return 1
     // fopen file
-    // fread file looking for jpeg signatures
-    // IF 4 bytes = jpeg
-        // fopen out file
-        // fread to temp array
-            // if jpeg signature found stop
+    // while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+        // if jpeg signature found
             // fwrite to out file with name sprintf(###.jpg [8 bytes])
 
 }

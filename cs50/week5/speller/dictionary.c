@@ -56,7 +56,7 @@ bool load(const char *dictionary)
             return 1;
         }
 
-        strcpy(n->word, *buffer);
+        strcpy(n->word, buffer);
         printf("%s", n->word);
     }
     // insert word from dictionary into memory and initialise next node

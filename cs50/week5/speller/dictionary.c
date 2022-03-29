@@ -47,7 +47,6 @@ bool load(const char *dictionary)
     // Read strings from file one at a time
     while (fread())
     // insert word from dictionary into memory and initialise next node
-    node *n = malloc(sizeof(node));
     strcpy(n->word, "Hello");
     // n-> = NULL;
 

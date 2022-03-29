@@ -45,7 +45,10 @@ bool load(const char *dictionary)
         return 1;
     }
     // Read strings from file one at a time
-    
+    while(fscanf(file, "%s", ) != EOF)
+    {
+
+    }
     // insert word from dictionary into memory and initialise next node
     strcpy(n->word, "Hello");
     // n-> = NULL;

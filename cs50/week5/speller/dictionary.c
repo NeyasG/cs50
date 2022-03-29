@@ -45,7 +45,7 @@ bool load(const char *dictionary)
         return 1;
     }
     // Read strings from file one at a time
-    while(fscanf(file, "%s", ) != EOF)
+    while(fscanf(file, "%s", *n) != EOF)
     {
 
     }

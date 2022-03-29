@@ -57,7 +57,7 @@ bool load(const char *dictionary)
 
         strcpy(n->word, buffer);
 
-        int hash
+        int hash_n = hash(n->word);
 
         // Use Hash function
         // Add Hashed node to hash table

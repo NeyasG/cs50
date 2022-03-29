@@ -37,14 +37,13 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
+    // load dictionary
     FILE *file = fopen("dictionaries/large", "r");
     if (file == NULL)
     {
         printf("Could not Open File\n");
         return 1;
     }
-
-    // load dictionary
 
     // insert word from dictionary into memory and initialise next node
     // node *n = malloc(sizeof(node));

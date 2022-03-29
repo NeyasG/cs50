@@ -19,6 +19,8 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+int word_count = 0;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -69,14 +71,11 @@ bool load(const char *dictionary)
         }
 
         // Add Hashed node to hash table
-        table[pos] = n;
-
-        free(&n);
+        table[hash_n] = n;
     }
-    // insert word from dictionary into memory and initialise next node
 
-    // n-> = NULL;
-
+    printf("Word count: %i", word_count);
+    free(buffer);
     return true;
 }
 

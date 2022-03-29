@@ -37,8 +37,8 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *dict = fopen("dictionaries/large", "r");
-    if (dict == NULL)
+    FILE *file = fopen("dictionaries/large", "r");
+    if (file == NULL)
     {
         printf("Could not Open File\n");
         return 1;

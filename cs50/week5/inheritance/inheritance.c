@@ -63,7 +63,8 @@ person *create_family(int generations)
         person *parent1 = NULL;
 
         // TODO: Randomly assign alleles
-        person child.alleles[0] = 
+        person child.alleles[0] = random_allele()
+        person child.alleles[1] = random_allele()
 
     }
 

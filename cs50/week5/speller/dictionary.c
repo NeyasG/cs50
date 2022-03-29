@@ -39,7 +39,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // load dictionary
-    FILE *file = fopen("dictionaries/large.txt", "r");
+    FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
         return false;
@@ -72,6 +72,7 @@ bool load(const char *dictionary)
 
         // Add Hashed node to hash table
         table[hash_n] = n;
+        word_count++;
     }
 
     printf("Word count: %i", word_count);

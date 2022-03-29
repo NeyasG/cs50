@@ -40,8 +40,7 @@ bool load(const char *dictionary)
     FILE *file = fopen("dictionaries/large.txt", "r");
     if (file == NULL)
     {
-        printf("Could not Open File\n");
-        return 1;
+        return false;
     }
 
     // Read strings from file one at a time
@@ -51,8 +50,7 @@ bool load(const char *dictionary)
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
-            printf("Not enough memory\n");
-            return 1;
+            return false;
         }
 
         strcpy(n->word, buffer);

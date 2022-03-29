@@ -36,7 +36,6 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
     // load dictionary
     FILE *file = fopen("dictionaries/large", "r");
     if (file == NULL)
@@ -45,8 +44,8 @@ bool load(const char *dictionary)
         return 1;
     }
 
-    char buffer[LENGTH + 1];
     // Read strings from file one at a time
+    char buffer[LENGTH + 1];
     while(fscanf(file, "%s", buffer) != EOF)
     {
         node *n = malloc(sizeof(node));
@@ -57,6 +56,10 @@ bool load(const char *dictionary)
         }
 
         strcpy(n->word, buffer);
+
+        // Use Hash function
+        // Add Hashed node to hash table
+
 
     }
     // insert word from dictionary into memory and initialise next node

@@ -46,8 +46,8 @@ bool load(const char *dictionary)
     }
 
     // insert word from dictionary into memory and initialise next node
-    // node *n = malloc(sizeof(node));
-    // strcpy(n -> word, TO DO);
+    node *n = malloc(sizeof(node));
+    strcpy(n->word, "Hello");
     // n-> = NULL;
 
     return false;

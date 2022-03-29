@@ -60,7 +60,7 @@ bool load(const char *dictionary)
         // Use Hash function
         // Add Hashed node to hash table
 
-        free(n);
+        free(&n);
     }
     // insert word from dictionary into memory and initialise next node
 

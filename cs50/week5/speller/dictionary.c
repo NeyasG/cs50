@@ -44,7 +44,7 @@ bool load(const char *dictionary)
     }
 
     // Read strings from file one at a time
-    char buffer[LENGTH + 1];
+    char *buffer = malloc(sizeof(LENGTH + 1));
     while(fscanf(file, "%s", buffer) != EOF)
     {
         node *n = malloc(sizeof(node));

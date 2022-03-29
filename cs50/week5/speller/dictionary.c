@@ -63,11 +63,13 @@ bool load(const char *dictionary)
         {
             n->next = NULL;
         }
-        else
+        else // write node ref to first node
         {
-            n->next = 
+            n->next = table[hash_n];
         }
+
         // Add Hashed node to hash table
+        table[pos] = n;
 
         free(&n);
     }

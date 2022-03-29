@@ -44,10 +44,17 @@ bool load(const char *dictionary)
         printf("Could not Open File\n");
         return 1;
     }
+
+    char buffer[LENGTH + 1];
     // Read strings from file one at a time
-    while(fscanf(file, "%s", *n) != EOF)
+    while(fscanf(file, "%s", buffer) != EOF)
     {
-        
+        node *n = malloc(sizeof(node));
+        if n == NULL
+        {
+            printf("Not enough memory\n");
+            return 1;
+        }
     }
     // insert word from dictionary into memory and initialise next node
     strcpy(n->word, "Hello");

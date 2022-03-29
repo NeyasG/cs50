@@ -44,7 +44,8 @@ bool load(const char *dictionary)
         printf("Could not Open File\n");
         return 1;
     }
-
+    // Read strings from file one at a time
+    while (fread())
     // insert word from dictionary into memory and initialise next node
     node *n = malloc(sizeof(node));
     strcpy(n->word, "Hello");

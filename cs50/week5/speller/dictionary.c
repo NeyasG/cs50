@@ -58,6 +58,15 @@ bool load(const char *dictionary)
         // Use Hash function
         int hash_n = hash(n->word);
 
+        //check if head does not exist
+        if (table[hash_n] == NULL)
+        {
+            n->next = NULL;
+        }
+        else
+        {
+            n->next = 
+        }
         // Add Hashed node to hash table
 
         free(&n);

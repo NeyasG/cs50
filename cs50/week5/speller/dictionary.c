@@ -47,6 +47,7 @@ bool load(const char *dictionary)
     char *buffer = malloc(sizeof(LENGTH + 1));
     while(fscanf(file, "%s", buffer) != EOF)
     {
+        // Create node and copy string into node->word
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
@@ -54,10 +55,9 @@ bool load(const char *dictionary)
         }
 
         strcpy(n->word, buffer);
-
+        // Use Hash function
         int hash_n = hash(n->word);
 
-        // Use Hash function
         // Add Hashed node to hash table
 
         free(&n);

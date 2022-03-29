@@ -63,17 +63,17 @@ person *create_family(int generations)
     else
     {
         // TODO: Set parent pointers to NULL
-        person *parent0 = NULL;
-        person *parent1 = NULL;
+        child->parents[0] = NULL;
+        child->parents[1] = NULL;
 
         // TODO: Randomly assign alleles
-        // person child.alleles[0] = random_allele();
-        // person child.alleles[1] = random_allele();
+        child->alleles[0] = random_allele();
+        child->alleles[1] = random_allele();
 
     }
 
     // TODO: Return newly created person
-    return NULL;
+    return child;
 }
 
 // Free `p` and all ancestors of `p`.

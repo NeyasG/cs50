@@ -25,12 +25,12 @@ int word_count = 0;
 bool check(const char *word)
 {
     // hash word
-    text_hash = hash(word);
+    int text_hash = hash(word);
 
     // index into table at hash and compare word to dictionary
     for (node *curr_point = table[text_hash]; curr_point != NULL; curr_point = curr_point->next)
     {
-        if ((strcasecmp(curr_point->word, word) == 0)
+        if (strcasecmp(curr_point->word, word) == 0)
         {
             return true;
         }

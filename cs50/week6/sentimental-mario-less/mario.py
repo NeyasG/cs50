@@ -1,5 +1,11 @@
 import cs50
 
-height = get_int("Height: ")
-    for i in range(1, height, 1):
-        print(" " * (height - i), "#" * (i), sep='')
+while True:
+    try:
+        height = int(input("Height: "))
+    except ValueError:
+        continue
+    else:
+        for i in range(1, height, 1):
+            print(" " * (height - i), "#" * (i), sep='')
+        break

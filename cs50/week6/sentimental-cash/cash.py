@@ -1,8 +1,10 @@
 import cs50
 
+cents = 0
 
+while cents <= 0:
+    cents = cs50.get_float("Change owed: ")
 
-cents = cs50.get_float("Change owed: ")
 cents = cents * 100
 
 quarters = int(cents / 25)

@@ -14,6 +14,9 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
+    # Open file into memory
+    f = open(sys.argv[1])
+
     teams = []
     # TODO: Read teams into memory from file
 

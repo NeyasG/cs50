@@ -1,3 +1,3 @@
 import cs50
 
-cents = get_float("How many cents: ")
+cents = cs50.get_float("How many cents: ")

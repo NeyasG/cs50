@@ -7,8 +7,3 @@ while True:
             print(" " * (int(height) - i), "#" * (i), sep='', end='  ')
             print("#" * (i), sep='',)
         break
-
-
-
-
-    sdjkhgiuashglsdifjangksdfahgiouefhglijandfghlkjfhggidfjhglijh

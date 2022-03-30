@@ -21,11 +21,6 @@ def main():
         # debug
         # for row in reader:
         #     print(row)
-        for team in reader:
-            for team in sub:
-                sub[team] = int(sub[team])
-        for row in sub:
-            print(row)
 
     teams = []
     # TODO: Read teams into memory from file

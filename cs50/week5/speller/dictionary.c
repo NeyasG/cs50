@@ -104,7 +104,6 @@ bool unload(void)
     node *temp = table[0];
     node *curr_point = table[0];
 
-    while (temp)
     for (i = 0; i < N; i++)
     {
 

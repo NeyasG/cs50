@@ -86,7 +86,8 @@ bool load(const char *dictionary)
         word_count++;
     }
 
-    printf("Word count: %i", word_count);
+    // printf("Word count: %i", word_count);
+    fclose(file);
     free(buffer);
     return true;
 }

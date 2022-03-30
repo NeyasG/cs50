@@ -108,7 +108,7 @@ bool unload(void)
     {
         while (table[i] != NULL)
         {
-            curr_point = curr_point->next;
+            curr_point = table[i]->next;
             free(temp);
             temp = curr_point;
         }

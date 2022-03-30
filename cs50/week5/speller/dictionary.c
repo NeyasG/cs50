@@ -31,12 +31,10 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
-    // input word
-    // output numerical index
 
     int hash_value = 0;
-    hash_value = (toupper(word[0]) -'A')
+    hash_value = (toupper(word[0]) -'A');
+    return hash_value;
 
     // return toupper(word[0]) - 'A';
 }

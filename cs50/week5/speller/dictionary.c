@@ -101,16 +101,14 @@ unsigned int size(void)
 bool unload(void)
 {
     // Variables to store locations in linked list while freeing
+    node *curr = table[0];
     node *temp = table[0];
-    node *curr_point = table[0];
 
     for (int i = 0; i <= N ; i++)
     {
         while (table[i] != NULL)
         {
-            curr_point = table[i]->next;
-            free(temp);
-            temp = curr_point;
+
         }
     }
     return true;

@@ -104,9 +104,14 @@ bool unload(void)
     node *temp = table[0];
     node *curr_point = table[0];
 
-    for (i = 0; i < N && (curr_point != NULL); i++)
+    for (int i = 0; i <= N ; i++)
     {
-        
+        while (table[i] != NULL)
+        {
+            curr_point = curr_point->next;
+            free(temp);
+            temp = curr_point;
+        }
     }
-    return false;
+    return true;
 }

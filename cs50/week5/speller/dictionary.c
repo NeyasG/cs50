@@ -100,6 +100,13 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    // Variables to store locations in linked list while freeing
+    node *temp = table
+    node *curr_point
+
+    for (i = 0; i < N; i++)
+    {
+
+    }
     return false;
 }

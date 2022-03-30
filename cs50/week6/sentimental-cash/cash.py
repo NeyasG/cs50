@@ -1,20 +1,8 @@
 import cs50
 
-dollars = cs50.get_float("How many dollars: ")
-remainder = dollars;
+cents = cs50.get_float("Change owed: ")
 
-quarters = int(remainder / 0.25)
-remainder = remainder - (quarters * 0.25)
+quarters = int(cents / 25)
+cents = cents - quarters * 25
 
-# print(remainder, quarters)
-
-dimes = int(remainder / 0.10)
-remainder = remainder - (dimes * 0.10)
-
-nickels = int(remainder / 0.05)
-remainder = remainder - (nickels * 0.05)
-
-cents = int(remainder / 0.01)
-remainder = remainder - (cents * 0.01)
-
-print(quarters + dimes + nickels + cents)
+nickels = int(cents / )

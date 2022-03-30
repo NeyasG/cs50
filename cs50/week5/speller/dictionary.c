@@ -26,19 +26,16 @@ bool check(const char *word)
 {
     // hash word
     text_hash = hash(word);
+
     // index into table at hash and compare word to dictionary
-    node *curr_point = table[text_hash];
-    for (i = 0; i < LENGTH; i++)
+    for (node *curr_point = table[text_hash]; curr_point != NULL; curr_point = curr_point->next)
     {
-        if ((strcasecmp(word, table[text_hash]) == 0)
+        if ((strcasecmp(curr_point->word, word) == 0)
         {
-            return true
-        }
-        else
-        {
-            curr_point = curr_point->next;
+            return true;
         }
     }
+    return false;
 }
 
 // Hashes word to a number

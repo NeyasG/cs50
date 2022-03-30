@@ -57,7 +57,7 @@ bool load(const char *dictionary)
     }
 
     // Read strings from file one at a time
-    char *buffer = malloc(sizeof(LENGTH + 1));
+    char buffer[LENGTH + 1];
     while(fscanf(file, "%s", buffer) != EOF)
     {
         // Create node and copy string into node->word
@@ -88,7 +88,6 @@ bool load(const char *dictionary)
 
     // printf("Word count: %i", word_count);
     fclose(file);
-    free(buffer);
     return true;
 }
 

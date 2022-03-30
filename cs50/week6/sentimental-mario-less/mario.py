@@ -6,7 +6,3 @@ while True:
         for i in range(1, (int(height) + 1), 1):
             print(" " * (int(height) - i), "#" * (i), sep='')
         break
-
-
-
-

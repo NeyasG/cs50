@@ -7,6 +7,8 @@ remainder = dollars;
 quarters = remainder / 25
 remainder = remainder - quarters
 
+print(remainder, quarters)
+
 dimes = remainder / 10
 remainder = remainder - dimes
 

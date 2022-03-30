@@ -24,11 +24,17 @@ int word_count = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
     // hash word
     text_hash = hash(word);
-    if (
-    return false;
+    // index into table at hash and compare word to dictionary
+    for (i = 0; i < LENGTH; i++)
+    {
+        if ((strcasecmp(word, table[text_hash]) == 0)
+        {
+            return true
+        }
+            return false;
+    }
 }
 
 // Hashes word to a number

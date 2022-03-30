@@ -42,7 +42,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     int hash_value = 0;
-    hash_value = (toupper(word[0]) -'A');
+    hash_value = (toupper(word[0]) - 'A');
     return hash_value;
 }
 
@@ -58,7 +58,7 @@ bool load(const char *dictionary)
 
     // Read strings from file one at a time
     char buffer[LENGTH + 1];
-    while(fscanf(file, "%s", buffer) != EOF)
+    while (fscanf(file, "%s", buffer) != EOF)
     {
         // Create node and copy string into node->word
         node *n = malloc(sizeof(node));

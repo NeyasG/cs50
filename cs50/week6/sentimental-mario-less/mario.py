@@ -1,4 +1,6 @@
+height = 0
 
-height = int(input("Height: "))
-for i in range(1, height, 1):
-    print(" " * (height - i), "#" * (i), sep='')
+while (height < 1, type(height) != int):
+    height = int(input("Height: "))
+    for i in range(1, height, 1):
+        print(" " * (height - i), "#" * (i), sep='')

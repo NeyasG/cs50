@@ -27,6 +27,7 @@ bool check(const char *word)
     // hash word
     text_hash = hash(word);
     // index into table at hash and compare word to dictionary
+    curr_point = 
     for (i = 0; i < LENGTH; i++)
     {
         if ((strcasecmp(word, table[text_hash]) == 0)

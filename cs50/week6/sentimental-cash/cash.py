@@ -1,5 +1,7 @@
 import cs50
 
+
+
 cents = cs50.get_float("Change owed: ")
 cents = cents * 100
 

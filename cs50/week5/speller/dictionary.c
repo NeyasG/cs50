@@ -25,7 +25,9 @@ int word_count = 0;
 bool check(const char *word)
 {
     // TODO
-    if ((strcasecmp(*word),
+    // hash word
+    text_hash = hash(word);
+    if (
     return false;
 }
 

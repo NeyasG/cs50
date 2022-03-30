@@ -25,18 +25,16 @@ int word_count = 0;
 bool check(const char *word)
 {
     // TODO
+    if ((strcasecmp(*word),
     return false;
 }
 
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-
     int hash_value = 0;
     hash_value = (toupper(word[0]) -'A');
     return hash_value;
-
-    // return toupper(word[0]) - 'A';
 }
 
 // Loads dictionary into memory, returning true if successful, else false

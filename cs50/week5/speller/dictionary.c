@@ -27,14 +27,17 @@ bool check(const char *word)
     // hash word
     text_hash = hash(word);
     // index into table at hash and compare word to dictionary
-    curr_point = 
+    curr_point = table[text_hash];
     for (i = 0; i < LENGTH; i++)
     {
         if ((strcasecmp(word, table[text_hash]) == 0)
         {
             return true
         }
-            return false;
+        else
+        {
+            curr_point = curr_point->next;
+        }
     }
 }
 

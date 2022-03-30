@@ -1,6 +1,5 @@
-height = ("wrong")
+import cs50
 
-while (isinstance(height)):
-    height = int(input("Height: "))
+height = get_int("Height: ")
     for i in range(1, height, 1):
         print(" " * (height - i), "#" * (i), sep='')

@@ -35,7 +35,10 @@ unsigned int hash(const char *word)
     // input word
     // output numerical index
 
-    return toupper(word[0]) - 'A';
+    int hash_value = 0;
+    hash_value = (toupper(word[0]) -'A')
+
+    // return toupper(word[0]) - 'A';
 }
 
 // Loads dictionary into memory, returning true if successful, else false

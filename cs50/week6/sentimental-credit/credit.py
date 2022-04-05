@@ -18,12 +18,9 @@ print(digits)
 y = 0
 for x in range(1, len(cc_num), 2):
     y = digits[x] * 2 + y
-    print(digits[x])
+    print("y = ", y)
 
 for x in range(0, len(cc_num), 2):
     y = y + digits[x]
-    print(digits[x])
-
-print(y)
 
 # output whether valid or not

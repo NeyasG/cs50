@@ -28,7 +28,7 @@ for elem in y:
 
 # add above to sum of remaining digits in cc_num
 for x in range(0, len(cc_num), 2):
-    result += sum(digits[x])
+    result += sum([digits[x]])
 
 print(result)
 # output whether valid or not

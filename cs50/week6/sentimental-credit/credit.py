@@ -16,11 +16,18 @@ cc_num = cc_num[::-1]
 digits = [int(x) for x in str(cc_num)]
 # print(digits)
 y = []
+# for x in range(1, len(cc_num), 2):
+#     y = y + [digits[x] * 2]
+
 for x in range(1, len(cc_num), 2):
     y = y + [digits[x] * 2]
 
-# print(y)
+result = 0
+for elem in y:
+    sum_val = 0
+    for digit in str(elem):
+        sum_val += int(digit)
+    result += sum_val
 
-
-
+print(result)
 # output whether valid or not

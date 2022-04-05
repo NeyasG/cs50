@@ -12,5 +12,6 @@ if re.match(regex, cc_num) == None:
 # print("VALID") # Debug
 
 # apply algorithm to user input
-
+for digit in str(cc_num):
+    print(int(digit))
 # output whether valid or not

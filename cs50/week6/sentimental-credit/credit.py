@@ -12,9 +12,6 @@ if re.match(regex, cc_num) == None:
 # reverse cc_num
 cc_num = cc_num[::-1]
 
-sum_of_digits = sum(int(cc_num) for digit in str(cc_num))
-print(sum_of_digits)
-
 # apply algorithm to user input
 digits = [int(x) for x in str(cc_num)]
 # print(digits)
@@ -23,5 +20,7 @@ for x in range(1, len(cc_num), 2):
     y = y + [digits[x] * 2]
 
 # print(y)
+
+
 
 # output whether valid or not

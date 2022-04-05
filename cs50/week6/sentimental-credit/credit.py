@@ -17,7 +17,7 @@ digits = [int(x) for x in str(cc_num)]
 print(digits)
 y = 0
 for x in range(1, len(cc_num), 2):
-    y = [digits[x]]
+    y.append = [digits[x]]
 
 print(y)
 

@@ -30,6 +30,7 @@ for elem in y:
 for x in range(0, len(cc_num), 2):
     result += sum([digits[x]])
 
+print(cc_num)
 if cc_num[:2] == 34 or cc_num[:2] == 37:
     print("AMEX")
 elif cc_num[:2] == 51 or cc_num[:2] == 52 or cc_num[:2] == 53 or cc_num[:2] == 54 or cc_num[:2] == 55:

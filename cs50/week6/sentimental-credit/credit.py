@@ -9,9 +9,9 @@ if re.match(regex, cc_num) == None:
     print("INVALID")
     exit()
 
-# print("VALID") # Debug
-
 # apply algorithm to user input
-for digit in str(cc_num):
-    print(int(digit))
+digits = [int(x) for x in str(cc_num)]
+
+for 
+
 # output whether valid or not

@@ -14,9 +14,14 @@ cc_num = cc_num[::-1]
 
 # apply algorithm to user input
 digits = [int(x) for x in str(cc_num)]
-for x in range(1, len(cc_num), 2):
-    # y = x * 2 + y
-    print(cc_num)
 
+y = 0
+for x in range(1, len(cc_num), 2):
+    y = digits[x] * 2 + y
+
+for x in range(0, len(cc_num), 2):
+    y = y + digits[x]
+
+print(y)
 
 # output whether valid or not

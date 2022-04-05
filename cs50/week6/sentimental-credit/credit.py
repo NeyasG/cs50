@@ -17,8 +17,8 @@ digits = [int(x) for x in str(cc_num)]
 print(digits)
 y = []
 for x in range(1, len(cc_num), 2):
-    y.append(digits[x])
+    y = y + [digits[x] * 2]
 
-print(y * 2)
+print(y)
 
 # output whether valid or not

@@ -16,7 +16,7 @@ cc_num = cc_num[::-1]
 digits = [int(x) for x in str(cc_num)]
 y = 0
 for x in range(1, len(cc_num), 2):
-    y = x + y
+    y = x * 2 + y
 
 print(y)
 

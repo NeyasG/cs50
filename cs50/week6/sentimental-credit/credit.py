@@ -12,7 +12,7 @@ if re.match(regex, cc_num) == None:
 # apply algorithm to user input
 digits = [int(x) for x in str(cc_num)]
 
-for y in range(len(cc_num), 2):
-    print(y)
+for x in cc_num:
+    print(x)
 
 # output whether valid or not

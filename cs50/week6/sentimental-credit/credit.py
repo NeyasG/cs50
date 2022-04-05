@@ -30,5 +30,5 @@ for elem in y:
 for x in range(0, len(cc_num), 2):
     result += sum([digits[x]])
 
-print(result)
+if 
 # output whether valid or not

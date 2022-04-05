@@ -1,6 +1,5 @@
 {
     "files.associations": {
-        "*.html": "jinja-html",
         "*.tcc": "c",
         "string": "c",
         "string_view": "c"

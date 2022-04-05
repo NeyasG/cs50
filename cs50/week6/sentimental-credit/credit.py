@@ -30,12 +30,11 @@ for elem in y:
 for x in range(0, len(cc_num), 2):
     result += sum([digits[x]])
 
-print(cc_num)
-if cc_num[:2] == 34 or cc_num[:2] == 37:
+if int(cc_num[:2]) == 34 or int(cc_num[:2]) == 37:
     print("AMEX")
-elif cc_num[:2] == 51 or cc_num[:2] == 52 or cc_num[:2] == 53 or cc_num[:2] == 54 or cc_num[:2] == 55:
+elif int(cc_num[:2]) == 51 or int(cc_num[:2]) == 52 or int(cc_num[:2]) == 53 or int(cc_num[:2]) == 54 or int(cc_num[:2]) == 55:
     print("MASTERCARD")
-elif cc_num[:1] == 4:
+elif int(cc_num[:1]) == 4:
     print("VISA")
 else:
     print("INVALID")

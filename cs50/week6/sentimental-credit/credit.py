@@ -10,10 +10,10 @@ if re.match(regex, cc_num) == None:
     exit()
 
 # reverse cc_num
-cc_num = cc_num[::-1]
+cc_num_rev = cc_num[::-1]
 
 # find every second number * 2
-digits = [int(x) for x in str(cc_num)]
+digits = [int(x) for x in str(cc_num_rev)]
 y = []
 for x in range(1, len(cc_num), 2):
     y = y + [digits[x] * 2]

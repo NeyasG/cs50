@@ -6,13 +6,12 @@ import re
 
 def digit_sum(number):
     new_num = 0
-    print(number)
     if len(str(number)) == 1:
         return number
     else:
         for digit in str(number):
             new_num += int(digit)
-        digit_sum(new_num)
+        return digit_sum(new_num)
 
 # Protects script if imported from being run
 if __name__ == "__main__":

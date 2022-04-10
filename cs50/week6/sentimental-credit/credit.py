@@ -35,12 +35,7 @@ if __name__ == "__main__":
         y = y + [x * 2]
 
     # find sum of digits from above
-    result = 0
-    for elem in y:
-        sum_val = 0
-        for digit in str(elem):
-            sum_val += int(digit)
-        result += sum_val
+    result = digit_sum(y)
 
     # add above to sum of remaining digits in cc_num
     # simplified counter

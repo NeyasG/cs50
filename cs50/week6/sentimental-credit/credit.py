@@ -38,9 +38,8 @@ if __name__ == "__main__":
     #for x in range(0, len(cc_num), 2):
         #result += sum([digits[x]])
 
-    # Pythonic way of writing loop, no indexes needed
-    for x in digits[:: 2]:
-        result += sum(x)
+    # simplified counter
+    result += sum(digits[::2])
 
     # checksum
     if result % 10 != 0:

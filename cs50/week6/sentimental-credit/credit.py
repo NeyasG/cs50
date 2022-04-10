@@ -35,7 +35,9 @@ if __name__ == "__main__":
         y = y + [x * 2]
 
     # find sum of digits from above
-    result = digit_sum(y)
+    result = 0
+    for x in y:
+        result += digit_sum(x)
 
     # add above to sum of remaining digits in cc_num
     # simplified counter

@@ -14,11 +14,9 @@ if __name__ == "__main__":
         print("INVALID")
         exit()
 
-    # reverse cc_num
-    cc_num_rev = cc_num[::-1]
-
     # find every second number * 2
-    digits = [int(x) for x in str(cc_num_rev)]
+    # List comphrension
+    digits = [int(x) for x in cc_num[::-1]]
     y = []
     for x in range(1, len(cc_num), 2):
         y = y + [digits[x] * 2]
@@ -35,7 +33,7 @@ if __name__ == "__main__":
     for x in range(0, len(cc_num), 2):
         result += sum([digits[x]])
 
-    # 
+    # checksum
     if result % 10 != 0:
         print("INVALID")
         exit()

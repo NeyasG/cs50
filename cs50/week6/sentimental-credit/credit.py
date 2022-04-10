@@ -3,6 +3,7 @@
 
 import re
 
+# Protects script if imported from being run
 if __name__ == "__main__":
     # get user input
     cc_num = input("Number: ")
@@ -38,6 +39,7 @@ if __name__ == "__main__":
         print("INVALID")
         exit()
 
+    # output whether valid or not
     if int(cc_num[:2]) == 34 or int(cc_num[:2]) == 37:
         print("AMEX")
     elif int(cc_num[:2]) == 51 or int(cc_num[:2]) == 52 or int(cc_num[:2]) == 53 or int(cc_num[:2]) == 54 or int(cc_num[:2]) == 55:
@@ -46,5 +48,3 @@ if __name__ == "__main__":
         print("VISA")
     else:
         print("INVALID")
-
-    # output whether valid or not

@@ -32,18 +32,8 @@ if __name__ == "__main__":
         else:
             sum_value += digit_sum(x * 2)
 
-    # every second digit
-    y = [x * 2 for x in digits[1::2]]
-
-    # find sum of digits from above
-    result = sum([digit_sum(x) for x in y])
-
-    # add above to sum of remaining digits in cc_num
-    # simplified counter
-    result += sum(digits[::2])
-
     # checksum
-    if result % 10 != 0:
+    if sum_value % 10 != 0:
         print("INVALID")
         exit()
 

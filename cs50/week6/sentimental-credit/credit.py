@@ -21,6 +21,7 @@ if __name__ == "__main__":
     y = []
 
     # Pythonic way of writing loop, no indexes needed
+    # every second digit
     for x in digits[1: : 2]:
         y = y + [x * 2]
 

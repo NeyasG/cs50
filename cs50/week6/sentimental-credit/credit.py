@@ -35,6 +35,7 @@ if __name__ == "__main__":
     for x in range(0, len(cc_num), 2):
         result += sum([digits[x]])
 
+    # 
     if result % 10 != 0:
         print("INVALID")
         exit()

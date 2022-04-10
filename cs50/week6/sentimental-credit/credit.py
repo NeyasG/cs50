@@ -27,17 +27,12 @@ if __name__ == "__main__":
     # find every second number * 2
     # List comphrension
     digits = [int(x) for x in cc_num[::-1]]
-    y = []
 
-    # Pythonic way of writing loop, no indexes needed
     # every second digit
-    for x in digits[1: : 2]:
-        y = y + [x * 2]
+    y = [x * 2 for x in digits[1::2]]
 
     # find sum of digits from above
-    result = 0
-    for x in y:
-        result += digit_sum(x)
+    result = sum([digit_sum(x) for x in y])
 
     # add above to sum of remaining digits in cc_num
     # simplified counter

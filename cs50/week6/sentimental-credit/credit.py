@@ -17,13 +17,13 @@ if __name__ == "__main__":
 
     # find every second number * 2
     # List comphrension
-    digits = [int(x) for x in cc_num[::-1]]
-    y = []
-    for x in range(1, len(cc_num), 2):
-        y = y + [digits[x] * 2]
+    #digits = [int(x) for x in cc_num[::-1]]
+    #y = []
+    #for x in range(1, len(cc_num), 2):
+        #y = y + [digits[x] * 2]
 
-    # 
-    for x in digits[1: : 2]
+    # Pythonic way of writing loop, no indexes needed
+    for x in digits[1: : 2]:
         y = y + [x * 2]
 
     # find sum of digits from above
@@ -35,8 +35,12 @@ if __name__ == "__main__":
         result += sum_val
 
     # add above to sum of remaining digits in cc_num
-    for x in range(0, len(cc_num), 2):
-        result += sum([digits[x]])
+    #for x in range(0, len(cc_num), 2):
+        #result += sum([digits[x]])
+
+    # Pythonic way of writing loop, no indexes needed
+    for x in digits[:: 2]:
+        result += sum(x)
 
     # checksum
     if result % 10 != 0:

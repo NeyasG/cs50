@@ -10,7 +10,7 @@ if __name__ == "__main__":
     regex = r"^(\d{13}|\d{15,16})$"
 
     # Validate User input
-    if re.match(regex, cc_num) == None:
+    if re.match(regex, cc_num) is None:
         print("INVALID")
         exit()
 

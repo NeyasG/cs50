@@ -6,6 +6,7 @@ import re
 
 def digit_sum(number):
     new_num = 0
+    print(number)
     if len(str(number)) == 1:
         return number
     else:

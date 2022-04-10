@@ -41,7 +41,8 @@ if __name__ == "__main__":
     def digit_sum(number):
         if len(str(number)) == 1:
             return number
-        
+        elif
+            
 
     # checksum
     if result % 10 != 0:

@@ -4,6 +4,15 @@
 
 import re
 
+def digit_sum(number):
+    new_num = 0
+    if len(str(number)) == 1:
+        return number
+    else:
+        for digit in str(number):
+            new_num += int(digit)
+        digit_sum(new_num)
+
 # Protects script if imported from being run
 if __name__ == "__main__":
     # get user input
@@ -36,18 +45,6 @@ if __name__ == "__main__":
     # add above to sum of remaining digits in cc_num
     # simplified counter
     result += sum(digits[::2])
-
-    for x in digits
-    def digit_sum(number):
-        new_num = 0
-        if len(str(number)) == 1:
-            return number
-        elif
-            for digit in str(number):
-                new_num += int(digit)
-            digit_sum(new_num)
-
-
 
     # checksum
     if result % 10 != 0:

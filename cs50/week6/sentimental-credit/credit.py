@@ -45,6 +45,7 @@ if __name__ == "__main__":
         elif
             for digit in str(number):
                 new_num += int(digit)
+            digit_sum(new_num)
 
 
 

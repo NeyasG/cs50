@@ -1,4 +1,5 @@
 #!/usr/local/bin/python
+# called a shebang, has to be first line. Directs OS to interpreter
 
 import re
 

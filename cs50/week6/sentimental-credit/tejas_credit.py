@@ -1,12 +1,12 @@
 def luhn_validate(card_number):
     luhn_sum = 0
-    card_length = 0
+    counter = 0
 
     card_number_copy = card_number
 
     while(card_number_copy > 0):
         digit = card_number_copy % 10
-        if card_length % 2 == 1:
+        if counter % 2 == 1:
             #counting from the *right*, we double every *second* digit
             digit *= 2
         if digit >= 10:
@@ -17,18 +17,18 @@ def luhn_validate(card_number):
         luhn_sum += digit
         #integer division by 10 shifts all the digits down
         card_number_copy //= 10
-        card_length += 1
+        counter += 1
 
     if luhn_sum % 10 != 0:
         return "INVALID"
 
-    if card_length == 13:
+    if counter == 13:
         if (4e12 <= card_number < 5e12):
             return "VISA"
-    if card_length == 15:
+    if counter == 15:
         if (34e13 <= card_number < 35e13) or (37e13 <= card_number < 38e13):
             return "AMEX"
-    if card_length == 16:
+    if counter == 16:
         if (4e15 <= card_number < 5e15):
             return "VISA"
         elif (51e14 <= card_number < 56e14):

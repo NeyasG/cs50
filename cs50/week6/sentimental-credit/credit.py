@@ -30,6 +30,10 @@ for elem in y:
 for x in range(0, len(cc_num), 2):
     result += sum([digits[x]])
 
+if result % 10 != 0:
+    print("INVALID")
+    exit()
+
 if int(cc_num[:2]) == 34 or int(cc_num[:2]) == 37:
     print("AMEX")
 elif int(cc_num[:2]) == 51 or int(cc_num[:2]) == 52 or int(cc_num[:2]) == 53 or int(cc_num[:2]) == 54 or int(cc_num[:2]) == 55:

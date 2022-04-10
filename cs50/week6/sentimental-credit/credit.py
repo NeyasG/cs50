@@ -24,8 +24,8 @@ if __name__ == "__main__":
         print("INVALID")
         exit()
 
-    for x in cc_num[::-1]:
-        
+    for i,x in cc_num[::-1]:
+
 
     # find every second number * 2
     # List comphrension

@@ -19,8 +19,6 @@ if __name__ == "__main__":
     # List comphrension
     digits = [int(x) for x in cc_num[::-1]]
     y = []
-    #for x in range(1, len(cc_num), 2):
-        #y = y + [digits[x] * 2]
 
     # Pythonic way of writing loop, no indexes needed
     for x in digits[1: : 2]:
@@ -35,9 +33,6 @@ if __name__ == "__main__":
         result += sum_val
 
     # add above to sum of remaining digits in cc_num
-    #for x in range(0, len(cc_num), 2):
-        #result += sum([digits[x]])
-
     # simplified counter
     result += sum(digits[::2])
 

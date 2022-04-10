@@ -36,6 +36,8 @@ if __name__ == "__main__":
     # simplified counter
     result += sum(digits[::2])
 
+    for x in digits
+
     # checksum
     if result % 10 != 0:
         print("INVALID")

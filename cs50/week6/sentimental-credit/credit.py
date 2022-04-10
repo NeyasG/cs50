@@ -22,6 +22,8 @@ if __name__ == "__main__":
     for x in range(1, len(cc_num), 2):
         y = y + [digits[x] * 2]
 
+    for x in digits[1: : 2]
+
     # find sum of digits from above
     result = 0
     for elem in y:

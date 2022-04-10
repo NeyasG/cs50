@@ -38,7 +38,10 @@ if __name__ == "__main__":
     result += sum(digits[::2])
 
     for x in digits
-    def digit_sum
+    def digit_sum(number):
+        if len(str(number)) == 1:
+            return number
+        
 
     # checksum
     if result % 10 != 0:

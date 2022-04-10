@@ -1,5 +1,6 @@
 #!/usr/local/bin/python
 # called a shebang, has to be first line. Directs OS to interpreter
+# test cases, optimal way of inputting test cases
 
 import re
 

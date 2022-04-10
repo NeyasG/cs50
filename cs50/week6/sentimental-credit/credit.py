@@ -17,8 +17,8 @@ if __name__ == "__main__":
 
     # find every second number * 2
     # List comphrension
-    #digits = [int(x) for x in cc_num[::-1]]
-    #y = []
+    digits = [int(x) for x in cc_num[::-1]]
+    y = []
     #for x in range(1, len(cc_num), 2):
         #y = y + [digits[x] * 2]
 

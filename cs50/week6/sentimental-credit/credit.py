@@ -27,10 +27,10 @@ if __name__ == "__main__":
     sum_value = 0
     for i,x in enumerate(cc_num[::-1]):
         x = int(x)
-        if i % 2 == 0:
-            sum_value += x
-        else:
+        if i % 2:
             sum_value += digit_sum(x * 2)
+        else:
+            sum_value += x
 
     # checksum
     if sum_value % 10 != 0:

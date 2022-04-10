@@ -24,12 +24,13 @@ if __name__ == "__main__":
         print("INVALID")
         exit()
 
-    for i,x in cc_num[::-1]:
-
-
-    # find every second number * 2
-    # List comphrension
-    digits = [int(x) for x in cc_num[::-1]]
+    sum_value = 0
+    for i,x in enumerate(cc_num[::-1]):
+        x = int(x)
+        if i % 2 == 0:
+            sum_value += x
+        else:
+            sum_value += digit_sum(x * 2)
 
     # every second digit
     y = [x * 2 for x in digits[1::2]]

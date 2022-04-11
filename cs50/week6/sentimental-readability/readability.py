@@ -13,10 +13,12 @@ words = len(text.split(" "))
 # using regex to find delimiters in text
 delimiters = ".", "!", "?"
 regex = "|".join(map(re.escape, delimiters))
-sentences = re.split(regex, text)
+# creates list of sentences then filters out None and finds len
+sentences = len(list(filter(None, re.split(regex, text))))
+
+CL_index = 0.588 * (letters / 100) - 0.296 * (sentences)
 
 #debug
 print(letters)
 print(words)
-print(regex)
 print(sentences)

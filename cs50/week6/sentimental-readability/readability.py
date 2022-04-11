@@ -2,5 +2,7 @@ import cs50
 
 text = cs50.get_string("Text: ")
 
-print(len(text) - text.count(" "))
+letters = len([c for c in text if c.isalpha()])
+
+print(letters)
 print(text.count(" "))

@@ -26,7 +26,7 @@ CL_index = 0.0588 * (letters / words) * 100 - 0.296 * (sentences / words) * 100 
 # print(CL_index)
 
 # print Grade level
-if CL_index > 16:
+if CL_index >= 16:
     print("Grade 16+")
 elif CL_index < 1:
     print("Before Grade 1")

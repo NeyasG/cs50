@@ -3,10 +3,11 @@ import re
 
 # get string from user
 text = cs50.get_string("Text: ")
+# remove unwanted characters in text
 clean_text = "[^a-zA-Z.?! ]"
 text = re.sub(clean_text, "", text)
 
-print(text)
+# print(text)
 
 # find number of letters, discounting non alpha chars
 letters = len([c for c in text if c.isalpha()])

@@ -4,7 +4,7 @@ import re
 # get string from user
 text = cs50.get_string("Text: ")
 clean_text = "[^a-zA-Z.?! ]"
-text = re.sub(clean_text, text)
+text = re.sub(clean_text, "", text)
 
 print(text)
 
@@ -24,11 +24,10 @@ sentences = len(list(filter(None, re.split(regex, text))))
 CL_index = 0.0588 * (letters / words) * 100 - 0.296 * (sentences / words) * 100 - 15.8
 
 # debug
-print(letters)
-print(words)
-print(sentences)
-print(list(filter(None, re.split(regex, text))))
-print(CL_index)
+# print(letters)
+# print(words)
+# print(sentences)
+# print(CL_index)
 
 # print Grade level
 if CL_index >= 16:

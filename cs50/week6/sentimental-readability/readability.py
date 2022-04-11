@@ -3,7 +3,8 @@ import re
 
 # get string from user
 text = cs50.get_string("Text: ")
-text = text.replace(text, "[^a-zA-Z.?! ]g", "")
+clean_text = "[^a-zA-Z.?! ]"
+text = text.replace("", clean_text)
 
 print(text)
 

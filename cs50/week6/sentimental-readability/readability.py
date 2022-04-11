@@ -4,7 +4,7 @@ import re
 # get string from user
 text = cs50.get_string("Text: ")
 clean_text = "[^a-zA-Z.?! ]"
-text = text.replace(clean_text, "")
+text = re.sub(clean_text, text)
 
 print(text)
 

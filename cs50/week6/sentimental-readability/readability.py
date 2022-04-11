@@ -20,10 +20,10 @@ sentences = len(list(filter(None, re.split(regex, text))))
 CL_index = 0.0588 * (letters / words) * 100 - 0.296 * (sentences / words) * 100 - 15.8
 
 # debug
-print(letters)
-print(words)
-print(sentences)
-print(CL_index)
+# print(letters)
+# print(words)
+# print(sentences)
+# print(CL_index)
 
 # print Grade level
 if CL_index >= 16:

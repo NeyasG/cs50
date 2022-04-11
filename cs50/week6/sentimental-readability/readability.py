@@ -16,9 +16,10 @@ regex = "|".join(map(re.escape, delimiters))
 # creates list of sentences then filters out None and finds len
 sentences = len(list(filter(None, re.split(regex, text))))
 
-CL_index = 0.588 * (letters / 100) - 0.296 * (sentences)
+CL_index = 0.588 * (letters / words) * 100 - 0.296 * (sentences / words) * 100 - 15.8
 
 #debug
 print(letters)
 print(words)
 print(sentences)
+print(CL_index)

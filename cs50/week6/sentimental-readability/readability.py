@@ -9,8 +9,9 @@ letters = len([c for c in text if c.isalpha()])
 # split into list then count len of list
 words = len(text.split(" "))
 
-sentence = 
+sentences = len(text.split(".|!|?"))
 
 #debug
 print(letters)
 print(words)
+print(sentences)

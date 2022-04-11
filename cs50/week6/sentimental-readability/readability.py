@@ -23,6 +23,7 @@ CL_index = 0.0588 * (letters / words) * 100 - 0.296 * (sentences / words) * 100 
 print(letters)
 print(words)
 print(sentences)
+print(list(filter(None, re.split(regex, text))))
 print(CL_index)
 
 # print Grade level

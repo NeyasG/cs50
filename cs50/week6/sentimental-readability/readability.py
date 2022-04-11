@@ -31,4 +31,4 @@ if CL_index >= 16:
 elif CL_index < 1:
     print("Before Grade 1")
 else:
-    print(f"Grade {int(CL_index)}")
+    print(f"Grade {round(CL_index)}")

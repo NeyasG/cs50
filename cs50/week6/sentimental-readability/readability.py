@@ -13,7 +13,7 @@ words = len(text.split(" "))
 # using regex to find delimiters in text
 delimiters = ".", "!", "?"
 regex = "|".join(map(re.escape, delimiters))
-sentences = len(re.split(regex, text))
+sentences = re.split(regex, text)
 
 #debug
 print(letters)

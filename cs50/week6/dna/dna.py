@@ -11,7 +11,9 @@ def main():
 
     # Read database file into a variable
     with open(sys.argv[1], "r") as csvfile:
-        database = csv.DictReader(csvfile)
+        reader = csv.DictReader(csvfile)
+        for database in reader:
+            databse 
         # debug
         # for row in database:
         #     print(row['name'], row['AGATC'])

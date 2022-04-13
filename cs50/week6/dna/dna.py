@@ -47,7 +47,7 @@ def main():
         #print(STR_counts)
 
         # TODO: Check database for matching profiles
-        if database.items() <= STR_counts.items():
+        if STR_counts.items() <= database.items():
             print("True")
 
     return

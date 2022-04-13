@@ -47,6 +47,8 @@ def main():
         for row in database:
             if STR_counts.items() <= row.items():
                 print(row["name"])
+                return
+        print("No Match")
 
     return
 

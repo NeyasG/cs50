@@ -13,11 +13,11 @@ def main():
     with open(sys.argv[1], "r") as csvfile:
         database = csv.DictReader(csvfile)
         # debug
-        for row in database:
-            #print(row['name'], row['AGATC'])
-            test = [row]
+        # for row in database:
+        #     print(row['name'], row['AGATC'])
+        #     test = [row]
         headers = database.fieldnames
-        print(test)
+        # print(test)
 
         # Read DNA sequence file into a variable
         with open(sys.argv[2], "r") as file:
@@ -44,7 +44,7 @@ def main():
         #print(STR_counts)
 
         # TODO: Check database for matching profiles
-        # if STR_counts.items() <= database.items():
+        # if STR_counts.items() <= dict.items(database):
         #     print("True")
 
     return

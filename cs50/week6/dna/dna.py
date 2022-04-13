@@ -48,7 +48,6 @@ def main():
         print(database)
 
         # TODO: Check database for matching profiles
-        a == {k:v for k,v in a if k in b}
         # for row in database:
         #     print(row)
             # if STR_counts.items() <= database.items():

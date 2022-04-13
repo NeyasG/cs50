@@ -15,13 +15,8 @@ def main():
         reader = csv.DictReader(csvfile)
         for row in reader:
             database.append(row)
-            # print(database)
-        # debug
-        # for row in database:
-        #     print(row['name'], row['AGATC'])
-        #     test = [row]
         headers = reader.fieldnames
-        # print(headers)
+
         # Read DNA sequence file into a variable
         with open(sys.argv[2], "r") as file:
             sequence = file.read()
@@ -44,21 +39,14 @@ def main():
             # adds to dict with key = name and value = max_len
             STR_counts[name] = str(max_len)
 
-        print(f"STR_counts = {STR_counts}")
-        print(f"Database = {database}")
+        # debug
+        # print(f"STR_counts = {STR_counts}")
+        # print(f"Database = {database}")
 
+        # Check database for matching profiles
         for row in database:
             if STR_counts.items() <= row.items():
                 print(row["name"])
-        # if STR_counts in database:
-        #     print("True")
-        # TODO: Check database for matching profiles
-        # for row in database:
-        #     print(row)
-            # if STR_counts.items() <= database.items():
-            #     print("True")
-            # else:
-            #     print("False")
 
     return
 

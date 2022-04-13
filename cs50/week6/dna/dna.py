@@ -31,7 +31,7 @@ def main():
         # Find longest match of each STR in DNA sequence
         # Create empty dict to store STR lengths
         STR_counts = {}
-        for name in headers[1:]:
+        for name in headers:
             # finds a list of all matches of {name}
             regex = f'(?:{name})+'
             matches = re.findall(regex, sequence)
@@ -44,8 +44,8 @@ def main():
             # adds to dict with key = name and value = max_len
             STR_counts[name] = str(max_len)
 
-        print(STR_counts)
-        print(database)
+        print(f"STR_counts = {STR_counts}")
+        print(f"Database = {database}")
 
         if STR_counts in database:
             print("True")

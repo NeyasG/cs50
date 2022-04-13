@@ -44,10 +44,11 @@ def main():
             # adds to dict with key = name and value = max_len
             STR_counts[name] = str(max_len)
 
-        print(f"STR_counts = {STR_counts)
+        print(f"STR_counts = {STR_counts}")
         print(f"Database = {database}")
 
-        for name in database
+        for row in database:
+            print(row)
         # if STR_counts in database:
         #     print("True")
         # TODO: Check database for matching profiles

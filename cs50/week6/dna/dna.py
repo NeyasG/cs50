@@ -48,7 +48,8 @@ def main():
         print(f"Database = {database}")
 
         for row in database:
-            print(row)
+            if STR_counts.items() <= row.items():
+                print(row["name"])
         # if STR_counts in database:
         #     print("True")
         # TODO: Check database for matching profiles

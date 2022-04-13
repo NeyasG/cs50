@@ -10,11 +10,11 @@ def main():
         print("Usage: python dna.py data.csv sequence.txt")
 
     # Read database file into a variable
-    database = []
+    database = {}
     with open(sys.argv[1], "r") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            database.append(dict(row))
+            database = row
             # print(database)
         # debug
         # for row in database:
@@ -44,15 +44,16 @@ def main():
             # adds to dict with key = name and value = max_len
             STR_counts[name] = str(max_len)
 
-        #print(STR_counts)
+        print(STR_counts)
+        print(database)
 
         # TODO: Check database for matching profiles
-        print(STR_counts.items())
-        print(database.items())
-        if STR_counts.items() <= database.items():
-            print("True")
-        else:
-            print("False")
+        # for row in database:
+        #     print(row)
+            # if STR_counts.items() <= database.items():
+            #     print("True")
+            # else:
+            #     print("False")
 
     return
 

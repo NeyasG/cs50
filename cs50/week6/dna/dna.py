@@ -47,8 +47,9 @@ def main():
         print(f"STR_counts = {STR_counts)
         print(f"Database = {database}")
 
-        if STR_counts in database:
-            print("True")
+        for name in database
+        # if STR_counts in database:
+        #     print("True")
         # TODO: Check database for matching profiles
         # for row in database:
         #     print(row)

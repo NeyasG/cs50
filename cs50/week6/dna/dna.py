@@ -47,6 +47,8 @@ def main():
         print(STR_counts)
         print(database)
 
+        if STR_counts in database:
+            print("True")
         # TODO: Check database for matching profiles
         # for row in database:
         #     print(row)

@@ -1,18 +1,6 @@
-SELECT title
-FROM movies AS m1
-INNER JOIN ratings r1
-
-
-
-
-WHERE id IN
-
-(SELECT movie_id from stars
-WHERE person_id IN
-
-(SELECT person_id FROM stars
-WHERE person_id IN
-
-(SELECT id FROM people
-WHERE name = "Chadwick Boseman")))
-LIMIT 5;
+SELECT movies.title ratings.rating
+FROM movies
+INNER JOIN ratings ON ratings.movie_id = movie.id
+WHERE id IN(
+    1
+);

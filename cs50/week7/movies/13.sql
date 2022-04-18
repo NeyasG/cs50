@@ -2,6 +2,6 @@ SELECT name FROM people
 WHERE id IN
 (
     SELECT movie_id FROM stars
-    WHERE movie_id IN
+    WHERE person_id IN
     (SELECT id FROM people WHERE name = "Kevin Bacon")
 );

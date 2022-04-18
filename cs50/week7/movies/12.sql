@@ -4,7 +4,7 @@ WHERE id IN
     SELECT movie_id FROM stars
     WHERE person_id IN
     (
-        SELECT id IN people
+        SELECT id FROM people
         WHERE name IN ("Johnny Depp", "Helena Bonham Carter")
     )
 );

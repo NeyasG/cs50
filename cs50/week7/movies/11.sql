@@ -1,4 +1,10 @@
-SELECT title FROM movies
+SELECT title
+FROM movies AS m1
+INNER JOIN ratings r1
+
+
+
+
 WHERE id IN
 
 (SELECT movie_id from stars

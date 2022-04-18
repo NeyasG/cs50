@@ -5,6 +5,6 @@ WHERE id IN
     WHERE person_id IN
     (
         SELECT id IN people
-        WHERE name IN "Johnny Depp", "Helena Bonham Carter"
+        WHERE name IN ("Johnny Depp", "Helena Bonham Carter")
     )
 );

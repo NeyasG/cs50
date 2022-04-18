@@ -1,4 +1,4 @@
-SELECT movies.title, ratings.rating
+SELECT movies.title
 FROM movies
 INNER JOIN ratings ON ratings.movie_id = movies.id
 WHERE id IN(
@@ -8,5 +8,4 @@ WHERE id IN(
     )
 )
 ORDER BY rating DESC
-LIMIT 5
-;
+LIMIT 5;

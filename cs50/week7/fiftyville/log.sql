@@ -2,7 +2,7 @@
 
 -- Theft took place on July 28th 2021 on Humphrey Street
 -- Querying crime_scene_reports for details
-SELECT * FROM crime_scene_reports WHERE street = "Humphrey Street"
+SELECT description FROM crime_scene_reports WHERE street = "Humphrey Street"
 AND year = 2021
 AND month = 7
 AND day = 28;

@@ -5,10 +5,12 @@
 SELECT id, description FROM crime_scene_reports WHERE street = "Humphrey Street"
 AND year = 2021
 AND month = 7
-AND day = 28
-LIMIT 1;
+AND day = 28;
 
 -- Description of crime: Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery.
 -- Interviews were conducted today with three witnesses who were present at the time – each of their interview transcripts mentions the bakery.
 
-SELECT name, transcript FROM interviews WHERE id = 295;
+SELECT name, transcript FROM interviews WHERE year = 2021
+AND month = 7
+AND day = 28
+AND ;

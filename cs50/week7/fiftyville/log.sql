@@ -73,11 +73,18 @@ AND day = 28
 AND duration < 60;
 
 -- Joining caller and receiver table together to visualise all phone calls around time of theft.
+DROP VIEW IF EXISTS phone_logs;
+CREATE VIEW phone_logs AS
 SELECT caller_names.duration, caller_names.name, caller, receiver_names.name, receiver
 FROM caller_names
 INNER JOIN receiver_names ON caller_names.duration = receiver_names.duration;
+SELECT * FROM phone_logs;
 
 -- Using the security logs, ATM transactions and the phone call table we can narrow down suspects.
-
+SELECT *
+FROM (( security_logs
+    INNER JOIN atm_logs ON security_logs.name = atm_logs.name
+    INNER JOIN phone_logs ON security_logs.name = phone_logs.name
+));
 
 

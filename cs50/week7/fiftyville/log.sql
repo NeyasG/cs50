@@ -104,6 +104,8 @@ WHERE passengers.flight_id = (
 Select city FROM airports
 WHERE id = (
     SELECT destination_airport_id FROM flights
-    WHERE 
-)
+    WHERE year = 2021 AND month = 7 AND day = 29 AND origin_airport_id = (
+        SELECT id FROM airports WHERE city = "Fiftyville")
+    );
 
+-- Location of suspect is Boston.

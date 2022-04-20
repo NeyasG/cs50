@@ -118,7 +118,7 @@ WHERE passport_number IN
         AND year = 2021
         AND month = 7
         AND day = 29
-        ORDER BY hour ASC
+        ORDER BY hour, minute ASC
         LIMIT 1
     )
 )

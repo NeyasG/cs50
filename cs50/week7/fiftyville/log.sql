@@ -87,40 +87,52 @@ FROM (( security_logs
     INNER JOIN phone_logs ON security_logs.name = phone_logs.name
 ));
 
--- Suspects remaining are Bruce, accomplice Robin, or Diana, accomplice Philip.
--- Will use flight ticket purchase to identify who it could be.
-SELECT flights.id, origin_airport_id, destination_airport_id, full_name AS "Destination Airport", city AS "Destination"
-FROM flights
-INNER JOIN airports
-ON flights.destination_airport_id = airports.id
-WHERE origin_airport_id IN
-(
-    SELECT id FROM airports WHERE city = "Fiftyville"
-)
-AND year = 2021
-AND month = 7
-AND day = 29
-ORDER BY hour ASC
-LIMIT 1;
-
--- Finding passengers on first flight out of fifyville on July 29th 2021.
+-- Finding Passengers on earliest flights out of Fiftyville on July 29th 2021
 SELECT name FROM people
-WHERE passport_number IN
-(
-    SELECT passport_number FROM passengers
-    WHERE flight_id IN
-    (
-        SELECT flight_id FROM flights
-        WHERE origin_airport_id IN
-        (
-            SELECT id FROM airports WHERE city = "Fiftyville"
-        )
-        AND year = 2021
-        AND month = 7
-        AND day = 29
-        ORDER BY hour, minute ASC
-        LIMIT 1
-    )
-)
-AND name = "Bruce" OR name = "Diana"
-ORDER BY name ASC;
+JOIN passengers ON passengers.passport_number = people.passport_number
+WHERE passengers.flight_id = (
+    SELECT id FROM flights
+    WHERE year = 2021 AND month = 7 AND day = 29 AND origin_airport_id = (
+        SELECT id FROM airports WHERE city = "Fiftyville")
+    ORDER BY hour, minute
+    LIMIT 1
+    );
+
+
+-- -- Suspects remaining are Bruce, accomplice Robin, or Diana, accomplice Philip.
+-- -- Will use flight ticket purchase to identify who it could be.
+-- SELECT flights.id, origin_airport_id, destination_airport_id, full_name AS "Destination Airport", city AS "Destination"
+-- FROM flights
+-- INNER JOIN airports
+-- ON flights.destination_airport_id = airports.id
+-- WHERE origin_airport_id IN
+-- (
+--     SELECT id FROM airports WHERE city = "Fiftyville"
+-- )
+-- AND year = 2021
+-- AND month = 7
+-- AND day = 29
+-- ORDER BY hour ASC
+-- LIMIT 1;
+
+-- -- Finding passengers on first flight out of fifyville on July 29th 2021.
+-- SELECT name FROM people
+-- WHERE passport_number IN
+-- (
+--     SELECT passport_number FROM passengers
+--     WHERE flight_id IN
+--     (
+--         SELECT flight_id FROM flights
+--         WHERE origin_airport_id IN
+--         (
+--             SELECT id FROM airports WHERE city = "Fiftyville"
+--         )
+--         AND year = 2021
+--         AND month = 7
+--         AND day = 29
+--         ORDER BY hour, minute ASC
+--         LIMIT 1
+--     )
+-- )
+-- AND name = "Bruce" OR name = "Diana"
+-- ORDER BY name ASC;

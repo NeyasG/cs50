@@ -40,4 +40,3 @@ AND day = 28
 AND atm_location = "Leggett Street"
 AND transaction_type = "withdraw";
 -- Joining This information with account holder to identify names
-INNER JOIN bank_accounts ON atm_transactions.id = bank_accounts.

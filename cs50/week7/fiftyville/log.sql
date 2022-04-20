@@ -81,7 +81,7 @@ INNER JOIN receiver_names ON caller_names.duration = receiver_names.duration;
 SELECT * FROM phone_logs;
 
 -- Using the security logs, ATM transactions and the phone call table we can narrow down suspects.
-SELECT *
+SELECT security_logs.name
 FROM (( security_logs
     INNER JOIN atm_logs ON security_logs.name = atm_logs.name
     INNER JOIN phone_logs ON security_logs.name = phone_logs.name

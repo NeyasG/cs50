@@ -46,7 +46,7 @@ AND transaction_type = "withdraw";
 
 -- Following second lead, Querying phone calls around time of Theft.
 SELECT duration, people.name, caller, receiver  FROM phone_calls
-INNER JOIN people ON phone_calls.caller = people.phone_number
+NATURAL JOIN people
 WHERE year = 2021
 AND month = 7
 AND day = 28

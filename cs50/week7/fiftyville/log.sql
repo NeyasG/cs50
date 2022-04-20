@@ -101,5 +101,9 @@ WHERE passengers.flight_id = (
 
 -- Culprit is Bruce, and accomplice is Robin
 -- Finding Destination airport for flight
-Select city FROM 
+Select city FROM airports
+WHERE id = (
+    SELECT destination_airport_id FROM flights
+    WHERE 
+)
 

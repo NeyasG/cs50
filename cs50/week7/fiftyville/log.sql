@@ -23,9 +23,11 @@ AND day = 28;
 -- Emma: Suspicious person came in whispering into phone for 30 minutes. Didn't buy anything.
 
 -- Querying for Security Footage from bakery on July 28th at 10:15am.
--- License plates of all cars leaving bakery within timeframe
-SELECT activity, license_plate FROM bakery_security_logs WHERE
-year = 2021
+-- License plates of all cars leaving bakery within timeframe joined to people table to identify possible suspects
+SELECT activity, name, bakery_security_logs.license_plate
+FROM bakery_security_logs
+INNER JOIN people ON bakery_security_logs.license_plate = people.license_plate
+WHERE year = 2021
 AND month = 7
 AND day = 28
 AND hour = 10
@@ -37,8 +39,7 @@ FROM atm_transactions
 -- Joining This information with bank_accounts and peeoples tables to identify names
 INNER JOIN bank_accounts ON atm_transactions.account_number = bank_accounts.account_number
 INNER JOIN people ON bank_accounts.person_id = people.id
-WHERE
-year = 2021
+WHERE year = 2021
 AND month = 7
 AND day = 28
 AND atm_location = "Leggett Street"

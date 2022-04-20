@@ -89,4 +89,8 @@ FROM (( security_logs
 
 -- Suspects remaining are Bruce, accomplice Robin, or Diana, accomplice Philip.
 -- Will use flight ticket purchase to identify who it could be.
-
+SELECT * FROM flights
+WHERE origin_airport_id IN
+(
+    SELECT id FROM airports WHERE 
+)

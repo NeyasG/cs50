@@ -51,7 +51,7 @@ WHERE year = 2021
 AND month = 7
 AND day = 28
 AND duration < 60
-UNION
+
 SELECT duration, people.name, receiver FROM phone_calls
 INNER JOIN people ON phone_calls.receiver = people.phone_number
 WHERE year = 2021

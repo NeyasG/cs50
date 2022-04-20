@@ -92,5 +92,5 @@ FROM (( security_logs
 SELECT * FROM flights
 WHERE origin_airport_id IN
 (
-    SELECT id FROM airports WHERE 
-)
+    SELECT id FROM airports WHERE city = "Fiftyville"
+);

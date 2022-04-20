@@ -122,4 +122,4 @@ WHERE passport_number IN
         LIMIT 1
     )
 )
-ORDER BY name DESC;
+ORDER BY name ASC;

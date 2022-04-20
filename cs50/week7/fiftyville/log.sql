@@ -99,4 +99,7 @@ WHERE passengers.flight_id = (
     LIMIT 1
     );
 
+-- Culprit is Bruce, and accomplice is Robin
+-- Finding Destination airport for flight
+Select city FROM 
 

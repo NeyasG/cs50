@@ -90,7 +90,8 @@ FROM (( security_logs
 -- Suspects remaining are Bruce, accomplice Robin, or Diana, accomplice Philip.
 -- Will use flight ticket purchase to identify who it could be.
 SELECT * FROM flights
-INNER JOIN
+INNER JOIN airports
+ON flights.origin_airport_id = airports.id
 WHERE origin_airport_id IN
 (
     SELECT id FROM airports WHERE city = "Fiftyville"

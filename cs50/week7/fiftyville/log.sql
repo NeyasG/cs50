@@ -39,3 +39,4 @@ AND day = 28
 -- AND hour BETWEEN 1 AND 12
 AND atm_location = "Leggett Street"
 AND transaction_type = "withdraw";
+-- Joining This information with account holder to identify names

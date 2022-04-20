@@ -32,11 +32,14 @@ AND hour = 10
 AND minute BETWEEN 15 AND 25;
 
 -- Querying for Leggett Street ATM transactions in the morning hour <= 12
-SELECT account_number, transaction_type, amount FROM atm_transactions WHERE
+SELECT people.name, atm_transactions.account_number, bank_accounts.person_id, transaction_type, amount
+FROM atm_transactions
+-- Joining This information with bank_accounts and peeoples tables to identify names
+INNER JOIN bank_accounts ON atm_transactions.account_number = bank_accounts.account_number
+INNER JOIN people ON bank_accounts.person_id = people.id
+WHERE
 year = 2021
 AND month = 7
 AND day = 28
--- AND hour BETWEEN 1 AND 12
 AND atm_location = "Leggett Street"
 AND transaction_type = "withdraw";
--- Joining This information with account holder to identify names

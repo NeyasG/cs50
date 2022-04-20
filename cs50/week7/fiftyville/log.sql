@@ -45,7 +45,8 @@ AND atm_location = "Leggett Street"
 AND transaction_type = "withdraw";
 
 -- Following second lead, Querying phone calls around time of Theft.
-CREATE OR REPLACE VIEW caller_names AS
+DROP VIEW IF EXISTS caller_names;
+CREATE VIEW caller_names AS
 SELECT duration, people.name, caller FROM phone_calls
 INNER JOIN people ON phone_calls.caller = people.phone_number
 WHERE year = 2021
@@ -53,9 +54,18 @@ AND month = 7
 AND day = 28
 AND duration < 60;
 
--- SELECT duration, people.name, receiver FROM phone_calls
--- INNER JOIN people ON phone_calls.receiver = people.phone_number
--- WHERE year = 2021
--- AND month = 7
--- AND day = 28
--- AND duration < 60;
+DROP VIEW IF EXISTS receiver_names;
+CREATE VIEW receiver_names AS
+SELECT duration, people.name, receiver FROM phone_calls
+INNER JOIN people ON phone_calls.receiver = people.phone_number
+WHERE year = 2021
+AND month = 7
+AND day = 28
+AND duration < 60;
+
+SELECT * from caller_names;
+SELECT * from receiver_names;
+
+SELECT caller_names.duration, 
+FROM caller_names
+INNER JOIN receiver_names ON caller_names.duration = receiver_names.duration;

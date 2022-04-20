@@ -66,6 +66,6 @@ AND duration < 60;
 SELECT * from caller_names;
 SELECT * from receiver_names;
 
-SELECT caller_names.duration, 
+SELECT caller_names.duration, caller_names.name
 FROM caller_names
 INNER JOIN receiver_names ON caller_names.duration = receiver_names.duration;

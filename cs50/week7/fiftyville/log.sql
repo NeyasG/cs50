@@ -24,7 +24,8 @@ AND day = 28;
 
 -- Querying for Security Footage from bakery on July 28th at 10:15am.
 -- License plates of all cars leaving bakery within timeframe joined to people table to identify possible suspects
-
+DROP VIEW IF EXISTS security_logs;
+CREATE VIEW security_logs AS
 SELECT activity, name, bakery_security_logs.license_plate
 FROM bakery_security_logs
 INNER JOIN people ON bakery_security_logs.license_plate = people.license_plate
@@ -33,9 +34,12 @@ AND month = 7
 AND day = 28
 AND hour = 10
 AND minute BETWEEN 15 AND 25;
+SELECT * FROM security_logs;
 
 -- Querying for Leggett Street ATM transactions in the morning hour <= 12
 -- Joining This information with bank_accounts and peeoples tables to identify names
+DROP VIEW IF EXISTS atm_logs;
+CREATE VIEW atm_logs AS
 SELECT people.name, atm_transactions.account_number, bank_accounts.person_id, transaction_type, amount
 FROM atm_transactions
 INNER JOIN bank_accounts ON atm_transactions.account_number = bank_accounts.account_number
@@ -45,6 +49,7 @@ AND month = 7
 AND day = 28
 AND atm_location = "Leggett Street"
 AND transaction_type = "withdraw";
+SELECT * FROM atm_logs;
 
 -- Following second lead, Querying phone calls around time of Theft.
 -- Creating view for caller table

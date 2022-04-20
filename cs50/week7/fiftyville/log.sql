@@ -122,4 +122,5 @@ WHERE passport_number IN
         LIMIT 1
     )
 )
+AND name = "Bruce" OR name = "Diana"
 ORDER BY name ASC;

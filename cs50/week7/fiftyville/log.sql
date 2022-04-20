@@ -89,7 +89,8 @@ FROM (( security_logs
 
 -- Suspects remaining are Bruce, accomplice Robin, or Diana, accomplice Philip.
 -- Will use flight ticket purchase to identify who it could be.
-SELECT * FROM flights
+SELECT flights.id, origin_airport_id, destination_airport_id, full_name AS "Destination Airport", city AS "Destination"
+FROM flights
 INNER JOIN airports
 ON flights.destination_airport_id = airports.id
 WHERE origin_airport_id IN
@@ -101,3 +102,24 @@ AND month = 7
 AND day = 29
 ORDER BY hour ASC
 LIMIT 1;
+
+-- Finding passengers on first flight out of fifyville on July 29th 2021.
+SELECT name FROM people
+WHERE passport_number IN
+(
+    SELECT passport_number FROM passengers
+    WHERE flight_id IN
+    (
+        SELECT flight_id FROM flights
+        WHERE origin_airport_id IN
+        (
+            SELECT id FROM airports WHERE city = "Fiftyville"
+        )
+        AND year = 2021
+        AND month = 7
+        AND day = 29
+        ORDER BY hour ASC
+        LIMIT 1
+    )
+)
+ORDER BY name DESC;

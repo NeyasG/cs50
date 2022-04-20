@@ -55,8 +55,160 @@
 | exit     | Bruce | 94KL13X       | Bruce | 49610011       | 686048    | withdraw         | 50     | 45       | Bruce | (367) 555-5533 | Robin  | (375) 555-8161 |
 | exit     | Diana | 322W7JE       | Diana | 26013199       | 514354    | withdraw         | 35     | 49       | Diana | (770) 555-1861 | Philip | (725) 555-3243 |
 +----------+-------+---------------+-------+----------------+-----------+------------------+--------+----------+-------+----------------+--------+----------------+
-+----+-------------------+------------------------+------+-------+-----+------+--------+----+--------------+-------------------+---------------+
-| id | origin_airport_id | destination_airport_id | year | month | day | hour | minute | id | abbreviation |     full_name     |     city      |
-+----+-------------------+------------------------+------+-------+-----+------+--------+----+--------------+-------------------+---------------+
-| 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     | 4  | LGA          | LaGuardia Airport | New York City |
-+----+-------------------+------------------------+------+-------+-----+------+--------+----+--------------+-------------------+---------------+
++----+-------------------+------------------------+---------------------+---------------+
+| id | origin_airport_id | destination_airport_id | Destination Airport |  Destination  |
++----+-------------------+------------------------+---------------------+---------------+
+| 36 | 8                 | 4                      | LaGuardia Airport   | New York City |
++----+-------------------+------------------------+---------------------+---------------+
++-------------+
+|    name     |
++-------------+
+| Willie      |
+| Walter      |
+| Virginia    |
+| Vincent     |
+| Vanessa     |
+| Tyler       |
+| Timothy     |
+| Thomas      |
+| Theresa     |
+| Terry       |
+| Teresa      |
+| Taylor      |
+| Susan       |
+| Steven      |
+| Stephanie   |
+| Sophia      |
+| Sofia       |
+| Shirley     |
+| Sharon      |
+| Sean        |
+| Sarah       |
+| Sara        |
+| Samuel      |
+| Samantha    |
+| Rose        |
+| Richard     |
+| Rebecca     |
+| Randy       |
+| Ralph       |
+| Philip      |
+| Peter       |
+| Paul        |
+| Patricia    |
+| Pamela      |
+| Olivia      |
+| Noah        |
+| Nicole      |
+| Nathan      |
+| Natalie     |
+| Nancy       |
+| Michelle    |
+| Michael     |
+| Melissa     |
+| Megan       |
+| Matthew     |
+| Mark        |
+| Marilyn     |
+| Margaret    |
+| Luca        |
+| Louis       |
+| Logan       |
+| Linda       |
+| Lawrence    |
+| Lauren      |
+| Laura       |
+| Larry       |
+| Kristina    |
+| Kenny       |
+| Kelsey      |
+| Kelly       |
+| Keith       |
+| Kayla       |
+| Kathryn     |
+| Kathleen    |
+| Karen       |
+| Justin      |
+| Judy        |
+| Judith      |
+| Juan        |
+| Joyce       |
+| Joseph      |
+| Jose        |
+| Jordan      |
+| Jonathan    |
+| Johnny      |
+| John        |
+| Jessica     |
+| Jerry       |
+| Jeremy      |
+| Jennifer    |
+| Jeffrey     |
+| Jean        |
+| Jason       |
+| Janet       |
+| James       |
+| Jacob       |
+| Jack        |
+| Isabella    |
+| Iman        |
+| Henry       |
+| Helen       |
+| Heather     |
+| Hannah      |
+| Gregory     |
+| Grace       |
+| Gloria      |
+| Gerald      |
+| George      |
+| Gabriel     |
+| Frank       |
+| Frances     |
+| Eugene      |
+| Ethan       |
+| Ernest      |
+| Emily       |
+| Edward      |
+| Dylan       |
+| Douglas     |
+| Dorothy     |
+| Doris       |
+| Diana       |
+| Dennis      |
+| Denise      |
+| Debra       |
+| Deborah     |
+| David       |
+| Daniel      |
+| Cynthia     |
+| Christopher |
+| Christian   |
+| Charlotte   |
+| Charles     |
+| Carolyn     |
+| Carol       |
+| Carl        |
+| Carina      |
+| Bryan       |
+| Bruce       |
+| Brooke      |
+| Brenda      |
+| Brandon     |
+| Bradley     |
+| Billy       |
+| Betty       |
+| Benista     |
+| Barbara     |
+| Austin      |
+| Arthur      |
+| Anthony     |
+| Ann         |
+| Angela      |
+| Andrea      |
+| Amy         |
+| Amanda      |
+| Alice       |
+| Alexis      |
+| Alan        |
+| Aaron       |
++-------------+

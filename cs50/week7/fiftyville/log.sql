@@ -20,7 +20,7 @@ AND day = 28;
 -- Ruth: Within 10 minutes of theft (10:15am) car left bakery parking lot. Check Security footage from bakery
 -- Eugene: Recognised Thief. Saw thief withdrawing money from ATM on Leggett Street in the morning
 -- Raymond: Phone call to thief after leaving bakery. Planning to take earliest flight out of fiftyville on 29th July. Asked caller to purchase ticket
--- Emma: Sucpicious person came in whispering into phone for 30 minutes. Didn't buy anything.
+-- Emma: Suspicious person came in whispering into phone for 30 minutes. Didn't buy anything.
 
 -- Querying for Security Footage from bakery on July 28th at 10:15am.
 -- License plates of all cars leaving bakery within timeframe
@@ -69,3 +69,6 @@ AND duration < 60;
 SELECT caller_names.duration, caller_names.name, caller, receiver_names.name, receiver
 FROM caller_names
 INNER JOIN receiver_names ON caller_names.duration = receiver_names.duration;
+
+-- Using both the ATM transactions and the phone call table, we can narrow down suspects.
+

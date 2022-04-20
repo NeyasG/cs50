@@ -45,4 +45,8 @@ AND atm_location = "Leggett Street"
 AND transaction_type = "withdraw";
 
 -- Following second lead, Querying phone calls around time of Theft.
-SELECT caller, receiver, duration, phone_calls
+SELECT duration, caller, receiver FROM phone_calls
+WHERE year = 2021
+AND month = 7
+AND day = 28;
+-- AND duration = 30;

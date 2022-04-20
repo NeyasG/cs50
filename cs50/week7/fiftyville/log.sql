@@ -46,7 +46,8 @@ AND transaction_type = "withdraw";
 
 -- Following second lead, Querying phone calls around time of Theft.
 SELECT duration, caller, receiver FROM phone_calls
+INNER JOIN 
 WHERE year = 2021
 AND month = 7
-AND day = 28;
--- AND duration < 60;
+AND day = 28
+AND duration < 60;

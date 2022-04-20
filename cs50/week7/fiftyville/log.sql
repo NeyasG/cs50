@@ -24,6 +24,7 @@ AND day = 28;
 
 -- Querying for Security Footage from bakery on July 28th at 10:15am.
 -- License plates of all cars leaving bakery within timeframe joined to people table to identify possible suspects
+
 SELECT activity, name, bakery_security_logs.license_plate
 FROM bakery_security_logs
 INNER JOIN people ON bakery_security_logs.license_plate = people.license_plate
@@ -34,9 +35,9 @@ AND hour = 10
 AND minute BETWEEN 15 AND 25;
 
 -- Querying for Leggett Street ATM transactions in the morning hour <= 12
+-- Joining This information with bank_accounts and peeoples tables to identify names
 SELECT people.name, atm_transactions.account_number, bank_accounts.person_id, transaction_type, amount
 FROM atm_transactions
--- Joining This information with bank_accounts and peeoples tables to identify names
 INNER JOIN bank_accounts ON atm_transactions.account_number = bank_accounts.account_number
 INNER JOIN people ON bank_accounts.person_id = people.id
 WHERE year = 2021
@@ -71,5 +72,7 @@ SELECT caller_names.duration, caller_names.name, caller, receiver_names.name, re
 FROM caller_names
 INNER JOIN receiver_names ON caller_names.duration = receiver_names.duration;
 
--- Using both the ATM transactions and the phone call table, we can narrow down suspects.
+-- Using the security logs, ATM transactions and the phone call table we can narrow down suspects.
+
+
 

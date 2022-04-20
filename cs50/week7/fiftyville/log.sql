@@ -45,6 +45,7 @@ AND atm_location = "Leggett Street"
 AND transaction_type = "withdraw";
 
 -- Following second lead, Querying phone calls around time of Theft.
+-- Creating view for caller table
 DROP VIEW IF EXISTS caller_names;
 CREATE VIEW caller_names AS
 SELECT duration, people.name, caller FROM phone_calls
@@ -54,6 +55,7 @@ AND month = 7
 AND day = 28
 AND duration < 60;
 
+-- Creating View for receiver table
 DROP VIEW IF EXISTS receiver_names;
 CREATE VIEW receiver_names AS
 SELECT duration, people.name, receiver FROM phone_calls
@@ -63,9 +65,7 @@ AND month = 7
 AND day = 28
 AND duration < 60;
 
-SELECT * from caller_names;
-SELECT * from receiver_names;
-
-SELECT caller_names.duration, caller_names.name
+-- Joining caller and receiver table together to visualise all phone calls around time of theft.
+SELECT caller_names.duration, caller_names.name, caller, receiver_names.name, receiver
 FROM caller_names
 INNER JOIN receiver_names ON caller_names.duration = receiver_names.duration;

@@ -10,6 +10,30 @@
   <title>Gallery</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+        <div class="container">
+          <a href="#index" class="navbar-brand">James Webb Space Telescope</a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="science.html" class="nav-link">Science</a>
+              </li>
+              <li class="nav-item">
+                <a href="gallery.html" class="nav-link">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="trivia.html" class="nav-link">Trivia</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
 <!-- Cards from - https://mdbootstrap.com/docs/standard/extended/gallery/ -->
 <!-- Carousel wrapper -->
 <div
@@ -17,27 +41,7 @@ id="carouselMultiItemExample"
 class="carousel slide carousel-dark text-center"
 data-mdb-ride="carousel"
 >
-<!-- Controls -->
-<div class="d-flex justify-content-center mb-4">
-  <button
-    class="carousel-control-prev position-relative"
-    type="button"
-    data-mdb-target="#carouselMultiItemExample"
-    data-mdb-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next position-relative"
-    type="button"
-    data-mdb-target="#carouselMultiItemExample"
-    data-mdb-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+
 <!-- Inner -->
 <div class="carousel-inner py-4">
   <!-- Single item -->
@@ -52,12 +56,12 @@ data-mdb-ride="carousel"
               alt="SMACS 0723"
             />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">SMACS 0723</h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up the bulk
                 of the card's content.
               </p>
-              <a href="#!" class="btn btn-primary">Button</a>
+              <a href="#!" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
@@ -70,12 +74,12 @@ data-mdb-ride="carousel"
               alt="Stephan's Quintet"
             />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Stephans Quintet</h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up the bulk
                 of the card's content.
               </p>
-              <a href="#!" class="btn btn-primary">Button</a>
+              <a href="#!" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
@@ -88,15 +92,34 @@ data-mdb-ride="carousel"
               alt="Carina Nebula"
             />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Carina Nebula</h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up the bulk
                 of the card's content.
               </p>
-              <a href="#!" class="btn btn-primary">Button</a>
+              <a href="#!" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+            <div class="card">
+              <img
+                src="img/JWST-4.png"
+                class="card-img-top"
+                alt="Southern Ring Nebula"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Southern Ring Nebula</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk
+                  of the card's content.
+                </p>
+                <a href="#!" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+
       </div>
     </div>
   </div>

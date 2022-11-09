@@ -1,3 +1,19 @@
 body {
     background-color: #000000 !important;
 }
+
+.accordion {
+    padding: 1em;
+}
+
+.accordion-button {
+    background: #0d6efd;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #0dcaf0;
+}
+
+.accordion-item {
+    background: grey;
+}

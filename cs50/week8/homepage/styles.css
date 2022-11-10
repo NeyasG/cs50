@@ -39,7 +39,7 @@ main {
     min-height: 100vh;
 }
 
-.container {
+.container-slider {
     display: grid;
     place-content: center;
     position: relative;

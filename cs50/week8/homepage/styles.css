@@ -41,7 +41,7 @@ main {
 
 .container {
     display: grid;
-    place-content: center
+    place-content: center;
     position: relative;
     overflow: hidden;
     border-radius: 1rem;

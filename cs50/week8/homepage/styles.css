@@ -75,6 +75,8 @@ main {
     height: 100%;
 }
 
+
+
 .slider-line {
     position: absolute;
     inset: 0;
@@ -99,6 +101,6 @@ main {
     left: var(--position);
     transform: translate(-50%, -50%);
     pointer-events: none;
-    z-index: 15:
+    z-index: 100:
     box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
 }

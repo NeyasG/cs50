@@ -17,3 +17,17 @@
 .accordion-item {
     background: grey;
 }
+
+/* JWST vs Hubble Styling */
+
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}

@@ -41,16 +41,16 @@
 
   <main>
     <!-- Before/After Slider from this tutorial https://youtu.be/dzqDU9efnnk -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="image-container">
         <img class="image-before slider-image" src="img/Hubble-SMACS-0723.png" alt="Hubble Deep Field">
         <img class="image-after slider-image" src="img/JWST-SMACS-0723.png" alt="JWST Deep Field">
       </div>
       <input type="range" min="0" max="100" value="50" class="slider" aria-label="Percentage of Hubble Photo Shown">
       <div class="slider-line" aria-hidden="true"></div>
-      <div class="slider-button" aria-hidden="true">
+      <div class="slider-button" aria-hidden="true"> -->
         <!-- Arrow Icon SVG from https://phosphoricons.com/ -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"
           style="--darkreader-inline-fill: #000000;" data-darkreader-inline-fill="">
           <rect width="256" height="256" fill="none"></rect>
           <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="#000000" stroke-linecap="round"
@@ -68,6 +68,90 @@
           <polyline points="208 96 240 128 208 160" fill="none" stroke="#000000" stroke-linecap="round"
             stroke-linejoin="round" stroke-width="16" style="--darkreader-inline-stroke: #e8e6e3;"
             data-darkreader-inline-stroke=""></polyline>
+        </svg>
+      </div>
+    </div> -->
+    <div class="container">
+      <div class="image-container">
+        <img
+          class="image-before slider-image"
+         src="https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I"
+          alt="color photo"
+        />
+        <img
+          class="image-after slider-image"
+          src="https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I"
+          alt="black and white"
+        />
+      </div>
+      <!-- step="10" -->
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        aria-label="Percentage of before photo shown"
+        class="slider"
+      />
+      <div class="slider-line" aria-hidden="true"></div>
+      <div class="slider-button" aria-hidden="true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+        >
+          <rect width="256" height="256" fill="none"></rect>
+          <line
+            x1="128"
+            y1="40"
+            x2="128"
+            y2="216"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <line
+            x1="96"
+            y1="128"
+            x2="16"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <polyline
+            points="48 160 16 128 48 96"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></polyline>
+          <line
+            x1="160"
+            y1="128"
+            x2="240"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <polyline
+            points="208 96 240 128 208 160"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></polyline>
         </svg>
       </div>
     </div>

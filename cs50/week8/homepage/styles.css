@@ -18,7 +18,7 @@
     background: grey;
 }
 
-/* JWST vs Hubble Styling */
+/* JWST vs Hubble Styling taken from Before/After Tutorial.*/
 
 *::after,
 *::before {
@@ -30,4 +30,18 @@
 img {
     display: block;
     max-width: 100%;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    place-content: center
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
 }

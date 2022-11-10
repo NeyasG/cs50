@@ -76,7 +76,10 @@ main {
     height: 100%;
 }
 
-
+.slider:focus-visible ~ .slider-button {
+    outline: 5px solid black;
+    outline-offset: 3px;
+}
 
 .slider-line {
     position: absolute;

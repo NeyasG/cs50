@@ -21,6 +21,15 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
+@app.route("/deregister", methods=["POST"])
+def deregister():
+
+    # Delete birthday
+    id = request.form.get("id")
+    if id:
+        db.execute("DELETE FROM birthdays WHERE id = ?", id)
+    return redirect("/")
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():

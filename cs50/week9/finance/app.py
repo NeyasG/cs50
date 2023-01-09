@@ -145,6 +145,8 @@ def register():
         if not db.execute("SELECT username FROM users WHERE username = ?", request.form.get("username")):
             return apology("Username already exists")
 
+        # add username and password to the database
+
 
     return apology("TODO")
 

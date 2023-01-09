@@ -133,6 +133,14 @@ def register():
         elif not request.form.get("password"):
             return apology("must provide password", 403)
 
+        # Ensure password confirmation was submitted
+        elif not request.form.get("confirmation"):
+            return apology("must confirm password", 403)
+
+        # Ensure password confirmation matches password
+        elif request.form.get("password") != request.form.get("confirmation"):
+            return apology("Passwords do not match")
+
     return apology("TODO")
 
 

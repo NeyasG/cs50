@@ -123,7 +123,7 @@ def register():
         return render_template("register.html")
 
     # User reached route via POST
-    if request.method == "POST":
+    # if request.method == "POST":
 
 
 

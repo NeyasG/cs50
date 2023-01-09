@@ -143,11 +143,13 @@ def register():
 
         # check if username exists already
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
-        if len(rows) = 1:
+        if len(rows) == 1:
             return apology("Username already exists")
 
         # add username and password to the database
-        
+        username = request.form.get("username")
+        hash = generate_password_hash(request.form.get("password"))
+        new_user = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
 
     return apology("TODO")

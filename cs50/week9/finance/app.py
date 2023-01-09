@@ -142,7 +142,8 @@ def register():
             return apology("Passwords do not match")
 
         # check if username exists already
-        if db.execute("SELECT username FROM users WHERE username = ?", request.form.get("username")):
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        if len(rows) != 0:
             return apology("Username already exists")
 
         # add username and password to the database

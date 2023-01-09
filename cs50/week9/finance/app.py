@@ -146,7 +146,8 @@ def register():
             return apology("Username already exists")
 
         # add username and password to the database
-
+        hash = generate_password_hash(request.form.get("password"))
+        db.execute("INSERT)
 
     return apology("TODO")
 

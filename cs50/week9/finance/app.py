@@ -157,6 +157,7 @@ def register():
         return redirect("/")
 
 
+
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():

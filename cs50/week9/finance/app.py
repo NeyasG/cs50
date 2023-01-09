@@ -149,10 +149,12 @@ def register():
         # add username and password to the database
         username = request.form.get("username")
         hash = generate_password_hash(request.form.get("password"))
-        new_user = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
+        new_login = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
+        # Create session ID for new user login
+        session["user_id"] = new_login
 
-    return apology("TODO")
+        return redirect("/")
 
 
 @app.route("/sell", methods=["GET", "POST"])

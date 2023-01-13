@@ -120,12 +120,17 @@ def quote():
     if request.method == "POST":
         stock = request.form.get("stock")
         stock_details = lookup(stock)
-        stock_name = stock_details["name"]
-        stock_symbol = stock_details["symbol"]
-        stock_price = usd(stock_details["price"])
-        return render_template("quoted.html", stock_price = stock_price, stock_symbol = stock_symbol, stock_name = stock_name)
 
-    else re
+        if lookup(stock) != None:
+            stock_name = stock_details["name"]
+            stock_symbol = stock_details["symbol"]
+            stock_price = usd(stock_details["price"])
+            return render_template("quoted.html", stock_price = stock_price, stock_symbol = stock_symbol, stock_name = stock_name)
+
+        else:
+            return apology("Invalid stock symbol", 403)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""

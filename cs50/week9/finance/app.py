@@ -111,9 +111,12 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+
+    # redirect to stock symbol form
     if request.method == "GET":
         return render_template("quote.html")
 
+    # If user reached via POST then lookup stock and render price
     if request.method == "POST":
         stock = request.form.get("stock")
         stock_details = lookup(stock)
@@ -122,7 +125,7 @@ def quote():
         stock_price = usd(stock_details["price"])
         return render_template("quoted.html", stock_price = stock_price, stock_symbol = stock_symbol, stock_name = stock_name)
 
-
+    else re
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""

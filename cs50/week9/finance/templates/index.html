@@ -13,20 +13,19 @@
 <table align="center">
     <thead>
         <tr>
-            <th>{{ name[0].username }}</th>
+            <th colspan = "2">{{ name[0].username }}</th>
         </tr>
     </thead>
     <tbody>
-        {% for row in transactions %}
+        {% for row in stocks %}
             <tr>
-                <td>
-                    {{ row.symbol }}
-                </td>
+                <td>{{ row.symbol }}</td>
+                <td>{{ row.cost }}</td>
             </tr>
         {% endfor %}
     </tbody>
 </table>
 
 <p>You have {{ cash[0].cash | usd }} available</p>
-<p>{{ stocks }}</p>
+
 {% endblock %}

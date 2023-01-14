@@ -6,12 +6,17 @@
 
 {% block main %}
 <table align="center">
-    <tr>
-        <th>User Logged In</th>
-    </tr>
+    <thead>
+        <tr>
+            <th>{{ name[0] }}</th>
+        </tr>
+    </thead>
+
 </table>
 
 {{ transactions }}
 
-
+{% for row in transactions %}
+    <p>{{ row.symbol }}</p>
+{% endfor %}
 {% endblock %}

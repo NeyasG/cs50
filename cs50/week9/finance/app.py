@@ -63,6 +63,8 @@ def buy():
             stock_price = usd(stock_details["price"])
             return render_template("quoted.html", stock_price = stock_price, stock_symbol = stock_symbol, stock_name = stock_name)
 
+        if request.form.get("shares")
+
         else:
             return apology("Invalid stock symbol", 403)
 

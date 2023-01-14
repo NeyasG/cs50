@@ -91,7 +91,7 @@ def buy():
         db.execute("INSERT into transactions (user_id, date_time, symbol, shares, cost) VALUES(?, ?, ?, ?, ?)", user_id, purchase_time, stock_symbol, shares, cost * (-1))
 
         # Update users cash value
-        new_cash = current_cash - cost
+        new_cash = current_cash + cost
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
         # Redirect to home page

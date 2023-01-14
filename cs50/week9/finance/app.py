@@ -90,6 +90,11 @@ def buy():
         purchase_time = datetime.now()
         db.execute("INSERT into purchases (user_id, date, symbol, shares, cost) VALUES(?, ?, ?, ?, ?)", user_id, purchase_time, stock_symbol, shares, cost)
 
+
+        # Update users cash value
+        new_cash = current_cash - cost
+        db.execute("UPDATE)
+
         # Redirect to home page
         return redirect("/")
 

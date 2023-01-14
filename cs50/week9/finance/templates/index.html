@@ -4,19 +4,28 @@
     Buy
 {% endblock %}
 
+
+
 {% block main %}
+<p>Current Transaction list</p>
+<p>{{ transactions }}</p>
+
 <table align="center">
     <thead>
         <tr>
-            <th>{{ name[0] }}</th>
+            <th>{{ name[0].username }}</th>
         </tr>
     </thead>
-
+    <tbody>
+        {% for row in transactions %}
+            <tr>
+                <td>
+                    {{ row.symbol }}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
 </table>
 
-{{ transactions }}
 
-{% for row in transactions %}
-    <p>{{ row.symbol }}</p>
-{% endfor %}
 {% endblock %}

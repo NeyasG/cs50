@@ -49,7 +49,7 @@ def index():
     transactions = db.execute("SELECT * from transactions WHERE user_id = ?", user)
     name = db.execute("SELECT username from users WHERE id = ?", user)
     cash = db.execute("SELECT cash from users WHERE id = ?", user)
-    # stocks = db.execute("SELECT S)
+    # stocks = db.execute("SELECT symbol, SUM(cost) FROM transactions GROUP BY symbol, WHERE user_id = ?", user)
 
     # render index.html
     return render_template("index.html", transactions = transactions, name = name, cash = cash)

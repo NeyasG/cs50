@@ -21,6 +21,7 @@
             <tr>
                 <td>{{ row.symbol }}</td>
                 <td>{{ row.shares }}</td>
+                <td>{{ lookup(row.symbol)["price"] }}</td>
             </tr>
         {% endfor %}
     </tbody>

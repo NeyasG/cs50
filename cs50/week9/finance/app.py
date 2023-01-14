@@ -61,7 +61,9 @@ def buy():
             stock_name = stock_details["name"]
             stock_symbol = stock_details["symbol"]
             stock_price = usd(stock_details["price"])
-            return render_template("quoted.html", stock_price = stock_price, stock_symbol = stock_symbol, stock_name = stock_name)
+
+        else:
+            return apology("Invalid Stock Symbol", 403)
 
         if request.form.get("shares"):
             try:
@@ -75,6 +77,7 @@ def buy():
         else:
             return apology("Invalid stock symbol", 403)
 
+    return render_template("/")
 
 @app.route("/history")
 @login_required

@@ -88,7 +88,7 @@ def buy():
 
         # Record purchase in database
         purchase_time = datetime.now()
-        db.execute("INSERT into purchases")
+        db.execute("INSERT into purchases (user_id, date, symbol, shares, cost) VALUES(?, ?, ?, ?, ?)", user_id, purchase_time, stock_symbol, shares, cost)
 
         # Redirect to home page
         return redirect("/")

@@ -78,7 +78,7 @@ def buy():
                 return apology("Please input a positive amount of Shares", 403)
 
         # Validate whether user has enough cash to make purchase
-        current_cash = db.execute("SELECT cash FROM users WHERE username = ?", )
+        current_cash = db.execute("SELECT cash FROM users WHERE username = ?", user_id)
 
         # Redirect to home page
         return redirect("/")

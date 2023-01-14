@@ -60,7 +60,7 @@ def buy():
         if lookup(stock) != None:
             stock_name = stock_details["name"]
             stock_symbol = stock_details["symbol"]
-            stock_price = usd(stock_details["price"])
+            stock_price = stock_details["price"]
 
         else:
             return apology("Invalid Stock Symbol", 403)

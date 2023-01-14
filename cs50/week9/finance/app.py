@@ -83,7 +83,7 @@ def buy():
         cost = stock_price * shares * (-1)
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
-        if current_cash < cost:
+        if current_cash < cost * (-1):
             return apology("Cannot afford this purchase", 403)
 
         # Record purchase in database

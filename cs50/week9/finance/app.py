@@ -62,20 +62,20 @@ def buy():
             stock_symbol = stock_details["symbol"]
             stock_price = usd(stock_details["price"])
 
-        else:
-            return apology("Invalid Stock Symbol", 403)
+        # else:
+        #     return apology("Invalid Stock Symbol", 403)
 
-        if request.form.get("shares"):
-            try:
-                shares = int(request.form.get("shares"))
-                if shares < 0:
-                    return apology("Not a Valid amount of Shares", 403)
+        # if request.form.get("shares"):
+        #     try:
+        #         shares = int(request.form.get("shares"))
+        #         if shares < 0:
+        #             return apology("Not a Valid amount of Shares", 403)
 
-            except ValueError:
-                return apology("Please input a positive amount of Shares", 403)
+        #     except ValueError:
+        #         return apology("Please input a positive amount of Shares", 403)
 
-        else:
-            return apology("Invalid stock symbol", 403)
+        # else:
+        #     return apology("Invalid stock symbol", 403)
 
     return render_template("/")
 

@@ -79,8 +79,9 @@ def buy():
                 return apology("Please input a positive amount of Shares", 403)
 
         # Validate whether user has enough cash to make purchase
+        user_id = session["user_id"]
         cost = stock_price * shares
-        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
         if current_cash < cost:
             return apology("Cannot afford this purchase", 403)

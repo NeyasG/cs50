@@ -84,6 +84,9 @@ def buy():
         if current_cash < cost:
             return apology("Cannot afford this purchase", 403)
 
+        # Record purchase in database
+        time = 
+
         # Redirect to home page
         return redirect("/")
 

@@ -79,7 +79,10 @@ def buy():
 
         # Validate whether user has enough cash to make purchase
         cost = stock_price * shares
-        # current_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+
+        if current_cash < cost:
+            return apology("Cannot afford this purchase", 403)
 
         # Redirect to home page
         return redirect("/")

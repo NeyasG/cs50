@@ -45,11 +45,14 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     # Retrieve list of transactions for logged in user
-    transactions = db.execute("SELECT * from transactions WHERE user_id = ?", session["user_id"])
-    name = db.execute("SELECT username from users WHERE id = ?", session["user_id"])
+    user = session["user_id"]
+    transactions = db.execute("SELECT * from transactions WHERE user_id = ?", user)
+    name = db.execute("SELECT username from users WHERE id = ?", user)
+    cash = db.execute("SELECT cash from users WHERE id = ?", user)
 
 
-    return render_template("index.html", transactions = transactions, name = name)
+    # render index.html
+    return render_template("index.html", transactions = transactions, name = name, cash = cash)
 
 
 @app.route("/buy", methods=["GET", "POST"])

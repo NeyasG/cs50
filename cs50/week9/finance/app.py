@@ -80,7 +80,7 @@ def buy():
 
         # Validate whether user has enough cash to make purchase
         user_id = session["user_id"]
-        cost = stock_price * shares
+        cost = stock_price * shares * (-1)
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
         if current_cash < cost:
@@ -88,7 +88,7 @@ def buy():
 
         # Record purchase in database
         purchase_time = datetime.now()
-        db.execute("INSERT into transactions (user_id, date_time, symbol, shares, cost) VALUES(?, ?, ?, ?, ?)", user_id, purchase_time, stock_symbol, shares, cost * (-1))
+        db.execute("INSERT into transactions (user_id, date_time, symbol, shares, cost) VALUES(?, ?, ?, ?, ?)", user_id, purchase_time, stock_symbol, shares, cost)
 
         # Update users cash value
         new_cash = current_cash + cost

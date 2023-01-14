@@ -53,10 +53,12 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
+    # If user reached via POST
     elif request.method == "POST":
         stock = request.form.get("buy")
         stock_details = lookup(stock)
 
+    # Validate stock symbol & store details if valid
         if lookup(stock) != None:
             stock_name = stock_details["name"]
             stock_symbol = stock_details["symbol"]
@@ -65,6 +67,7 @@ def buy():
         else:
             return apology("Invalid Stock Symbol", 403)
 
+        # Validate share amount is a positive integer
         if request.form.get("shares"):
             try:
                 shares = int(request.form.get("shares"))
@@ -74,6 +77,7 @@ def buy():
             except ValueError:
                 return apology("Please input a positive amount of Shares", 403)
 
+        # Redirect to home page
         return redirect("/")
 
 @app.route("/history")
@@ -86,7 +90,6 @@ def history():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
-
     # Forget any user_id
     session.clear()
 
@@ -134,7 +137,6 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-
     # redirect to stock symbol form
     if request.method == "GET":
         return render_template("quote.html")
@@ -157,7 +159,6 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-
     # Redirect user to register form
     if request.method == "GET":
         return render_template("register.html")

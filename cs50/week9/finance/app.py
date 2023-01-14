@@ -74,7 +74,6 @@ def buy():
             except ValueError:
                 return apology("Please input a positive amount of Shares", 403)
 
-        
         return redirect("/")
 
 @app.route("/history")

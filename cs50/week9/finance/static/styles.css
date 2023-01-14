@@ -24,4 +24,7 @@ nav .navbar-brand .green
 
 /* Universal Styling */
 
-background-color: #121212 !important;
+body
+{
+    background-color: #121212;
+}

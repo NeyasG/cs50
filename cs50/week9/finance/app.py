@@ -85,14 +85,18 @@ def buy():
             return apology("Invalid Stock Symbol", 403)
 
         # Validate share amount is a positive integer
-        if request.form.get("shares"):
-            try:
-                shares = int(request.form.get("shares"))
-                if shares <= 0:
-                    return apology("Not a Valid amount of Shares", 403)
+        if request.form.get("shares") != None:
+            if request.form.get("shares"):
+                try:
+                    shares = int(request.form.get("shares"))
+                    if shares <= 0:
+                        return apology("Not a Valid amount of Shares", 403)
 
-            except ValueError:
-                return apology("Please input a positive amount of Shares", 403)
+                except ValueError:
+                    return apology("Please input a positive amount of Shares", 403)
+
+            else:
+                return apology("Please input the amount of shares to buy")
 
         # Validate whether user has enough cash to make purchase
         user_id = session["user_id"]

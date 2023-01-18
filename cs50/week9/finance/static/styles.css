@@ -27,6 +27,7 @@ nav .navbar-brand .green
 body
 {
     background-color: #121212;
+    color: white;
 }
 
 table, th, td
@@ -34,7 +35,6 @@ table, th, td
     width: 70%;
     border: 1px solid;
     border-collapse: collapse;
-    color: white;
 }
 
 th

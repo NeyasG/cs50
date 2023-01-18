@@ -49,10 +49,13 @@ def index():
     transactions = db.execute("SELECT * from transactions WHERE user_id = ?", user)
     name = db.execute("SELECT username from users WHERE id = ?", user)
     cash = db.execute("SELECT cash from users WHERE id = ?", user)
+    # Create a table to pass to index.html with all current holdings
     stocks = db.execute("SELECT symbol, SUM(cost) as cost, SUM(shares) as shares FROM transactions WHERE user_id = ? GROUP BY symbol ORDER BY shares DESC", user)
+    # Total cost of all shares at current price
+    total_cost = db.execute("SELECT SUM(cost) as cost FROM transactions WHERE user_id = ?", user)
 
     # render index.html
-    return render_template("index.html", transactions = transactions, name = name, cash = cash, stocks = stocks, lookup=lookup)
+    return render_template("index.html", transactions = transactions, name = name, cash = cash, stocks = stocks, lookup=lookup, total_cost = total_cost)
 
 
 @app.route("/buy", methods=["GET", "POST"])

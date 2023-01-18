@@ -15,9 +15,9 @@
             <th class="left heading">Symbol</th>
             <th class="left heading">Name</th>
             <th class="right heading">Shares</th>
-            <th class="right heading">Purchase Price</th>
             <th class="right heading">Current Price</th>
-            <th class="right heading">Total</th>
+            <th class="right heading">Total Cost</th>
+            <th class="right heading">Total Value</th>
         </tr>
     </thead>
     <tbody>
@@ -26,8 +26,8 @@
                 <td class="left">{{ row.symbol }}</td>
                 <td class="left">{{ lookup(row.symbol)["name"] }}</td>
                 <td class="right">{{ row.shares }}</td>
-                <td class="right">{{ (row.cost / row.shares) | abs | usd }}</td>
                 <td class="right">{{ lookup(row.symbol)["price"] | usd }}</td>
+                <td class="right">{{ row.cost | abs | usd }}</td>
                 <td class="right">{{ (lookup(row.symbol)["price"] * row.shares) | usd }}</td>
             </tr>
         {% endfor %}
@@ -35,10 +35,12 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
             <th class="right">Cash</th>
             <td class="right">{{ cash[0].cash | usd }}</td>
         </tr>
         <tr id="last">
+            <td></td>
             <td></td>
             <td></td>
             <td></td>

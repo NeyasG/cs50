@@ -269,7 +269,13 @@ def sell():
 
         # Validate that user owns at least 1 share of selected stock
         if shares_owned != None and shares_owned > request.form.get("shares"):
+
+            # Update the database to reflect shares sold
             
+
+
+            return redirect("/")
+
 
 
 

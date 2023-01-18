@@ -60,12 +60,8 @@ def index():
         # Grand Total cash + stock value at current price
         grand_total += details["price"] * stock["shares"]
 
-    # Total cost of all shares at current price
-    total_cost = db.execute(
-        "SELECT SUM(cost) as cost FROM transactions WHERE user_id = ?", user)
-
     # render index.html
-    return render_template("index.html", cash=cash, stocks=stocks, total_cost=total_cost, grand_total=grand_total)
+    return render_template("index.html", cash=cash, stocks=stocks, grand_total=grand_total)
 
 
 @app.route("/buy", methods=["GET", "POST"])

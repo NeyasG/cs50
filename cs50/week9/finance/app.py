@@ -121,7 +121,15 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
+    # User reached route via GET
+    if request.method == "GET":
+        return render_template("history.html")
+
+    # User reached route via POST
+    if request.method == "POST":
+        transactions = db.execute("SELECT * FROM transactions")
+
+        return render_template("history.html", transactions = transactions)
 
 
 @app.route("/login", methods=["GET", "POST"])

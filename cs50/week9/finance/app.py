@@ -84,7 +84,7 @@ def buy():
         else:
             return apology("Invalid Stock Symbol", 403)
 
-        # Validate share amount is a positive integer
+        # Validate share amount is a positive integer and not None
         if request.form.get("shares") != None:
             if request.form.get("shares"):
                 try:
@@ -240,11 +240,17 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    # User reached via GET
     if request.method == "GET":
 
+        # Query for a distinct list of stocks owned by current user
         owned = db.execute("SELECT DISTINCT symbol FROM transactions WHERE user_id = ?", session["user_id"])
         return render_template("sell.html", owned = owned)
 
 
+    # User reached via POST
+    if request.method == "POST":
 
-    return apology("TODO")
+        # ensure valid amount of shares
+        if request.form.get("sell")
+

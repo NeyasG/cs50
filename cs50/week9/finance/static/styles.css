@@ -40,3 +40,13 @@ th
 {
     height: 50px;
 }
+
+.left
+{
+    text-align: left;
+}
+
+.right
+{
+    text-align: right;
+}

@@ -61,4 +61,5 @@ tr:nth-child(even)
 #last
 {
     background-color: #121212;
+    border-bottom: none !important;
 }

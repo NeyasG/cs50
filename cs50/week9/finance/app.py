@@ -54,6 +54,7 @@ def index():
     # Total cost of all shares at current price
     total_cost = db.execute("SELECT SUM(cost) as cost FROM transactions WHERE user_id = ?", user)
     # Grand Total cash + stock value at current price
+    grand_total = stocks
 
     # render index.html
     return render_template("index.html", transactions = transactions, name = name, cash = cash, stocks = stocks, lookup=lookup, total_cost = total_cost)

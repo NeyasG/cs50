@@ -17,7 +17,12 @@
         </thead>
         <tbody>
             {% for row in transactions %}
-                <td class="left">{{ row. }}</td>
+            <tr>
+                <td class="left">{{ row.symbol }}</td>
+                <td class="left">{{ row.shares }}</td>
+                <td class="left">{{ abs(row.cost / row.shares) }}</td>
+                <td class="left">{{ row.date_time }}</td>
+            </tr>
             {% endfor %}
         </tbody>
     </table>

@@ -72,7 +72,7 @@ def buy():
 
     # If user reached via POST
     elif request.method == "POST":
-        stock = request.form.get("buy")
+        stock = request.form.get("symbol")
         stock_details = lookup(stock)
 
     # Validate stock symbol & store details if valid
@@ -183,7 +183,7 @@ def quote():
 
     # If user reached via POST then lookup stock and render price
     if request.method == "POST":
-        stock = request.form.get("stock")
+        stock = request.form.get("symbol")
         stock_details = lookup(stock)
 
         if lookup(stock) != None:

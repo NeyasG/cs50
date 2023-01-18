@@ -51,6 +51,9 @@ def index():
     # Create a table to pass to index.html with all current holdings
     stocks = db.execute(
         "SELECT symbol, SUM(cost) as cost, SUM(shares) as shares FROM transactions WHERE user_id = ? GROUP BY symbol ORDER BY shares DESC", user)
+    for stock in stocks:
+        stock[name] = lookup(stock[symbol])["name"]
+
 
     # Total cost of all shares at current price
     total_cost = db.execute(

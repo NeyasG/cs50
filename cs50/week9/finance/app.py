@@ -82,7 +82,7 @@ def buy():
             stock_price = stock_details["price"]
 
         else:
-            return apology("Invalid Stock Symbol", 403)
+            return apology("Invalid Stock Symbol", 400)
 
         # Validate share amount is a positive integer and not None
         if request.form.get("shares") != None:
@@ -90,10 +90,10 @@ def buy():
                 try:
                     shares = int(request.form.get("shares"))
                     if shares <= 0:
-                        return apology("Not a Valid amount of Shares", 403)
+                        return apology("Not a Valid amount of Shares", 400)
 
                 except ValueError:
-                    return apology("Please input a positive amount of Shares", 403)
+                    return apology("Please input a positive amount of Shares", 400)
 
             else:
                 return apology("Please input the amount of shares to buy")
@@ -104,7 +104,7 @@ def buy():
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
         if current_cash < cost * (-1):
-            return apology("Cannot afford this purchase", 403)
+            return apology("Cannot afford this purchase", 400)
 
         # Record purchase in database
         purchase_time = datetime.now()
@@ -138,18 +138,18 @@ def login():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
-            return apology("invalid username and/or password", 403)
+            return apology("invalid username and/or password", 400)
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
@@ -193,7 +193,7 @@ def quote():
             return render_template("quoted.html", stock_price = stock_price, stock_symbol = stock_symbol, stock_name = stock_name)
 
         else:
-            return apology("Invalid stock symbol", 403)
+            return apology("Invalid stock symbol", 400)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -254,7 +254,7 @@ def sell():
     # User reached via POST
     if request.method == "POST":
 
-        shares_owned = db.execute("SELECT SUM(shares) as shares FROM transactions WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("stock"))
+        shares_owned = db.execute("SELECT SUM(shares) as shares FROM transactions WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
 
         # Ensure valid amount of shares
         if request.form.get("shares") != None:
@@ -262,10 +262,10 @@ def sell():
                 try:
                     shares = int(request.form.get("shares"))
                     if shares <= 0:
-                        return apology("Not a Valid amount of Shares", 403)
+                        return apology("Not a Valid amount of Shares", 400)
 
                 except ValueError:
-                    return apology("Please input a positive amount of Shares", 403)
+                    return apology("Please input a positive amount of Shares", 400)
 
             else:
                 return apology("Please input the amount of shares to sell")
@@ -276,9 +276,9 @@ def sell():
             # Update the database to reflect shares sold
             sale_time = datetime.now()
             user_id = session["user_id"]
-            stock_symbol = request.form.get("stock")
+            stock_symbol = request.form.get("symbol")
             shares = int(request.form.get("shares")) * -1
-            current_price = lookup(request.form.get("stock"))["price"]
+            current_price = lookup(request.form.get("symbol"))["price"]
             cost = shares * current_price
 
             db.execute("INSERT into transactions (user_id, date_time, symbol, shares, cost) VALUES(?, ?, ?, ?, ?)", user_id, sale_time, stock_symbol, shares, cost)

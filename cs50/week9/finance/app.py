@@ -122,7 +122,7 @@ def buy():
 def history():
     """Show history of transactions"""
 
-    transactions = db.execute("SELECT * FROM transactions")
+    transactions = db.execute("SELECT * FROM transactions WHERE user_id=?", session["user_id"])
 
     return render_template("history.html", transactions = transactions)
 

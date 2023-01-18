@@ -268,7 +268,7 @@ def sell():
                 return apology("Please input the amount of shares to sell")
 
         # Validate that user owns at least 1 share of selected stock
-        if shares_owned != None and shares_owned[0] > int(request.form.get("shares")):
+        if shares_owned != None and shares_owned[0]["shares"] > int(request.form.get("shares")):
 
             # Update the database to reflect shares sold
             sale_time = datetime.now()

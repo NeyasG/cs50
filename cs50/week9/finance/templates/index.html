@@ -23,7 +23,7 @@
             <tr>
                 <td>{{ row.symbol }}</td>
                 <td>{{ row.shares }}</td>
-                <td>{{ lookup(row.symbol)["name"] | usd }}</td>
+                <td>{{ lookup(row.symbol)["companyName"] }}</td>
                 <td>{{ lookup(row.symbol)["price"] | usd }}</td>
                 <td>{{ (lookup(row.symbol)["price"] * row.shares) | usd }}</td>
             </tr>

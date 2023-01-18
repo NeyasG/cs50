@@ -56,7 +56,7 @@ def index():
     # Grand Total cash + stock value at current price
 
     # render index.html
-    return render_template("index.html", transactions = transactions, name = name, cash = cash, stocks = stocks, lookup=lookup, total_cost = total_cost)
+    return render_template("index.html", transactions = transactions, cash = cash, stocks = stocks, lookup=lookup, total_cost = total_cost)
 
 
 @app.route("/buy", methods=["GET", "POST"])

@@ -251,7 +251,7 @@ def sell():
     # User reached via POST
     if request.method == "POST":
 
-        shares_owned = db.execute("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("stock"))
+        shares_owned = db.execute("SELECT SUM(shares) as shares FROM transactions WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("stock"))
 
         # Ensure valid amount of shares
         if request.form.get("shares") != None:

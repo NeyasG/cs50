@@ -51,25 +51,21 @@ def index():
     # Create a table to pass to index.html with all current holdings
     stocks = db.execute(
         "SELECT symbol, SUM(cost) as cost, SUM(shares) as shares FROM transactions WHERE user_id = ? GROUP BY symbol ORDER BY shares DESC", user)
+    grand_total = 0
     for stock in stocks:
         details = lookup(stock["symbol"])
         stock["name"] = details["name"]
         stock["price"] = details["price"]
         stock["value"] = details["price"] * stock["shares"]
-
+        # Grand Total cash + stock value at current price
+        grand_total += details["price"] * stock["shares"]
 
     # Total cost of all shares at current price
     total_cost = db.execute(
         "SELECT SUM(cost) as cost FROM transactions WHERE user_id = ?", user)
 
-    # Grand Total cash + stock value at current price
-    grand_total = 0
-    for stock in stocks:
-        details = lookup(stock["symbol"])
-        grand_total += details["price"] * stock["shares"]
-
     # render index.html
-    return render_template("index.html", cash=cash, stocks=stocks, lookup=lookup, total_cost=total_cost, grand_total=grand_total)
+    return render_template("index.html", cash=cash, stocks=stocks, total_cost=total_cost, grand_total=grand_total)
 
 
 @app.route("/buy", methods=["GET", "POST"])

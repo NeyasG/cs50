@@ -6,11 +6,13 @@
 
 {% block main %}
     <form action="/sell" method="post">
-        <select name="sell" id="sell">
-            {% for stock in owned %}
-                <option value="{{stock.symbol}}"></option>
-            {% endfor %}
-        </select>
+        <div class="mb-3">
+            <select name="sell" id="sell">
+                {% for stock in owned %}
+                    <option value="{{stock.symbol}}">{{stock.symbol}}</option>
+                {% endfor %}
+            </select>
+        </div>
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="text">
         </div>

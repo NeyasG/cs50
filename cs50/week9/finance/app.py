@@ -291,7 +291,7 @@ def sell():
             stock_symbol = request.form.get("symbol")
             shares = int(request.form.get("shares")) * -1
             current_price = lookup(request.form.get("symbol"))["price"]
-            cost = shares * current_price
+            cost = shares * current_price * -1
 
             db.execute("INSERT into transactions (user_id, date_time, symbol, shares, cost) VALUES(?, ?, ?, ?, ?)",
                        user_id, sale_time, stock_symbol, shares, cost)

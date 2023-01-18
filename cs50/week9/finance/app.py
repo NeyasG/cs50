@@ -216,7 +216,7 @@ def register():
 
         # Ensure password confirmation was submitted
         elif not request.form.get("confirmation"):
-            return apology("must confirm password", 403)
+            return apology("must confirm password", 400)
 
         # Ensure password confirmation matches password
         elif request.form.get("password") != request.form.get("confirmation"):

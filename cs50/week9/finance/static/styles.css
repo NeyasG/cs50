@@ -33,13 +33,19 @@ body
 table, th, td
 {
     width: 70%;
-    border: 1px solid;
     border-collapse: collapse;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
 th
 {
     height: 50px;
+}
+
+tr:nth-child(even)
+{
+    background-color: #303030;
 }
 
 .left

@@ -24,11 +24,11 @@
         {% for row in stocks %}
             <tr>
                 <td class="left">{{ row.symbol }}</td>
-                <td class="left">{{ lookup(row.symbol)["name"] }}</td>
+                <td class="left">{{ row.name }}</td>
                 <td class="right">{{ row.shares }}</td>
-                <td class="right">{{ lookup(row.symbol)["price"] | usd }}</td>
+                <td class="right">{{ row.price | usd }}</td>
                 <td class="right">{{ row.cost | abs | usd }}</td>
-                <td class="right">{{ (lookup(row.symbol)["price"] * row.shares) | usd }}</td>
+                <td class="right">{{ row.value | usd }}</td>
             </tr>
         {% endfor %}
         <tr>

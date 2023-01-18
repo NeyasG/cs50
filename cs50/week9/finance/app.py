@@ -52,7 +52,10 @@ def index():
     stocks = db.execute(
         "SELECT symbol, SUM(cost) as cost, SUM(shares) as shares FROM transactions WHERE user_id = ? GROUP BY symbol ORDER BY shares DESC", user)
     for stock in stocks:
-        stock[name] = lookup(stock[symbol])["name"]
+        details = lookup(stock["symbol"])
+        stock["name"] = details["name"]
+        stock["price"] = details["price"]
+        stock["value"] = details["price"] * stock["shares"]
 
 
     # Total cost of all shares at current price

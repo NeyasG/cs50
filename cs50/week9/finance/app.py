@@ -251,7 +251,7 @@ def sell():
     # User reached via POST
     if request.method == "POST":
 
-        shares_owned = db.execute("SELECT shares FROM transactions WHERE user_id = ?, symbol = ?", session["user_id"], request.form.get("stock"))
+        shares_owned = db.execute("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("stock"))
 
         # Ensure valid amount of shares
         if request.form.get("shares") != None:
@@ -268,7 +268,7 @@ def sell():
                 return apology("Please input the amount of shares to sell")
 
         # Validate that user owns at least 1 share of selected stock
-        if shares_owned != None and shares_owned > request.form.get("shares"):
+        if shares_owned != None and shares_owned[0] > int(request.form.get("shares")):
 
             # Update the database to reflect shares sold
             sale_time = datetime.now()

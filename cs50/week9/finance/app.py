@@ -271,14 +271,16 @@ def sell():
         if shares_owned != None and shares_owned > request.form.get("shares"):
 
             # Update the database to reflect shares sold
-            
+            sale_time = datetime.now()
+            user_id = session["user_id"]
+            stock_symbol = request.form.get("stock")
+            shares = request.form.get("shares") * -1
+            current_price = lookup(request.form.get("stock"))["price"]
+            cost = shares * current_price
 
+            db.execute("INSERT into transactions (user_id, date_time, symbol, shares, cost) VALUES(?, ?, ?, ?, ?)", user_id, sale_time, stock_symbol, shares, cost)
 
             return redirect("/")
-
-
-
-
 
         else:
             return apology("You do not own enough shares to sell")

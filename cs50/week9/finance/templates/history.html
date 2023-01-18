@@ -20,15 +20,11 @@
             <tr>
                 <td class="left">{{ row.symbol }}</td>
                 <td class="left">{{ row.shares }}</td>
-                <td class="left">{{ row.cost / row.shares}}</td>
+                <td class="left">{{ (row.cost / row.shares) | abs | usd }}</td>
                 <td class="left">{{ row.date_time }}</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
-
-
-
-{{transactions}}
 {% endblock %}

@@ -238,8 +238,8 @@ def sell():
     """Sell shares of stock"""
     if request.method == "GET":
 
-        owned = db.execute("SELECT symbol FROM transactions WHERE user_id = ?", session["user_id"])
-        return render_template("sell.html")
+        owned = db.execute("SELECT DISTINCT symbol FROM transactions WHERE user_id = ?", session["user_id"])
+        return render_template("sell.html", owned = owned)
 
 
 

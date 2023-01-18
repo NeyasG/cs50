@@ -34,6 +34,7 @@ table, th, td
     width: 70%;
     border: 1px solid;
     border-collapse: collapse;
+    color: white;
 }
 
 th

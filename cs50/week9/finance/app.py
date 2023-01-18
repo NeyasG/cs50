@@ -46,8 +46,6 @@ def index():
     """Show portfolio of stocks"""
     # Retrieve list of transactions for logged in user
     user = session["user_id"]
-    transactions = db.execute(
-        "SELECT * from transactions WHERE user_id = ?", user)
     cash = db.execute("SELECT cash from users WHERE id = ?", user)
 
     # Create a table to pass to index.html with all current holdings

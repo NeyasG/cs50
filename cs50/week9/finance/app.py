@@ -274,7 +274,7 @@ def sell():
             sale_time = datetime.now()
             user_id = session["user_id"]
             stock_symbol = request.form.get("stock")
-            shares = request.form.get("shares") * -1
+            shares = int(request.form.get("shares")) * -1
             current_price = lookup(request.form.get("stock"))["price"]
             cost = shares * current_price
 

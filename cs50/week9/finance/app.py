@@ -251,6 +251,28 @@ def sell():
     # User reached via POST
     if request.method == "POST":
 
-        # ensure valid amount of shares
-        if request.form.get("sell")
+        shares_owned = db.execute("SELECT shares FROM transactions WHERE user_id = ?, symbol = ?", session["user_id"], request.form.get("stock"))
 
+        # Ensure valid amount of shares
+        if request.form.get("shares") != None:
+            if request.form.get("shares"):
+                try:
+                    shares = int(request.form.get("shares"))
+                    if shares <= 0:
+                        return apology("Not a Valid amount of Shares", 403)
+
+                except ValueError:
+                    return apology("Please input a positive amount of Shares", 403)
+
+            else:
+                return apology("Please input the amount of shares to sell")
+
+        # Validate that user owns at least 1 share of selected stock
+        if shares_owned != None and shares_owned > request.form.get("shares"):
+            
+
+
+
+
+        else:
+            return apology("You do not own enough shares to sell")

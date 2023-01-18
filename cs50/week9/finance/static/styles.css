@@ -57,3 +57,9 @@ tr:nth-child(even)
 {
     text-align: right;
 }
+
+#last
+{
+    background-color: #121212;
+    border-bottom: none;
+}

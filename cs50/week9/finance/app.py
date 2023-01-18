@@ -48,7 +48,7 @@ def index():
     user = session["user_id"]
     cash = db.execute("SELECT cash from users WHERE id = ?", user)
 
-    # Create a table to pass to index.html with all current holdings
+    # Create a dict to pass to index.html with all current holdings
     stocks = db.execute(
         "SELECT symbol, SUM(cost) as cost, SUM(shares) as shares FROM transactions WHERE user_id = ? GROUP BY symbol ORDER BY shares DESC", user)
     grand_total = 0

@@ -40,28 +40,60 @@ def after_request(response):
     return response
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
     """Show portfolio of stocks"""
-    # Retrieve list of transactions for logged in user
-    user = session["user_id"]
-    cash = db.execute("SELECT cash from users WHERE id = ?", user)
+    # User reached via GET
+    if request.method == "GET":
 
-    # Create a dict to pass to index.html with all current holdings
-    stocks = db.execute(
-        "SELECT symbol, SUM(cost) as cost, SUM(shares) as shares FROM transactions WHERE user_id = ? GROUP BY symbol ORDER BY shares DESC", user)
-    grand_total = 0
-    for stock in stocks:
-        details = lookup(stock["symbol"])
-        stock["name"] = details["name"]
-        stock["price"] = details["price"]
-        stock["value"] = details["price"] * stock["shares"]
-        # Grand Total cash + stock value at current price
-        grand_total += details["price"] * stock["shares"]
+        # Retrieve list of transactions for logged in user
+        user = session["user_id"]
+        cash = db.execute("SELECT cash from users WHERE id = ?", user)
 
-    # render index.html
-    return render_template("index.html", cash=cash, stocks=stocks, grand_total=grand_total)
+        # Create a dict to pass to index.html with all current holdings
+        stocks = db.execute(
+            "SELECT symbol, SUM(cost) as cost, SUM(shares) as shares FROM transactions WHERE user_id = ? GROUP BY symbol ORDER BY shares DESC", user)
+        grand_total = 0
+        for stock in stocks:
+            details = lookup(stock["symbol"])
+            stock["name"] = details["name"]
+            stock["price"] = details["price"]
+            stock["value"] = details["price"] * stock["shares"]
+            # Grand Total cash + stock value at current price
+            grand_total += details["price"] * stock["shares"]
+
+        # render index.html
+        return render_template("index.html", cash=cash, stocks=stocks, grand_total=grand_total)
+
+    # User reached via POST and submitted add_cash form
+    else:
+        # Validate form is a positive integer
+        amount = int(request.form.get("add_cash"))
+        if request.form.get("add_cash") != None:
+            if request.form.get("add_cash"):
+                try:
+                    shares = int(request.form.get("add_cash"))
+                    if shares <= 0:
+                        return apology("Not a Valid amount of Cash", 400)
+                    elif shares > 1000000:
+                        return apology("Ok Mr. Bezos, we get it. You're rich. Try a lower amount")
+
+                except ValueError:
+                    return apology("Please input a positive amount of Cash", 400)
+
+            else:
+                return apology("Please input the amount of Cash to add")
+
+        # Update users cash in database
+        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+        new_cash = current_cash + amount
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
+
+        return redirect("/")
+
+
+
 
 
 @app.route("/buy", methods=["GET", "POST"])

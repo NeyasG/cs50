@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<div style="overflow-x: auto;">
+    <table align="center">
+        <thead>
+            <tr>
+                <th class="left heading">Symbol</th>
+                <th class="left heading">Shares</th>
+                <th class="left heading">Price</th>
+                <th class="left heading">Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in transactions %}
+            <tr>
+                <td class="left">{{ row.symbol }}</td>
+                <td class="left">{{ row.shares }}</td>
+                <td class="left">{{ (row.cost / row.shares) | abs | usd }}</td>
+                <td class="left">{{ row.date_time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

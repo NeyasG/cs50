@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>JWST vs Hubble - SMACS 0723</title>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">James Webb Space Telescope</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="science.html" class="nav-link">Science</a>
+          </li>
+          <li class="nav-item">
+            <a href="gallery.html" class="nav-link">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a href="JWSTvsHubble.html" class="nav-link">JWST vs Hubble</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="title">
+      <h2>The JWST vs the Hubble Space Telescope</h2>
+      <p>Drag the slider across the image to compare the difference in detail captured by the JWST and the Hubble
+        telescopes.
+      </p>
+    </div>
+
+    <!-- Before/After Slider from this tutorial https://youtu.be/dzqDU9efnnk -->
+    <div class="container-slider">
+      <div class="image-container">
+        <img class="image-before slider-image" src="img/Hubble2.png" alt="Hubble Deep Field">
+        <img class="image-after slider-image" src="img/JWST2.png" alt="JWST Deep Field">
+      </div>
+      <input type="range" min="0" max="100" value="50" class="slider" aria-label="Percentage of Hubble Photo Shown">
+      <div class="slider-line" aria-hidden="true"></div>
+      <div class="slider-button" aria-hidden="true">
+        <!-- Arrow Icon SVG from https://phosphoricons.com/ -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"
+          style="--darkreader-inline-fill: #000000;" data-darkreader-inline-fill="">
+          <rect width="256" height="256" fill="none"></rect>
+          <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="#000000" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16" style="--darkreader-inline-stroke: #8c8273;"
+            data-darkreader-inline-stroke=""></line>
+          <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="#000000" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16" style="--darkreader-inline-stroke: #8c8273;"
+            data-darkreader-inline-stroke=""></line>
+          <polyline points="48 160 16 128 48 96" fill="none" stroke="#000000" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16" style="--darkreader-inline-stroke: #e8e6e3;"
+            data-darkreader-inline-stroke=""></polyline>
+          <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="#000000" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16" style="--darkreader-inline-stroke: #8c8273;"
+            data-darkreader-inline-stroke=""></line>
+          <polyline points="208 96 240 128 208 160" fill="none" stroke="#000000" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16" style="--darkreader-inline-stroke: #e8e6e3;"
+            data-darkreader-inline-stroke=""></polyline>
+        </svg>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

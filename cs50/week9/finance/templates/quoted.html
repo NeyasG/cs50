@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+<h2>{{ stock_name }} ({{ stock_symbol }})</h2>
+<p>Currently trading at: {{ stock_price }}</p>
+{% endblock %}

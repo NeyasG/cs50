@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>James Webb Space Telescope</title>
+</head>
+
+<body class="bg-secondary">
+
+  <!--Homepage layout Inspired by this tutorial - https://youtu.be/4sosXZsdy-s -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">James Webb Space Telescope</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="science.html" class="nav-link">Science</a>
+          </li>
+          <li class="nav-item">
+            <a href="gallery.html" class="nav-link">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a href="JWSTvsHubble.html" class="nav-link">JWST vs Hubble</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Showcase-->
+  <section class="bg-dark text-light p-5 text-center text-sm-start">
+    <div class="container">
+      <div class="d-sm-flex align-items-center justify-content-between">
+        <div>
+          <h1>Explore the <span class="text-info">wonders of the Universe</span></h1>
+          <p class="lead my-4">The James Webb Space Telescope will be a giant leap forward in our quest to understand
+            the Universe and our origins.
+            JWST will examine every phase of cosmic history: from the first luminous glows after the Big Bang to the
+            formation of galaxies, stars, and planets to the evolution of our own solar system.</p>
+          <a href="https://www.jwst.nasa.gov/content/webbLaunch/assets/documents/WebbFactSheet.pdf"><button
+              class="btn btn-primary btn-lg">JWST Factsheet</button></a>
+        </div>
+        <img class="img-fluid w-50 d-none d-sm-block" src="img/outerspace.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!--Boxes-->
+  <section class="p-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md">
+          <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-calculator"></i>
+              </div>
+              <h3 class="card-title mb-3">Science</h3>
+              <p class="card-text">
+                Learn about the science behind the James Webb Space Telescope Project
+              </p>
+              <a href="science.html" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-binoculars"></i>
+              </div>
+              <h3 class="card-title mb-3">Gallery</h3>
+              <p class="card-text">
+                Explore some of the jaw-dropping images captured by the JWST Project
+              </p>
+              <a href="gallery.html" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-check-square"></i>
+              </div>
+              <h3 class="card-title mb-3">JWST vs Hubble</h3>
+              <p class="card-text">
+                Compare the staggering resolution difference between JWST and the Hubble telescopes
+              </p>
+              <a href="JWSTvsHubble.html" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

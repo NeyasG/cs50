@@ -7,6 +7,53 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
+            // Boy do I wish I used classes instead of selecting by ID...
+            document.addEventListener("DOMContentLoaded", function(){
+
+                b1 = document.getElementById("b1")
+                b2 = document.getElementById("b2")
+                b3 = document.getElementById("b3")
+
+                // Button 1 event
+                b1.addEventListener("click", function onClick(event) {
+                b2.style.backgroundColor = "#d9edff";
+                b3.style.backgroundColor = "#d9edff";
+                event.target.style.backgroundColor = "Red";
+                document.querySelector("#multi_incorrect").hidden=false;
+                document.querySelector("#multi_correct").hidden=true;
+                });
+
+                // Button 2 event
+                b2.addEventListener("click", function onClick(event) {
+                b1.style.backgroundColor = "#d9edff";
+                b3.style.backgroundColor = "#d9edff";
+                event.target.style.backgroundColor = "Red";
+                document.querySelector("#multi_incorrect").hidden=false;
+                document.querySelector("#multi_correct").hidden=true;
+                });
+
+                // Button 3 event (Correct)
+                b3.addEventListener("click", function onClick(event) {
+                b1.style.backgroundColor = "#d9edff";
+                b2.style.backgroundColor = "#d9edff";
+                event.target.style.backgroundColor = "Green";
+                document.querySelector("#multi_correct").hidden=false;
+                document.querySelector("#multi_incorrect").hidden=true;
+                });
+
+                // Used Walkthrough for help with this part
+                document.querySelector("#submit").addEventListener("click", function(){
+                    let input = document.querySelector("input");
+                    if (input.value === "Frank Herbert") {
+                        input.style.backgroundColor = "green";
+                        document.querySelector("#feedback").innerHTML = "Correct";
+                    } else {
+                        input.style.backgroundColor = "red";
+                        document.querySelector("#feedback").innerHTML = "Incorrect";
+                    }
+                });
+
+            })
         </script>
     </head>
     <body>
@@ -15,16 +62,27 @@
         </div>
 
         <div class="container">
-            <div class="section">
+            <div class="section1">
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
+                <h3>What is the name of Steve Irwin's son?</h3>
+                <button id="b1">Ross</button>
+                <button id="b2">Roger</button>
+                <button id="b3">Robert</button>
+                <p id="multi_correct" hidden>Correct!</p>
+                <p id="multi_incorrect" hidden>Incorrect</p>
             </div>
 
-            <div class="section">
+            <div class="section2">
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
+                <!-- Used walkthrough for help with this section -->
+                <h3>Who is the Author of the groundbreaking Sci-Fi Epic Dune?</h3>
+                    <input>
+                    <button id="submit">Submit</button>
+                    <p id="feedback"></p>
             </div>
         </div>
     </body>
